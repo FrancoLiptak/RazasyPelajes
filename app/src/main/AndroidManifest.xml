@@ -21,6 +21,9 @@
         <activity
             android:screenOrientation="landscape"
             android:name=".ConfigActivity" />
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".RazasYPelajes" />
     </application>
 
 </manifest>

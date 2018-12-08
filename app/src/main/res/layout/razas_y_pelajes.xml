@@ -10,51 +10,83 @@
         android:id="@+id/linearLayout3"
         android:layout_width="576dp"
         android:layout_height="99dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.938">
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="143dp"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/interaction_b_horse1"
-            app:srcCompat="@drawable/horse1"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="235dp" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="143dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:contentDescription="@string/interaction_b_horse2"
-            app:srcCompat="@drawable/horse1"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="235dp" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="143dp"
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:contentDescription="@string/interaction_b_horse1"
+                app:srcCompat="@drawable/horse1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="235dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:contentDescription="@string/interaction_b_horse3"
-            app:srcCompat="@drawable/horse1"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="235dp" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="143dp"
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:contentDescription="@string/interaction_b_horse1"
+                app:srcCompat="@drawable/horse1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="235dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:contentDescription="@string/interaction_b_horse4"
-            app:srcCompat="@drawable/horse1"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="235dp" />
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:contentDescription="@string/interaction_b_horse1"
+                app:srcCompat="@drawable/horse1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="235dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:contentDescription="@string/interaction_b_horse1"
+                app:srcCompat="@drawable/horse1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="235dp" />
+        </LinearLayout>
 
     </LinearLayout>
 

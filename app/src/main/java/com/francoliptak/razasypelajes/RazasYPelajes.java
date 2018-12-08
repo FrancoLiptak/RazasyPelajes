@@ -17,7 +17,7 @@ public class RazasYPelajes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.razas_y_pelajes);
 
     }
 
