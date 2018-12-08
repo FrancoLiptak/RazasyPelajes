@@ -7,12 +7,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="268dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="165dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -45,7 +47,7 @@
                         tools:layout_editor_absoluteY="68dp">
 
                         <RadioButton
-                            android:id="@+id/lista"
+                            android:id="@+id/listaRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="16dp"
                             android:layout_height="wrap_content"
@@ -53,7 +55,7 @@
                             android:text="Lista" />
 
                         <RadioButton
-                            android:id="@+id/grilla"
+                            android:id="@+id/grillaRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -62,7 +64,7 @@
                     </RadioGroup>
 
                     <CheckBox
-                        android:id="@+id/RazasCheckbox"
+                        android:id="@+id/razasCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toStartOf="@+id/ViewMode"
                         app:layout_constraintTop_toBottomOf="@+id/ViewMode"
@@ -73,7 +75,7 @@
                         tools:layout_editor_absoluteY="100dp" />
 
                     <CheckBox
-                        android:id="@+id/PelajesCheckbox"
+                        android:id="@+id/relajesCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toEndOf="@+id/RazasCheckbox"
                         app:layout_constraintTop_toTopOf="@+id/RazasCheckbox"
@@ -81,13 +83,17 @@
                         android:layout_height="wrap_content"
                         android:text="Pelajes"
                         tools:layout_editor_absoluteX="82dp"
-                        tools:layout_editor_absoluteY="100dp" />
+                        tools:layout_editor_absoluteY="100dp"
+                        layout_constraintStart_toEndOf="@+id/razasCheckbox"
+                        layout_constraintTop_toTopOf="@+id/razasCheckbox" />
 
                     <CheckBox
-                        android:id="@+id/CruzasCheckbox"
+                        android:id="@+id/cruzasCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toEndOf="@+id/PelajesCheckbox"
                         app:layout_constraintTop_toTopOf="@+id/PelajesCheckbox"
+                        layout_constraintStart_toEndOf="@+id/relajesCheckbox"
+                        layout_constraintTop_toTopOf="@+id/relajesCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cruzas"
@@ -126,7 +132,7 @@
                         tools:layout_editor_absoluteY="53dp">
 
                         <RadioButton
-                            android:id="@+id/razasYPelajes"
+                            android:id="@+id/razasYPelajesRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -134,7 +140,7 @@
                             android:text="Razas y Pelajes" />
 
                         <RadioButton
-                            android:id="@+id/razasYPelajesJuntas"
+                            android:id="@+id/razasYPelajesJuntasRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -142,7 +148,7 @@
                             android:text="Razas y Pelajes juntas" />
 
                         <RadioButton
-                            android:id="@+id/Cruzas"
+                            android:id="@+id/cruzasRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -175,8 +181,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Modo de Interacción:"
-                        tools:layout_editor_absoluteX="36dp"
-                        tools:layout_editor_absoluteY="13dp" />
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="0dp" />
 
                     <RadioGroup
                         android:id="@+id/ModoInteraccion"
@@ -184,11 +190,11 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView13"
                         android:layout_width="175dp"
                         android:layout_height="86dp"
-                        tools:layout_editor_absoluteX="88dp"
-                        tools:layout_editor_absoluteY="43dp">
+                        tools:layout_editor_absoluteX="108dp"
+                        tools:layout_editor_absoluteY="30dp">
 
                         <RadioButton
-                            android:id="@+id/interaccionA"
+                            android:id="@+id/interaccionARadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -196,7 +202,7 @@
                             android:text="Interacción A" />
 
                         <RadioButton
-                            android:id="@+id/interaccionB"
+                            android:id="@+id/interaccionBRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -204,7 +210,7 @@
                             android:text="Interacción B" />
 
                         <RadioButton
-                            android:id="@+id/interaccionC"
+                            android:id="@+id/interaccionCRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -231,8 +237,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ajustes:"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="16dp" />
+                        tools:layout_editor_absoluteX="47dp"
+                        tools:layout_editor_absoluteY="0dp" />
 
                     <Switch
                         android:id="@+id/Level"
@@ -244,7 +250,7 @@
                         android:switchMinWidth="100dp"
                         android:text="Nivel 1"
                         tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="50dp" />
+                        tools:layout_editor_absoluteY="30dp" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -254,8 +260,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="26dp"
                         android:text="Nivel 2"
-                        tools:layout_editor_absoluteX="199dp"
-                        tools:layout_editor_absoluteY="60dp" />
+                        tools:layout_editor_absoluteX="200dp"
+                        tools:layout_editor_absoluteY="46dp" />
 
                     <Switch
                         android:id="@+id/Sex"
@@ -269,7 +275,7 @@
                         android:switchMinWidth="100dp"
                         android:text="Masculina"
                         tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="103dp" />
+                        tools:layout_editor_absoluteY="85dp" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -280,10 +286,35 @@
                         android:layout_height="wrap_content"
                         android:text="Femenina"
                         tools:layout_editor_absoluteX="184dp"
-                        tools:layout_editor_absoluteY="105dp" />
+                        tools:layout_editor_absoluteY="87dp" />
 
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="267dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/aceptarButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/colorPressedHighlight"
+                android:onClick="onAccept"
+                android:text="Aceptar"
+                tools:layout_editor_absoluteX="488dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
