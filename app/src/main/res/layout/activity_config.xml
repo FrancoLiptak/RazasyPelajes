@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="226dp"
+                        android:layout_height="30dp"
+                        android:text="Modo Reconocimiento:"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:id="@+id/ViewMode"
+                        app:layout_constraintStart_toStartOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12"
+                        android:layout_width="306dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteY="68dp">
+
+                        <RadioButton
+                            android:id="@+id/lista"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="16dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lista" />
+
+                        <RadioButton
+                            android:id="@+id/grilla"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Grilla" />
+                    </RadioGroup>
+
+                    <CheckBox
+                        android:id="@+id/RazasCheckbox"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintStart_toStartOf="@+id/ViewMode"
+                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Razas"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="100dp" />
+
+                    <CheckBox
+                        android:id="@+id/PelajesCheckbox"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintStart_toEndOf="@+id/RazasCheckbox"
+                        app:layout_constraintTop_toTopOf="@+id/RazasCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pelajes"
+                        tools:layout_editor_absoluteX="82dp"
+                        tools:layout_editor_absoluteY="100dp" />
+
+                    <CheckBox
+                        android:id="@+id/CruzasCheckbox"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintStart_toEndOf="@+id/PelajesCheckbox"
+                        app:layout_constraintTop_toTopOf="@+id/PelajesCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cruzas"
+                        tools:layout_editor_absoluteX="173dp"
+                        tools:layout_editor_absoluteY="100dp" />
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minijuego:"
+                        tools:layout_editor_absoluteX="41dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:id="@+id/Minijuego"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:layout_editor_absoluteX="63dp"
+                        tools:layout_editor_absoluteY="53dp">
+
+                        <RadioButton
+                            android:id="@+id/razasYPelajes"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Razas y Pelajes" />
+
+                        <RadioButton
+                            android:id="@+id/razasYPelajesJuntas"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Razas y Pelajes juntas" />
+
+                        <RadioButton
+                            android:id="@+id/Cruzas"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cruza" />
+                    </RadioGroup>
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="299dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo de Interacción:"
+                        tools:layout_editor_absoluteX="36dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                    <RadioGroup
+                        android:id="@+id/ModoInteraccion"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13"
+                        android:layout_width="175dp"
+                        android:layout_height="86dp"
+                        tools:layout_editor_absoluteX="88dp"
+                        tools:layout_editor_absoluteY="43dp">
+
+                        <RadioButton
+                            android:id="@+id/interaccionA"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Interacción A" />
+
+                        <RadioButton
+                            android:id="@+id/interaccionB"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Interacción B" />
+
+                        <RadioButton
+                            android:id="@+id/interaccionC"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Interacción C" />
+                    </RadioGroup>
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ajustes:"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <Switch
+                        android:id="@+id/Level"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15"
+                        android:layout_width="200dp"
+                        android:layout_height="43dp"
+                        android:switchMinWidth="100dp"
+                        android:text="Nivel 1"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="50dp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/Level"
+                        app:layout_constraintStart_toEndOf="@+id/Level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:text="Nivel 2"
+                        tools:layout_editor_absoluteX="199dp"
+                        tools:layout_editor_absoluteY="60dp" />
+
+                    <Switch
+                        android:id="@+id/Sex"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintEnd_toEndOf="@+id/Level"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/Level"
+                        app:layout_constraintTop_toBottomOf="@+id/Level"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:switchMinWidth="100dp"
+                        android:text="Masculina"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="103dp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/Sex"
+                        app:layout_constraintStart_toEndOf="@+id/Sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Femenina"
+                        tools:layout_editor_absoluteX="184dp"
+                        tools:layout_editor_absoluteY="105dp" />
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
