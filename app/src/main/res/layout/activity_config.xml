@@ -75,7 +75,7 @@
                         tools:text="@string/razasCheckbox" />
 
                     <CheckBox
-                        android:id="@+id/relajesCheckbox"
+                        android:id="@+id/pelajesCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toEndOf="@+id/RazasCheckbox"
                         app:layout_constraintTop_toTopOf="@+id/RazasCheckbox"
@@ -92,8 +92,8 @@
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toEndOf="@+id/PelajesCheckbox"
                         app:layout_constraintTop_toTopOf="@+id/PelajesCheckbox"
-                        layout_constraintStart_toEndOf="@+id/relajesCheckbox"
-                        layout_constraintTop_toTopOf="@+id/relajesCheckbox"
+                        layout_constraintStart_toEndOf="@+id/pelajesCheckbox"
+                        layout_constraintTop_toTopOf="@+id/pelajesCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:layout_editor_absoluteX="173dp"

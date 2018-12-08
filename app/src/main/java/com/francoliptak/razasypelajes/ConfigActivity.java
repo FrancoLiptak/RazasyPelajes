@@ -9,7 +9,8 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
-import java.util.HashMap;
+import com.francoliptak.razasypelajes.utils.GameModeCheckbox;
+
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -20,33 +21,28 @@ public class ConfigActivity extends AppCompatActivity {
     private RadioGroup minijuegoRadio;
     private RadioGroup viewModeRadio;
     private RadioGroup modoInteraccionRadio;
-    private HashMap<String, CheckBox> gameModeCheckBox;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        gameModeCheckBox = new HashMap<>();
         setContentView(R.layout.activity_config);
+        preferences = getSharedPreferences(getString(R.string.config_preferences), Context.MODE_PRIVATE);
         associateViewsToVariables();
         setValues();
     }
 
+    public SharedPreferences getPreferences(){
+        return preferences;
+    }
+
     private void setValues(){
-        SharedPreferences preferences = getSharedPreferences(getString(R.string.config),Context.MODE_PRIVATE);
-        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.level), false));
-        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.sex), false));
-        minijuegoRadio.check(preferences.getInt(getString(R.string.minijuego), R.id.razasYPelajes));
-        viewModeRadio.check(preferences.getInt(getString(R.string.viewMode), R.id.lista));
-        modoInteraccionRadio.check(preferences.getInt(getString(R.string.modo_interaccion), R.id.interaccionB));
-
-        for (CheckBox checkBox : gameModeCheckBox.values()) checkBox.setChecked(false);
-
-        Set<String> gameModes = preferences.getStringSet(getString(R.string.gameMode), new HashSet<String>());
-
-        if (gameModes != null) for (String checkBoxKey : gameModes) {
-            CheckBox ck = gameModeCheckBox.get(checkBoxKey);
-            if (ck != null) ck.setChecked(true);
-        }
+        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), false));
+        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), true));
+        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_minijuego), R.id.razasYPelajesRadioButton));
+        viewModeRadio.check(preferences.getInt(getString(R.string.config_preferences_view_mode), R.id.listaRadioButton));
+        modoInteraccionRadio.check(preferences.getInt(getString(R.string.config_preferences_interaction_mode), R.id.interaccionARadioButton));
+        GameModeCheckbox.check(this);
     }
 
     private void associateViewsToVariables(){
@@ -55,23 +51,22 @@ public class ConfigActivity extends AppCompatActivity {
         sexSwitch = findViewById(R.id.Sex);
         minijuegoRadio = findViewById(R.id.Minijuego);
         viewModeRadio = findViewById(R.id.ViewMode);
-        gameModeCheckBox.put(getString(R.string.razas), (CheckBox) findViewById(R.id.razasCheckbox));
-        gameModeCheckBox.put(getString(R.string.pelajes), (CheckBox) findViewById(R.id.relajesCheckbox));
-        gameModeCheckBox.put(getString(R.string.cruzas), (CheckBox) findViewById(R.id.cruzasCheckbox));
+        GameModeCheckbox.associate(this);
     }
 
     public void onAccept(View view) {
-        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.config),Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(getString(R.string.sex), sexSwitch.isChecked());
-        editor.putBoolean(getString(R.string.level), levelSwitch.isChecked());
-        editor.putInt(getString(R.string.minijuego), minijuegoRadio.getCheckedRadioButtonId());
-        editor.putInt(getString(R.string.viewMode), viewModeRadio.getCheckedRadioButtonId());
-        editor.putInt(getString(R.string.modo_interaccion), modoInteraccionRadio.getCheckedRadioButtonId());
+        SharedPreferences.Editor editor = this.getPreferences().edit();
+        editor.putBoolean(getString(R.string.config_preferences_sex), sexSwitch.isChecked());
+        editor.putBoolean(getString(R.string.config_preferences_level), levelSwitch.isChecked());
+        editor.putInt(getString(R.string.config_preferences_minijuego), minijuegoRadio.getCheckedRadioButtonId());
+        editor.putInt(getString(R.string.config_preferences_view_mode), viewModeRadio.getCheckedRadioButtonId());
+        editor.putInt(getString(R.string.config_preferences_interaction_mode), modoInteraccionRadio.getCheckedRadioButtonId());
+
         HashSet<String> selectedGameModes = new HashSet<>();
         for (Map.Entry<String, CheckBox> entry : gameModeCheckBox.entrySet())
             if (entry.getValue().isChecked()) selectedGameModes.add(entry.getKey());
         editor.putStringSet(getString(R.string.gameMode), selectedGameModes);
+
         editor.apply();
         finish();
     }
