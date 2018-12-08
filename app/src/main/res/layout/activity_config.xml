@@ -33,9 +33,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="226dp"
                         android:layout_height="30dp"
-                        android:text="Modo Reconocimiento:"
                         tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="16dp" />
+                        tools:layout_editor_absoluteY="16dp"
+                        tools:text="@string/recognition_mode" />
 
                     <RadioGroup
                         android:id="@+id/ViewMode"
@@ -52,7 +52,7 @@
                             android:layout_width="16dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Lista" />
+                            tools:text="@string/listRadioButton" />
 
                         <RadioButton
                             android:id="@+id/grillaRadioButton"
@@ -60,7 +60,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Grilla" />
+                            tools:text="@string/gridRadioButton" />
                     </RadioGroup>
 
                     <CheckBox
@@ -70,22 +70,22 @@
                         app:layout_constraintTop_toBottomOf="@+id/ViewMode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Razas"
                         tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="100dp" />
+                        tools:layout_editor_absoluteY="100dp"
+                        tools:text="@string/razasCheckbox" />
 
                     <CheckBox
                         android:id="@+id/relajesCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         app:layout_constraintStart_toEndOf="@+id/RazasCheckbox"
                         app:layout_constraintTop_toTopOf="@+id/RazasCheckbox"
+                        layout_constraintStart_toEndOf="@+id/razasCheckbox"
+                        layout_constraintTop_toTopOf="@+id/razasCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pelajes"
                         tools:layout_editor_absoluteX="82dp"
                         tools:layout_editor_absoluteY="100dp"
-                        layout_constraintStart_toEndOf="@+id/razasCheckbox"
-                        layout_constraintTop_toTopOf="@+id/razasCheckbox" />
+                        tools:text="@string/pelajesCheckbox" />
 
                     <CheckBox
                         android:id="@+id/cruzasCheckbox"
@@ -96,9 +96,9 @@
                         layout_constraintTop_toTopOf="@+id/relajesCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cruzas"
                         tools:layout_editor_absoluteX="173dp"
-                        tools:layout_editor_absoluteY="100dp" />
+                        tools:layout_editor_absoluteY="100dp"
+                        tools:text="@string/cruzasCheckbox" />
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
 
@@ -118,9 +118,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Minijuego:"
                         tools:layout_editor_absoluteX="41dp"
-                        tools:layout_editor_absoluteY="16dp" />
+                        tools:layout_editor_absoluteY="16dp"
+                        tools:text="@string/miniGame" />
 
                     <RadioGroup
                         android:id="@+id/Minijuego"
@@ -137,7 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Razas y Pelajes" />
+                            tools:text="@string/razasYPelajesRadioButton" />
 
                         <RadioButton
                             android:id="@+id/razasYPelajesJuntasRadioButton"
@@ -145,7 +145,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Razas y Pelajes juntas" />
+                            tools:text="@string/razasYPelajesJuntasRadioButton" />
 
                         <RadioButton
                             android:id="@+id/cruzasRadioButton"
@@ -153,7 +153,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Cruza" />
+                            tools:text="@string/cruzaRadioButton" />
                     </RadioGroup>
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
@@ -180,9 +180,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Modo de Interacción:"
                         tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="0dp" />
+                        tools:layout_editor_absoluteY="0dp"
+                        tools:text="@string/interaction_mode" />
 
                     <RadioGroup
                         android:id="@+id/ModoInteraccion"
@@ -199,7 +199,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Interacción A" />
+                            tools:text="@string/interaccionA" />
 
                         <RadioButton
                             android:id="@+id/interaccionBRadioButton"
@@ -207,7 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Interacción B" />
+                            tools:text="@string/interaccionB" />
 
                         <RadioButton
                             android:id="@+id/interaccionCRadioButton"
@@ -215,7 +215,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Interacción C" />
+                            tools:text="@string/interaccionC" />
                     </RadioGroup>
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
@@ -236,9 +236,9 @@
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ajustes:"
                         tools:layout_editor_absoluteX="47dp"
-                        tools:layout_editor_absoluteY="0dp" />
+                        tools:layout_editor_absoluteY="0dp"
+                        tools:text="@string/settings" />
 
                     <Switch
                         android:id="@+id/Level"
@@ -248,9 +248,9 @@
                         android:layout_width="200dp"
                         android:layout_height="43dp"
                         android:switchMinWidth="100dp"
-                        android:text="Nivel 1"
                         tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="30dp" />
+                        tools:layout_editor_absoluteY="30dp"
+                        tools:text="@string/levelOne" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -259,9 +259,9 @@
                         app:layout_constraintStart_toEndOf="@+id/Level"
                         android:layout_width="wrap_content"
                         android:layout_height="26dp"
-                        android:text="Nivel 2"
                         tools:layout_editor_absoluteX="200dp"
-                        tools:layout_editor_absoluteY="46dp" />
+                        tools:layout_editor_absoluteY="46dp"
+                        tools:text="@string/levelTwo" />
 
                     <Switch
                         android:id="@+id/Sex"
@@ -273,9 +273,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:switchMinWidth="100dp"
-                        android:text="Masculina"
                         tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="85dp" />
+                        tools:layout_editor_absoluteY="85dp"
+                        tools:text="@string/masculine" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -284,9 +284,9 @@
                         app:layout_constraintStart_toEndOf="@+id/Sex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Femenina"
                         tools:layout_editor_absoluteX="184dp"
-                        tools:layout_editor_absoluteY="87dp" />
+                        tools:layout_editor_absoluteY="87dp"
+                        tools:text="@string/femenine" />
 
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
@@ -312,9 +312,9 @@
                 android:layout_height="wrap_content"
                 android:background="?android:attr/colorPressedHighlight"
                 android:onClick="onAccept"
-                android:text="Aceptar"
                 tools:layout_editor_absoluteX="488dp"
-                tools:layout_editor_absoluteY="0dp" />
+                tools:layout_editor_absoluteY="0dp"
+                tools:text="@string/accept" />
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

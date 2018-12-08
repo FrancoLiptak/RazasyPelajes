@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Razas y Pelajes</string>
+
+    <string name="recognition_mode">Modo Reconocimiento:</string>
+    <string name="listRadioButton">Lista</string>
+    <string name="gridRadioButton">Grilla</string>
+    <string name="razasCheckbox">Razas</string>
+    <string name="pelajesCheckbox">Pelajes</string>
+    <string name="cruzasCheckbox">Cruzas</string>
+
+    <string name="miniGame">Minijuego:</string>
+    <string name="razasYPelajesRadioButton">Razas y Pelajes</string>
+    <string name="razasYPelajesJuntasRadioButton">Razas y Pelajes juntas</string>
+    <string name="cruzaRadioButton">Cruza</string>
+
+    <string name="interaction_mode">Modo de Interacción:</string>
+    <string name="interaccionA">Interacción A</string>
+    <string name="interaccionB">Interacción B</string>
+    <string name="interaccionC">Interacción C</string>
+
+    <string name="settings">Ajustes:</string>
+    <string name="levelOne">Nivel 1</string>
+    <string name="levelTwo">Nivel 2</string>
+    <string name="masculine">Masculine</string>
+    <string name="femenine">Femenina</string>
+
+    <string name="accept">Aceptar</string>
+
 </resources>
