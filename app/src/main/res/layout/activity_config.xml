@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="268dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,29 +33,33 @@
                     <TextView
                         android:id="@+id/textView12"
                         style="@android:style/TextAppearance.DeviceDefault.Large"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="226dp"
                         android:layout_height="30dp"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="16dp"
+                        android:text="@string/recognition_mode"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:text="@string/recognition_mode" />
 
                     <RadioGroup
                         android:id="@+id/ViewMode"
-                        app:layout_constraintStart_toStartOf="@+id/textView12"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12"
                         android:layout_width="306dp"
-                        android:layout_height="0dp"
+                        android:layout_height="54dp"
                         android:orientation="horizontal"
-                        tools:layout_editor_absoluteY="68dp">
+                        app:layout_constraintBottom_toTopOf="@+id/razasCheckbox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
                         <RadioButton
                             android:id="@+id/listaRadioButton"
                             style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="16dp"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/listRadioButton"
                             tools:text="@string/listRadioButton" />
 
                         <RadioButton
@@ -60,6 +68,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/gridRadioButton"
                             tools:text="@string/gridRadioButton" />
                     </RadioGroup>
 
@@ -67,36 +76,44 @@
                         android:id="@+id/razasCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="36dp"
-                        app:layout_constraintStart_toStartOf="@+id/ViewMode"
+                        android:layout_height="24dp"
+                        android:text="@string/razasCheckbox"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/pelajesCheckbox"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ViewMode"
                         tools:text="@string/razasCheckbox" />
 
                     <CheckBox
                         android:id="@+id/pelajesCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        app:layout_constraintStart_toEndOf="@+id/RazasCheckbox"
-                        app:layout_constraintTop_toTopOf="@+id/RazasCheckbox"
-                        layout_constraintStart_toEndOf="@+id/razasCheckbox"
-                        layout_constraintTop_toTopOf="@+id/razasCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="82dp"
-                        tools:layout_editor_absoluteY="100dp"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginLeft="88dp"
+                        android:text="@string/pelajesCheckbox"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/cruzasCheckbox"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/razasCheckbox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
                         tools:text="@string/pelajesCheckbox" />
 
                     <CheckBox
                         android:id="@+id/cruzasCheckbox"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        app:layout_constraintStart_toEndOf="@+id/PelajesCheckbox"
-                        app:layout_constraintTop_toTopOf="@+id/PelajesCheckbox"
-                        layout_constraintStart_toEndOf="@+id/pelajesCheckbox"
-                        layout_constraintTop_toTopOf="@+id/pelajesCheckbox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="173dp"
-                        tools:layout_editor_absoluteY="100dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/cruzasCheckbox"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/pelajesCheckbox"
+                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
                         tools:text="@string/cruzasCheckbox" />
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
@@ -113,22 +130,26 @@
                     <TextView
                         android:id="@+id/textView14"
                         style="@android:style/TextAppearance.DeviceDefault.Large"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="41dp"
-                        tools:layout_editor_absoluteY="16dp"
+                        android:text="@string/miniGame"
+                        app:layout_constraintBottom_toTopOf="@+id/Minijuego"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread_inside"
                         tools:text="@string/miniGame" />
 
                     <RadioGroup
                         android:id="@+id/Minijuego"
-                        app:layout_constraintStart_toStartOf="@+id/textView14"
-                        app:layout_constraintTop_toBottomOf="@+id/textView14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="63dp"
-                        tools:layout_editor_absoluteY="53dp">
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14">
 
                         <RadioButton
                             android:id="@+id/razasYPelajesRadioButton"
@@ -136,6 +157,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/razasYPelajesRadioButton"
                             tools:text="@string/razasYPelajesRadioButton" />
 
                         <RadioButton
@@ -144,6 +166,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/razasYPelajesJuntasRadioButton"
                             tools:text="@string/razasYPelajesJuntasRadioButton" />
 
                         <RadioButton
@@ -152,6 +175,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/cruzaRadioButton"
                             tools:text="@string/cruzaRadioButton" />
                     </RadioGroup>
                 </android.support.constraint.ConstraintLayout>
@@ -175,22 +199,24 @@
                     <TextView
                         android:id="@+id/textView13"
                         style="@android:style/TextAppearance.DeviceDefault.Large"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="0dp"
+                        android:text="@string/interaction_mode"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:text="@string/interaction_mode" />
 
                     <RadioGroup
                         android:id="@+id/ModoInteraccion"
-                        app:layout_constraintStart_toStartOf="@+id/textView13"
-                        app:layout_constraintTop_toBottomOf="@+id/textView13"
                         android:layout_width="175dp"
                         android:layout_height="86dp"
-                        tools:layout_editor_absoluteX="108dp"
-                        tools:layout_editor_absoluteY="30dp">
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13">
 
                         <RadioButton
                             android:id="@+id/interaccionARadioButton"
@@ -198,6 +224,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/interaccionA"
                             tools:text="@string/interaccionA" />
 
                         <RadioButton
@@ -206,6 +233,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/interaccionB"
                             tools:text="@string/interaccionB" />
 
                         <RadioButton
@@ -214,6 +242,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:text="@string/interaccionC"
                             tools:text="@string/interaccionC" />
                     </RadioGroup>
                 </android.support.constraint.ConstraintLayout>
@@ -231,60 +260,58 @@
                     <TextView
                         android:id="@+id/textView15"
                         style="@android:style/TextAppearance.DeviceDefault.Large"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="47dp"
-                        tools:layout_editor_absoluteY="0dp"
+                        android:text="@string/settings"
+                        app:layout_constraintBottom_toTopOf="@+id/Level"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         tools:text="@string/settings" />
 
                     <Switch
                         android:id="@+id/Level"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        app:layout_constraintStart_toStartOf="@+id/textView15"
-                        app:layout_constraintTop_toBottomOf="@+id/textView15"
                         android:layout_width="200dp"
                         android:layout_height="43dp"
                         android:switchMinWidth="100dp"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="30dp"
+                        android:text="@string/levelOne"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15"
                         tools:text="@string/levelOne" />
 
                     <TextView
                         android:id="@+id/textView7"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/Level"
-                        app:layout_constraintStart_toEndOf="@+id/Level"
                         android:layout_width="wrap_content"
                         android:layout_height="26dp"
-                        tools:layout_editor_absoluteX="200dp"
-                        tools:layout_editor_absoluteY="46dp"
+                        android:text="@string/levelTwo"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/Level"
+                        app:layout_constraintStart_toEndOf="@+id/Level"
                         tools:text="@string/levelTwo" />
 
                     <Switch
                         android:id="@+id/Sex"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:switchMinWidth="100dp"
+                        android:text="@string/masculine"
                         app:layout_constraintEnd_toEndOf="@+id/Level"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/Level"
                         app:layout_constraintTop_toBottomOf="@+id/Level"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:switchMinWidth="100dp"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="85dp"
                         tools:text="@string/masculine" />
 
                     <TextView
                         android:id="@+id/textView9"
                         style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/Sex"
-                        app:layout_constraintStart_toEndOf="@+id/Sex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteX="184dp"
-                        tools:layout_editor_absoluteY="87dp"
+                        android:text="@string/femenine"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/Sex"
+                        app:layout_constraintStart_toEndOf="@+id/Sex"
                         tools:text="@string/femenine" />
 
                 </android.support.constraint.ConstraintLayout>
@@ -293,10 +320,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="267dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -304,13 +336,13 @@
 
             <Button
                 android:id="@+id/aceptarButton"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/colorPressedHighlight"
                 android:onClick="onAccept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="488dp"
                 tools:layout_editor_absoluteY="0dp"
                 tools:text="@string/accept" />
