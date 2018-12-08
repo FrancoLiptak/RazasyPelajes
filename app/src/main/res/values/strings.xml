@@ -34,4 +34,12 @@
 
     <string name="accept">Aceptar</string>
 
+    <string name="interaction_b_horse1">interaction_b_horse1</string>
+    <string name="interaction_b_horse2">interaction_b_horse2</string>
+    <string name="interaction_b_horse3">interaction_b_horse3</string>
+    <string name="interaction_b_horse4">interaction_b_horse4</string>
+
+    <string name="raza_para_adivinar">Raza para adivinar</string>
+
+
 </resources>
