@@ -41,4 +41,11 @@ public class GameModeCheckbox {
             gameModeCheckBox.get(getSelectedCheckboxByDefault(configActivity)).setChecked(true);
         }
     }
+
+    public static Set<String> getSelectedGameModes(){
+        Set<String> selectedGameModes = new HashSet<>();
+        for (Map.Entry<String, CheckBox> entry : gameModeCheckBox.entrySet())
+            if (entry.getValue().isChecked()) selectedGameModes.add(entry.getKey());
+        return selectedGameModes;
+    }
 }

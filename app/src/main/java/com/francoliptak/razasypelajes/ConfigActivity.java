@@ -5,15 +5,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
 import com.francoliptak.razasypelajes.utils.GameModeCheckbox;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 public class ConfigActivity extends AppCompatActivity {
     private Switch levelSwitch;
@@ -61,11 +57,7 @@ public class ConfigActivity extends AppCompatActivity {
         editor.putInt(getString(R.string.config_preferences_minijuego), minijuegoRadio.getCheckedRadioButtonId());
         editor.putInt(getString(R.string.config_preferences_view_mode), viewModeRadio.getCheckedRadioButtonId());
         editor.putInt(getString(R.string.config_preferences_interaction_mode), modoInteraccionRadio.getCheckedRadioButtonId());
-
-        HashSet<String> selectedGameModes = new HashSet<>();
-        for (Map.Entry<String, CheckBox> entry : gameModeCheckBox.entrySet())
-            if (entry.getValue().isChecked()) selectedGameModes.add(entry.getKey());
-        editor.putStringSet(getString(R.string.gameMode), selectedGameModes);
+        editor.putStringSet(getString(R.string.config_preferences_game_mode), GameModeCheckbox.getSelectedGameModes());
 
         editor.apply();
         finish();
