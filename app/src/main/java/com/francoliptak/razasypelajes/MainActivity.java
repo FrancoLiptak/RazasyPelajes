@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
-    public void redirectToGame(View view){
-        Intent intent = new Intent(this, GameActivity.class);
+
+    public void redirectToRazasYPelajes(View view){
+        Intent intent = new Intent(this, RazasYPelajes.class);
         startActivity(intent);
     }
-    */
+
 }
