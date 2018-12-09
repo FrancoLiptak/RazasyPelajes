@@ -12,8 +12,10 @@ import java.util.Random;
 public class GameInitializer {
     private static List<Horse> horses = null;
     private static Horse correctAnswer = null;
+    private static Integer correctAnswerView = null;
 
     public static void initialize(RazasYPelajes razasYPelajes){
+        destroy();
         createHorses(razasYPelajes);
         printHorses(razasYPelajes);
     }
@@ -31,22 +33,23 @@ public class GameInitializer {
         while (horses.size() > 0){
             Horse randomHorse = horses.get(r.nextInt(horses.size()));
             horses.remove(randomHorse);
-            if(correctAnswer == null){ correctAnswer = randomHorse;}
             List<ImageView> views = razasYPelajes.getHorsesViews();
             ImageView imageView = views.get(r.nextInt(views.size()));
             views.remove(imageView);
+            if(correctAnswer == null){ correctAnswerView = imageView.getId(); correctAnswer = randomHorse;}
             int id = razasYPelajes.getResources().getIdentifier(randomHorse.getImage(), "drawable", razasYPelajes.getPackageName());
             imageView.setImageResource(id);
         }
         razasYPelajes.getRaceName().setText(correctAnswer.getRace());
     }
 
-    public static Horse getCorrectAnswer(){
-        return correctAnswer;
+    public static Integer getCorrectAnswer(){
+        return correctAnswerView;
     }
 
     public static void destroy(){
         horses = null;
         correctAnswer = null;
+        correctAnswerView = null;
     }
 }

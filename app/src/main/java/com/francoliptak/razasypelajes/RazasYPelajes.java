@@ -19,8 +19,7 @@ import java.util.Map;
 public class RazasYPelajes extends AppCompatActivity {
     private List<ImageView> horsesViews;
     private TextView raceName;
-    private Horse correctAnswer;
-    private int answer;
+    private Integer correctAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -59,12 +58,17 @@ public class RazasYPelajes extends AppCompatActivity {
         return raceName;
     }
 
-    public int getAnswer() {
-        return answer;
-    }
-
     public void playHorseSound(View view){
         SoundManager.playHorse();
+    }
+
+    public void evaluateOptionChosen(View view){
+        if(view.getId() == correctAnswer){
+            SoundManager.playSucces();
+            finish();
+        }else{
+            SoundManager.playError();
+        }
     }
 
     @Override

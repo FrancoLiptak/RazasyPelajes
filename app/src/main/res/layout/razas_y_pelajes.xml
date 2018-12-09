@@ -29,6 +29,7 @@
                 android:layout_weight="1"
                 android:baselineAligned="false"
                 android:contentDescription="@string/interaction_b_horse1"
+                android:onClick="evaluateOptionChosen"
                 app:srcCompat="@drawable/horse1"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="235dp" />
@@ -47,6 +48,7 @@
                 android:layout_weight="1"
                 android:baselineAligned="false"
                 android:contentDescription="@string/interaction_b_horse1"
+                android:onClick="evaluateOptionChosen"
                 app:srcCompat="@drawable/horse1"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="235dp" />
@@ -65,6 +67,7 @@
                 android:layout_weight="1"
                 android:baselineAligned="false"
                 android:contentDescription="@string/interaction_b_horse1"
+                android:onClick="evaluateOptionChosen"
                 app:srcCompat="@drawable/horse1"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="235dp" />
@@ -83,6 +86,7 @@
                 android:layout_weight="1"
                 android:baselineAligned="false"
                 android:contentDescription="@string/interaction_b_horse1"
+                android:onClick="evaluateOptionChosen"
                 app:srcCompat="@drawable/horse1"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="235dp" />
