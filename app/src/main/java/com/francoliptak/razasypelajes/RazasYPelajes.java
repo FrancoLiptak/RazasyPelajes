@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.francoliptak.razasypelajes.utils.SoundManager;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +15,6 @@ import java.util.Map;
 
 public class RazasYPelajes extends AppCompatActivity {
     private List<ImageView> horsesViews;
-    private Map<String, MediaPlayer> sounds;
     private TextView raceName;
     private int answer;
 
@@ -39,9 +40,9 @@ public class RazasYPelajes extends AppCompatActivity {
     }
 
     private void associateSounds(){
-        sounds = new HashMap<>();
-        sounds.put(getString(R.string.horse_sound), MediaPlayer.create(this, R.raw.horse_sound));
-        sounds.put(getString(R.string.error_sound), MediaPlayer.create(this, R.raw.error_sound));
-        sounds.put(getString(R.string.success_sound), MediaPlayer.create(this, R.raw.success_sound));
+        SoundManager.associateSounds(MediaPlayer.create(this, R.raw.horse_sound),
+                                     MediaPlayer.create(this, R.raw.success_sound),
+                                     MediaPlayer.create(this, R.raw.error_sound));
+
     }
 }
