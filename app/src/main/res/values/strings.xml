@@ -7,6 +7,8 @@
     <string name="razasCheckbox">Razas</string>
     <string name="pelajesCheckbox">Pelajes</string>
     <string name="cruzasCheckbox">Cruzas</string>
+    <string name="reconocimiento">Reconocimiento</string>
+    <string name="jugar">Jugar</string>
 
     <string name="miniGame">Minijuego:</string>
     <string name="razasYPelajesRadioButton">Razas y Pelajes</string>
