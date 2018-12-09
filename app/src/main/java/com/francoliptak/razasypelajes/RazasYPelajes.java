@@ -3,6 +3,7 @@ package com.francoliptak.razasypelajes;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,6 +61,10 @@ public class RazasYPelajes extends AppCompatActivity {
 
     public int getAnswer() {
         return answer;
+    }
+
+    public void playHorseSound(View view){
+        SoundManager.playHorse();
     }
 
     @Override
