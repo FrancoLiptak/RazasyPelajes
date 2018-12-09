@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.francoliptak.razasypelajes.utils.GameInitializer;
+import com.francoliptak.razasypelajes.utils.Horse;
 import com.francoliptak.razasypelajes.utils.SoundManager;
 
 import java.util.ArrayList;
@@ -16,13 +18,16 @@ import java.util.Map;
 public class RazasYPelajes extends AppCompatActivity {
     private List<ImageView> horsesViews;
     private TextView raceName;
+    private Horse correctAnswer;
     private int answer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.razas_y_pelajes);
         associateElementsToVariables();
+        GameInitializer.initialize(this);
+        correctAnswer = GameInitializer.getCorrectAnswer();
     }
 
     private void associateElementsToVariables(){
@@ -43,6 +48,24 @@ public class RazasYPelajes extends AppCompatActivity {
         SoundManager.associateSounds(MediaPlayer.create(this, R.raw.horse_sound),
                                      MediaPlayer.create(this, R.raw.success_sound),
                                      MediaPlayer.create(this, R.raw.error_sound));
+    }
 
+    public List<ImageView> getHorsesViews() {
+        return horsesViews;
+    }
+
+    public TextView getRaceName() {
+        return raceName;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    @Override
+    public void onBackPressed(){
+        correctAnswer = null;
+        GameInitializer.destroy();
+        finish();
     }
 }
