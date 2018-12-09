@@ -102,7 +102,8 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:background="@android:color/holo_orange_light">
 
             <ImageView
                 android:id="@+id/soundImage2"
@@ -118,12 +119,12 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/raceText2"
+                app:layout_constraintStart_toEndOf="@+id/raceText"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/play_sound" />
 
             <TextView
-                android:id="@+id/raceText2"
+                android:id="@+id/raceText"
                 style="@android:style/TextAppearance.DeviceDefault.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
