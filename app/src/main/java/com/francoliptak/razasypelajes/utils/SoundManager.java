@@ -3,17 +3,15 @@ package com.francoliptak.razasypelajes.utils;
 import android.media.MediaPlayer;
 
 public class SoundManager {
-    private static MediaPlayer horseSound;
     private static MediaPlayer successSound;
     private static MediaPlayer errorSound;
 
-    public static void associateSounds(MediaPlayer horse, MediaPlayer success, MediaPlayer error){
-        horseSound = horse;
+    public static void associateSounds(MediaPlayer success, MediaPlayer error){
         successSound = success;
         errorSound = error;
     }
 
-    public static void playHorse(){
+    public static void playHorse(MediaPlayer horseSound){
         horseSound.start();
     }
 

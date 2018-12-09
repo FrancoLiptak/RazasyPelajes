@@ -2,6 +2,7 @@ package com.francoliptak.razasypelajes;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,7 +19,8 @@ import java.util.Map;
 
 public class RazasYPelajes extends AppCompatActivity {
     private List<ImageView> horsesViews;
-    private TextView raceName;
+    private TextView raceName; // Nombre de la raza del caballo a adivinar
+    private MediaPlayer horseSound; // Nombre del archivo de sonido del caballo a adivinar
     private Integer correctAnswer;
 
     @Override
@@ -45,8 +47,7 @@ public class RazasYPelajes extends AppCompatActivity {
     }
 
     private void associateSounds(){
-        SoundManager.associateSounds(MediaPlayer.create(this, R.raw.horse_sound),
-                                     MediaPlayer.create(this, R.raw.success_sound),
+        SoundManager.associateSounds(MediaPlayer.create(this, R.raw.success_sound),
                                      MediaPlayer.create(this, R.raw.error_sound));
     }
 
@@ -59,7 +60,7 @@ public class RazasYPelajes extends AppCompatActivity {
     }
 
     public void playHorseSound(View view){
-        SoundManager.playHorse();
+        SoundManager.playHorse(horseSound);
     }
 
     public void evaluateOptionChosen(View view){
@@ -71,9 +72,14 @@ public class RazasYPelajes extends AppCompatActivity {
         }
     }
 
+    public void setHorseSound(MediaPlayer horseSound) {
+        this.horseSound = horseSound;
+    }
+
     @Override
     public void onBackPressed(){
         correctAnswer = null;
+        horseSound = null;
         GameInitializer.destroy();
         finish();
     }

@@ -1,17 +1,21 @@
 package com.francoliptak.razasypelajes.utils;
 
+import android.media.MediaPlayer;
+
 public class Horse {
     private String race;
     private String fur;
-    private String image;
+    private String imageName;
+    private MediaPlayer soundName;
 
     public Horse() {
     }
 
-    public Horse(String race, String fur, String image) {
+    public Horse(String race, String fur, String imageName, MediaPlayer sound) {
         this.race = race;
         this.fur = fur;
-        this.image = image;
+        this.imageName = imageName;
+        this.soundName = sound;
     }
 
     public String getRace() {
@@ -30,11 +34,19 @@ public class Horse {
         this.fur = fur;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageName() {
+        return imageName;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public MediaPlayer getSoundName() {
+        return soundName;
+    }
+
+    public void setSoundName(MediaPlayer soundName) {
+        this.soundName = soundName;
     }
 }
