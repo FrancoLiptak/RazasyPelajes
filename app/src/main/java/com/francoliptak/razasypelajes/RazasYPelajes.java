@@ -76,11 +76,19 @@ public class RazasYPelajes extends AppCompatActivity {
         this.horseSound = horseSound;
     }
 
-    @Override
-    public void onBackPressed(){
+    public void goBack(View view){
+        goBack();
+    }
+
+    private void goBack(){
         correctAnswer = null;
         horseSound = null;
         GameInitializer.destroy();
         finish();
+    }
+
+    @Override
+    public void onBackPressed(){
+        goBack();
     }
 }
