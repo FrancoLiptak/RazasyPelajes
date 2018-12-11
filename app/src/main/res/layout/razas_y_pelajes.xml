@@ -98,7 +98,6 @@
         android:layout_width="576dp"
         android:layout_height="174dp"
         android:background="@color/colorOrange"
-        android:onClick="goBack"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
