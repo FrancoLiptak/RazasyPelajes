@@ -3,352 +3,166 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="268dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
-                        android:layout_width="226dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/recognition_mode"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.216"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="@string/recognition_mode" />
-
-                    <RadioGroup
-                        android:id="@+id/ViewMode"
-                        android:layout_width="306dp"
-                        android:layout_height="54dp"
-                        android:orientation="horizontal"
-                        app:layout_constraintBottom_toTopOf="@+id/razasCheckbox"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-                        <RadioButton
-                            android:id="@+id/listaRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="43dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/listRadioButton"
-                            tools:text="@string/listRadioButton" />
-
-                        <RadioButton
-                            android:id="@+id/grillaRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/gridRadioButton"
-                            tools:text="@string/gridRadioButton" />
-                    </RadioGroup>
-
-                    <CheckBox
-                        android:id="@+id/razasCheckbox"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="24dp"
-                        android:text="@string/razasCheckbox"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/pelajesCheckbox"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
-                        tools:text="@string/razasCheckbox" />
-
-                    <CheckBox
-                        android:id="@+id/pelajesCheckbox"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginLeft="88dp"
-                        android:text="@string/pelajesCheckbox"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/cruzasCheckbox"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/razasCheckbox"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
-                        tools:text="@string/pelajesCheckbox" />
-
-                    <CheckBox
-                        android:id="@+id/cruzasCheckbox"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:text="@string/cruzasCheckbox"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/pelajesCheckbox"
-                        app:layout_constraintTop_toBottomOf="@+id/ViewMode"
-                        app:layout_constraintVertical_bias="0.0"
-                        tools:text="@string/cruzasCheckbox" />
-
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/miniGame"
-                        app:layout_constraintBottom_toTopOf="@+id/Minijuego"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.084"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0"
-                        tools:text="@string/miniGame" />
-
-                    <RadioGroup
-                        android:id="@+id/Minijuego"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="44dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.797"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <RadioButton
-                            android:id="@+id/razasYPelajesRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/razasYPelajesRadioButton"
-                            tools:text="@string/razasYPelajesRadioButton" />
-
-                        <RadioButton
-                            android:id="@+id/razasYPelajesJuntasRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/razasYPelajesJuntasRadioButton"
-                            tools:text="@string/razasYPelajesJuntasRadioButton" />
-
-                        <RadioButton
-                            android:id="@+id/cruzasRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/cruzaRadioButton"
-                            tools:text="@string/cruzaRadioButton" />
-                    </RadioGroup>
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="299dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/interaction_mode"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.172"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="@string/interaction_mode" />
-
-                    <RadioGroup
-                        android:id="@+id/ModoInteraccion"
-                        android:layout_width="175dp"
-                        android:layout_height="86dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-                        <RadioButton
-                            android:id="@+id/interaccionARadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/interaccionA"
-                            tools:text="@string/interaccionA" />
-
-                        <RadioButton
-                            android:id="@+id/interaccionBRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/interaccionB"
-                            tools:text="@string/interaccionB" />
-
-                        <RadioButton
-                            android:id="@+id/interaccionCRadioButton"
-                            style="@android:style/TextAppearance.DeviceDefault.Medium"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/interaccionC"
-                            tools:text="@string/interaccionC" />
-                    </RadioGroup>
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/settings"
-                        app:layout_constraintBottom_toTopOf="@+id/Level"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.074"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="@string/settings" />
-
-                    <Switch
-                        android:id="@+id/Level"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="200dp"
-                        android:layout_height="43dp"
-                        android:switchMinWidth="100dp"
-                        android:text="@string/levelOne"
-                        app:layout_constraintStart_toStartOf="@+id/textView15"
-                        app:layout_constraintTop_toBottomOf="@+id/textView15"
-                        tools:text="@string/levelOne" />
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="26dp"
-                        android:text="@string/levelTwo"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/Level"
-                        app:layout_constraintStart_toEndOf="@+id/Level"
-                        tools:text="@string/levelTwo" />
-
-                    <Switch
-                        android:id="@+id/Sex"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:switchMinWidth="100dp"
-                        android:text="@string/masculine"
-                        app:layout_constraintEnd_toEndOf="@+id/Level"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toStartOf="@+id/Level"
-                        app:layout_constraintTop_toBottomOf="@+id/Level"
-                        tools:text="@string/masculine" />
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        style="@android:style/TextAppearance.DeviceDefault.Medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/femenine"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/Sex"
-                        app:layout_constraintStart_toEndOf="@+id/Sex"
-                        tools:text="@string/femenine" />
-
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_amarillo">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_width="715dp"
+        android:layout_height="319dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="346dp"
+                android:layout_height="303dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="330dp"
+                        android:layout_height="142dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                style="@android:style/Widget.DeviceDefault.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/recognition_mode"
+                                android:textColor="@android:color/background_light"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.123"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.13" />
+
+                            <android.support.constraint.ConstraintLayout
+                                android:layout_width="285dp"
+                                android:layout_height="53dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                                android:id="@+id/radioGroup">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="RadioButton"
+                                    tools:layout_conversion_absoluteHeight="27dp"
+                                    tools:layout_editor_absoluteY="86dp"
+                                    tools:layout_editor_absoluteX="47dp"
+                                    tools:layout_conversion_absoluteWidth="109dp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="RadioButton"
+                                    tools:layout_conversion_absoluteHeight="26dp"
+                                    tools:layout_editor_absoluteY="113dp"
+                                    tools:layout_editor_absoluteX="47dp"
+                                    tools:layout_conversion_absoluteWidth="109dp" />
+                            </android.support.constraint.ConstraintLayout>
+                        </android.support.constraint.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="330dp"
+                        android:layout_height="137dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"></LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="345dp"
+                android:layout_height="303dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="329dp"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout8"
+                        android:layout_width="329dp"
+                        android:layout_height="144dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="715dp"
+        android:layout_height="68dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="34dp">
-
-            <Button
-                android:id="@+id/aceptarButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?android:attr/colorPressedHighlight"
-                android:onClick="onAccept"
-                android:text="@string/accept"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/accept" />
-        </android.support.constraint.ConstraintLayout>
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></LinearLayout>
 </android.support.constraint.ConstraintLayout>

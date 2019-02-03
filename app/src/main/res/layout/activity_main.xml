@@ -10,12 +10,15 @@
         android:id="@+id/playGameButton"
         android:layout_width="217dp"
         android:layout_height="73dp"
-        android:layout_marginTop="291dp"
+        android:layout_marginTop="288dp"
         android:layout_marginEnd="257dp"
         android:layout_marginRight="257dp"
         android:background="@drawable/ma_jugar_regular"
         android:onClick="redirectToGame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recognitionButton"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toEndOf="@+id/recognitionButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -54,52 +57,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ma_Logo_app" />
+        app:srcCompat="@drawable/ma_logo_app" />
 
     <ImageView
         android:id="@+id/infoButton"
         android:layout_width="71dp"
         android:layout_height="72dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="644dp"
-        android:layout_marginRight="644dp"
         android:onClick="redirectToInfo"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/unlpLogo"
+        app:layout_constraintEnd_toStartOf="@+id/gameLogo"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059"
         app:srcCompat="@drawable/ma_info_regular" />
 
     <ImageView
         android:id="@+id/settingsButton"
         android:layout_width="71dp"
         android:layout_height="72dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:onClick="redirectToConfig"
+        app:layout_constraintBottom_toTopOf="@+id/informaticaLogo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toEndOf="@+id/gameLogo"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"
         app:srcCompat="@drawable/ma_config_regular" />
 
     <ImageView
         android:id="@+id/informaticaLogo"
         android:layout_width="136dp"
         android:layout_height="105dp"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/recognitionButton"
+        app:layout_constraintTop_toBottomOf="@+id/gameLogo"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ma_logo_facultad_informatiac" />
 
     <ImageView
         android:id="@+id/unlpLogo"
         android:layout_width="151dp"
         android:layout_height="56dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="576dp"
-        android:layout_marginRight="576dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recognitionButton"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameLogo"
+        app:layout_constraintVertical_bias="0.889"
         app:srcCompat="@drawable/ic_logo_unlp" />
 
 </android.support.constraint.ConstraintLayout>
