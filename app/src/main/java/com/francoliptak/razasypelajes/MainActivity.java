@@ -13,15 +13,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void redirectToGame(View view){
+        findViewById(R.id.playGameButton).setBackgroundResource(R.drawable.ma_jugar_click);
+        Intent intent = new Intent(this, RazasYPelajes.class);
+        startActivity(intent);
+    }
+
+    public void redirectToRecognition(View view) {
+        findViewById(R.id.recognitionButton).setBackgroundResource(R.drawable.ma_reconocimiento_click);
+        // Intent intent = new Intent(this, RecoActivity.class);
+        // startActivity(intent);
+    }
+
     public void redirectToConfig(View view) {
+        findViewById(R.id.settingsButton).setBackgroundResource(R.drawable.ma_config_click);
         Intent intent = new Intent(this, ConfigActivity.class);
         startActivity(intent);
     }
 
-
-    public void redirectToRazasYPelajes(View view){
-        Intent intent = new Intent(this, RazasYPelajes.class);
-        startActivity(intent);
+    public void redirectToInfo(View view) {
+        findViewById(R.id.infoButton).setBackgroundResource(R.drawable.ma_info_click);
+        // Intent intent = new Intent(this, InfoActivity.class);
+        // startActivity(intent);
     }
 
 }

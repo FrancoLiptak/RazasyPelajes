@@ -14,6 +14,7 @@
         android:layout_marginEnd="257dp"
         android:layout_marginRight="257dp"
         android:background="@drawable/ma_jugar_regular"
+        android:onClick="redirectToGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,6 +23,7 @@
         android:layout_width="224dp"
         android:layout_height="71dp"
         android:background="@drawable/ma_reconocimiento_regular"
+        android:onClick="redirectToRecognition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -61,6 +63,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="644dp"
         android:layout_marginRight="644dp"
+        android:onClick="redirectToInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ma_info_regular" />
@@ -72,6 +75,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="redirectToConfig"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ma_config_regular" />
