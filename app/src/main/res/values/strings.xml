@@ -11,8 +11,8 @@
     <string name="jugar">Jugar</string>
 
     <string name="miniGame">Minijuego:</string>
-    <string name="razasYPelajesRadioButton">Razas y Pelajes</string>
-    <string name="razasYPelajesJuntasRadioButton">Razas y Pelajes juntas</string>
+    <string name="razasYPelajesIPRadioButton">Razas y Pelajes: Imagen-Palabra</string>
+    <string name="razasYPelajesPIRadioButton">Razas y Pelajes: Palabra-Imagen</string>
     <string name="cruzaRadioButton">Cruza</string>
 
     <string name="interaction_mode">Modo de Interacción:</string>
