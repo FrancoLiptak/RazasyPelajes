@@ -20,9 +20,10 @@
     <string name="interaccionB">Interacción B</string>
     <string name="interaccionC">Interacción C</string>
 
-    <string name="settings">Ajustes:</string>
-    <string name="levelOne">Nivel 1</string>
-    <string name="levelTwo">Nivel 2</string>
+    <string name="difficulty_level">Nivel de dificultad:</string>
+    <string name="difficulty_level_easy">Fácil</string>
+    <string name="difficulty_level_hard">Difícil</string>
+    <string name="audio">Audio:</string>
     <string name="masculine">Masculina</string>
     <string name="femenine">Femenina</string>
 
