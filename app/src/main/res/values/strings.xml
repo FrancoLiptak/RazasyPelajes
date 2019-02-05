@@ -30,7 +30,7 @@
     <string name="config_preferences">config_preferences</string>
     <string name="config_preferences_level">config_preferences_level</string>
     <string name="config_preferences_sex">config_preferences_sex</string>
-    <string name="config_preferences_minijuego">config_preferences_minijuego</string>
+    <string name="config_preferences_mini_juego">config_preferences_mini_juego</string>
     <string name="config_preferences_recognition_mode">config_preferences_recognition_mode</string>
     <string name="config_preferences_game_mode">config_preferences_game_mode</string>
 
