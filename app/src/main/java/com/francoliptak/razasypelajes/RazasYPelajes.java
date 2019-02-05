@@ -2,20 +2,16 @@ package com.francoliptak.razasypelajes;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.utils.GameInitializer;
-import com.francoliptak.razasypelajes.utils.Horse;
 import com.francoliptak.razasypelajes.utils.SoundManager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class RazasYPelajes extends AppCompatActivity {
     private List<ImageView> horsesViews;
@@ -26,7 +22,7 @@ public class RazasYPelajes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.razas_y_pelajes);
+        setContentView(R.layout.juego_interaccion_ip);
         associateElementsToVariables();
         GameInitializer.initialize(this);
         correctAnswer = GameInitializer.getCorrectAnswer();
