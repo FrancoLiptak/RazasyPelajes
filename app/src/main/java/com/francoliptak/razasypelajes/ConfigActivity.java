@@ -15,8 +15,7 @@ public class ConfigActivity extends AppCompatActivity {
     private Switch levelSwitch;
     private Switch sexSwitch;
     private RadioGroup minijuegoRadio;
-    private RadioGroup viewModeRadio;
-    private RadioGroup modoInteraccionRadio;
+    private RadioGroup recognitionMode;
     private SharedPreferences preferences;
 
     @Override
@@ -35,18 +34,16 @@ public class ConfigActivity extends AppCompatActivity {
     private void setValues(){
         levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), false));
         sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), true));
-        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_minijuego), R.id.razasYPelajesRadioButton));
-        viewModeRadio.check(preferences.getInt(getString(R.string.config_preferences_view_mode), R.id.listaRadioButton));
-        modoInteraccionRadio.check(preferences.getInt(getString(R.string.config_preferences_interaction_mode), R.id.interaccionARadioButton));
+        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_minijuego), R.id.imgWord));
+        recognitionMode.check(preferences.getInt(getString(R.string.config_preferences_recognition_mode), R.id.listRadioButton));
         GameModeCheckbox.check(this);
     }
 
     private void associateViewsToVariables(){
-        modoInteraccionRadio = findViewById(R.id.ModoInteraccion);
-        levelSwitch = findViewById(R.id.Level);
-        sexSwitch = findViewById(R.id.Sex);
-        minijuegoRadio = findViewById(R.id.Minijuego);
-        viewModeRadio = findViewById(R.id.ViewMode);
+        levelSwitch = findViewById(R.id.label_switch);
+        sexSwitch = findViewById(R.id.sex_witch);
+        minijuegoRadio = findViewById(R.id.minijuego_radio);
+        recognitionMode = findViewById(R.id.recognition_mode);
         GameModeCheckbox.associate(this);
     }
 
@@ -55,8 +52,7 @@ public class ConfigActivity extends AppCompatActivity {
         editor.putBoolean(getString(R.string.config_preferences_sex), sexSwitch.isChecked());
         editor.putBoolean(getString(R.string.config_preferences_level), levelSwitch.isChecked());
         editor.putInt(getString(R.string.config_preferences_minijuego), minijuegoRadio.getCheckedRadioButtonId());
-        editor.putInt(getString(R.string.config_preferences_view_mode), viewModeRadio.getCheckedRadioButtonId());
-        editor.putInt(getString(R.string.config_preferences_interaction_mode), modoInteraccionRadio.getCheckedRadioButtonId());
+        editor.putInt(getString(R.string.config_preferences_recognition_mode), recognitionMode.getCheckedRadioButtonId());
         editor.putStringSet(getString(R.string.config_preferences_game_mode), GameModeCheckbox.getSelectedGameModes());
 
         editor.apply();

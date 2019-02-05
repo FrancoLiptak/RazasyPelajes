@@ -67,6 +67,7 @@
                                 app:layout_constraintVertical_bias="0.13" />
 
                             <RadioGroup
+                                android:id="@+id/recognition_mode"
                                 android:layout_width="277dp"
                                 android:layout_height="35dp"
                                 android:orientation="horizontal"
@@ -77,7 +78,7 @@
                                 app:layout_constraintTop_toBottomOf="@+id/textView2">
 
                                 <RadioButton
-                                    android:id="@+id/radioButton8"
+                                    android:id="@+id/listRadioButton"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -85,7 +86,7 @@
                                     android:textColor="@android:color/background_light" />
 
                                 <RadioButton
-                                    android:id="@+id/radioButton9"
+                                    android:id="@+id/gridRadioButton"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -151,12 +152,12 @@
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintHorizontal_bias="0.0"
-                                        app:layout_constraintStart_toEndOf="@+id/switch2"
+                                        app:layout_constraintStart_toEndOf="@+id/label_switch"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintVertical_bias="0.526" />
 
                                     <Switch
-                                        android:id="@+id/switch2"
+                                        android:id="@+id/label_switch"
                                         android:layout_width="149dp"
                                         android:layout_height="30dp"
                                         android:switchMinWidth="100dp"
@@ -237,34 +238,34 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
 
-                                    <TextView
-                                        android:id="@+id/textView8"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/femenine"
-                                        android:textColor="@android:color/background_light"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintHorizontal_bias="1.0"
-                                        app:layout_constraintStart_toEndOf="@+id/switch2"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintVertical_bias="0.526" />
-
                                     <Switch
-                                        android:id="@+id/switch2"
-                                        android:layout_width="173dp"
-                                        android:layout_height="34dp"
+                                        android:id="@+id/sex_witch"
+                                        android:layout_width="170dp"
+                                        android:layout_height="30dp"
                                         android:switchMinWidth="100dp"
                                         android:text="@string/masculine"
                                         android:textColor="@android:color/background_light"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintHorizontal_bias="0.5"
                                         app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:layout_constraintVertical_bias="1.0" />
+                                        app:layout_constraintTop_toTopOf="parent" />
+
                                 </android.support.constraint.ConstraintLayout>
                             </HorizontalScrollView>
+
+                            <TextView
+                                android:id="@+id/femenine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/femenine"
+                                android:textColor="@android:color/background_light"
+                                app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2"
+                                app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView2"
+                                app:layout_constraintHorizontal_bias="0.233"
+                                app:layout_constraintStart_toEndOf="@+id/horizontalScrollView2"
+                                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+                                app:layout_constraintVertical_bias="0.543" />
 
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
@@ -300,6 +301,7 @@
                                 app:layout_constraintVertical_bias="0.13" />
 
                             <RadioGroup
+                                android:id="@+id/minijuego_radio"
                                 android:layout_width="266dp"
                                 android:layout_height="82dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -309,7 +311,7 @@
                                 app:layout_constraintTop_toBottomOf="@+id/textView4">
 
                                 <RadioButton
-                                    android:id="@+id/radioButton7"
+                                    android:id="@+id/imgWord"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -317,7 +319,7 @@
                                     android:textColor="@android:color/background_light" />
 
                                 <RadioButton
-                                    android:id="@+id/radioButton6"
+                                    android:id="@+id/wordImg"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
