@@ -22,7 +22,7 @@ public class RazasYPelajes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.juego_interaccion_ip);
+        setContentView(R.layout.activity_game_ip);
         associateElementsToVariables();
         GameInitializer.initialize(this);
         correctAnswer = GameInitializer.getCorrectAnswer();
