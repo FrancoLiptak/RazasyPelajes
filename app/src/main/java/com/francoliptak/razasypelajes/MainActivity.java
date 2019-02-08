@@ -15,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void redirectToGame(View view){
         findViewById(R.id.playGameButton).setBackgroundResource(R.drawable.ma_jugar_click);
-        Intent intent = new Intent(this, RazasYPelajes.class);
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 
     public void redirectToRecognition(View view) {
         findViewById(R.id.recognitionButton).setBackgroundResource(R.drawable.ma_reconocimiento_click);
-        // Intent intent = new Intent(this, RecoActivity.class);
-        // startActivity(intent);
+        Intent intent = new Intent(this, RecognitionActivity.class);
+        startActivity(intent);
     }
 
     public void redirectToConfig(View view) {

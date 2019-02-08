@@ -13,11 +13,13 @@ import com.francoliptak.razasypelajes.utils.SoundManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RazasYPelajes extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
     private List<ImageView> horsesViews;
     private TextView raceName; // Nombre de la raza del caballo a adivinar
     private MediaPlayer horseSound; // Nombre del archivo de sonido del caballo a adivinar
     private Integer correctAnswer;
+    private int attempts;
+    private int hits;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -36,7 +38,7 @@ public class RazasYPelajes extends AppCompatActivity {
 
     private void associateHorsesViewsToVariables(){
         horsesViews = new ArrayList<>();
-        horsesViews.add((ImageView) findViewById(R.id.imageView1));
+        //horsesViews.add((ImageView) findViewById(R.id.imageView1));
         horsesViews.add((ImageView) findViewById(R.id.imageView2));
         horsesViews.add((ImageView) findViewById(R.id.imageView3));
         horsesViews.add((ImageView) findViewById(R.id.imageView4));

@@ -1,0 +1,58 @@
+[
+  {
+    "race": "race1",
+    "fur": "fur1",
+    "description": "description1",
+    "image_name": "horse1",
+    "sound_masculine_name": "horse_sound_1",
+    "sound_feminine_name": "horse_sound_1"
+  },
+  {
+    "race": "race2",
+    "fur": "fur2",
+    "description": "description2",
+    "image_name": "horse2",
+    "sound_masculine_name": "horse_sound_2",
+    "sound_feminine_name": "horse_sound_2"
+  },
+  {
+    "race": "race3",
+    "fur": "fur3",
+    "description": "description3",
+    "image_name": "horse3",
+    "sound_masculine_name": "horse_sound_3",
+    "sound_feminine_name": "horse_sound_3"
+  },
+  {
+    "race": "race4",
+    "fur": "fur4",
+    "description": "description4",
+    "image_name": "horse4",
+    "sound_masculine_name": "horse_sound_4",
+    "sound_feminine_name": "horse_sound_4"
+  },
+  {
+    "race": "race5",
+    "fur": "fur5",
+    "description": "description5",
+    "image_name": "horse1",
+    "sound_masculine_name": "horse_sound_1",
+    "sound_feminine_name": "horse_sound_1"
+  },
+  {
+    "race": "race6",
+    "fur": "fur6",
+    "description": "description6",
+    "image_name": "horse1",
+    "sound_masculine_name": "horse_sound_1",
+    "sound_feminine_name": "horse_sound_1"
+  },
+  {
+    "race": "race7",
+    "fur": "fur7",
+    "description": "description7",
+    "image_name": "horse1",
+    "sound_masculine_name": "horse_sound_1",
+    "sound_feminine_name": "horse_sound_1"
+  }
+]

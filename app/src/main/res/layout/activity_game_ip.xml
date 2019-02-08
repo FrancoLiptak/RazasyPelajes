@@ -148,7 +148,7 @@
                         app:srcCompat="@drawable/audio_regular" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/raceText"
                         android:layout_width="258dp"
                         android:layout_height="105dp"
                         android:text="@string/horse"

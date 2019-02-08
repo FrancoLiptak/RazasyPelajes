@@ -23,7 +23,10 @@
             android:name=".ConfigActivity" />
         <activity
             android:screenOrientation="landscape"
-            android:name=".RazasYPelajes" />
+            android:name=".GameActivity" />
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".RecognitionActivity" />
     </application>
 
 </manifest>
