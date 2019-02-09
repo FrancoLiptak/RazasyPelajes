@@ -14,46 +14,21 @@ public class ConfigActivity extends AppCompatActivity {
     private Switch sexSwitch;
     private RadioGroup minijuegoRadio;
     private RadioGroup recognitionMode;
-    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
-        preferences = getSharedPreferences(getString(R.string.config_preferences), Context.MODE_PRIVATE);
         associateViewsToVariables();
         setValues();
     }
 
-    public SharedPreferences getPreferences(){
-        return preferences;
-    }
-
     private void setValues(){
-        if(!hasCustomConfiguration()){
-            setDefaultConfiguration();
-        }
-        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), levelSwitch.isChecked()));
-        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), sexSwitch.isChecked()));
-        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_mini_juego), minijuegoRadio.getCheckedRadioButtonId()));
-        recognitionMode.check(preferences.getInt(getString(R.string.config_preferences_recognition_mode), recognitionMode.getCheckedRadioButtonId()));
-    }
-
-    private Boolean hasCustomConfiguration(){
-        return sexSwitch.isChecked() &&
-                levelSwitch.isChecked() &&
-                (minijuegoRadio.getCheckedRadioButtonId() != -1) &&
-                (recognitionMode.getCheckedRadioButtonId() != -1);
-    }
-
-    private void setDefaultConfiguration(){
-        SharedPreferences.Editor editor = this.getPreferences().edit();
-        editor.putBoolean(getString(R.string.config_preferences_sex), true);
-        editor.putBoolean(getString(R.string.config_preferences_level), false);
-        editor.putInt(getString(R.string.config_preferences_mini_juego), R.id.listRadioButton);
-        editor.putInt(getString(R.string.config_preferences_recognition_mode), R.id.imgWord);
-
-        editor.apply();
+        SharedPreferences preferences = getSharedPreferences(getString(R.string.config_preferences), Context.MODE_PRIVATE);
+        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), false));
+        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), true));
+        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_mini_juego), R.id.imgWord));
+        recognitionMode.check(preferences.getInt(getString(R.string.config_preferences_recognition_mode), R.id.listRadioButton));
     }
 
     private void associateViewsToVariables(){
@@ -64,7 +39,8 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     public void onAccept(View view) {
-        SharedPreferences.Editor editor = this.getPreferences().edit();
+        SharedPreferences preferences = getSharedPreferences(getString(R.string.config_preferences), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(getString(R.string.config_preferences_sex), sexSwitch.isChecked());
         editor.putBoolean(getString(R.string.config_preferences_level), levelSwitch.isChecked());
         editor.putInt(getString(R.string.config_preferences_mini_juego), minijuegoRadio.getCheckedRadioButtonId());
