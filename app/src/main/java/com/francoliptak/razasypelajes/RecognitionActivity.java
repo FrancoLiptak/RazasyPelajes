@@ -1,32 +1,48 @@
 package com.francoliptak.razasypelajes;
 
-import android.media.MediaPlayer;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.francoliptak.razasypelajes.utils.Horse;
 import com.francoliptak.razasypelajes.utils.HorsesInformationProvider;
+import com.francoliptak.razasypelajes.utils.RecognitionGridHandler;
+import com.francoliptak.razasypelajes.utils.RecognitionListHandler;
 
 import java.util.List;
 
 public class RecognitionActivity extends AppCompatActivity {
-    private MediaPlayer sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recognition_grid);
         List<Horse> horses = HorsesInformationProvider.getHorses(this);
-        ImageView imageView = (ImageView) findViewById(R.id.imageView19);
-        Horse horse = horses.get(3);
-        int id = getResources().getIdentifier(horse.getImageName(), "drawable", getPackageName());
-        imageView.setImageResource(id);
-        sound = horse.getSoundMasculine();
+        if (listModeSelected()) {
+            RecognitionListHandler.show(this, horses);
+        }else{
+            RecognitionGridHandler.show(this, horses);
+        }
     }
 
-    public void playSound(View view){
-        sound.start();
+    private SharedPreferences getConfigSharedPrefs(){
+        return getSharedPreferences(getString(R.string.config_preferences), Context.MODE_PRIVATE);
+    }
+
+    private Boolean listModeSelected() {
+        return  getConfigSharedPrefs().getInt(getString(R.string.config_preferences_recognition_mode), R.id.listRadioButton)
+                == R.id.listRadioButton;
+    }
+
+    public void onBack(View view){
+        if(listModeSelected()){
+            findViewById(R.id.goHomeFromRL).setBackgroundResource(R.drawable.home_click);
+        }else{
+            findViewById(R.id.goHomeFromRG).setBackgroundResource(R.drawable.home_click);
+        }
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

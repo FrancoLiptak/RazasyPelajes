@@ -6,19 +6,12 @@
     <string name="gridRadioButton">Grilla</string>
     <string name="razasCheckbox">Razas</string>
     <string name="pelajesCheckbox">Pelajes</string>
-    <string name="cruzasCheckbox">Cruzas</string>
     <string name="reconocimiento">Reconocimiento</string>
     <string name="jugar">Jugar</string>
 
     <string name="miniGame">Minijuego:</string>
     <string name="razasYPelajesIPRadioButton">Razas y Pelajes: Imagen-Palabra</string>
     <string name="razasYPelajesPIRadioButton">Razas y Pelajes: Palabra-Imagen</string>
-    <string name="cruzaRadioButton">Cruza</string>
-
-    <string name="interaction_mode">Modo de Interacción:</string>
-    <string name="interaccionA">Interacción A</string>
-    <string name="interaccionB">Interacción B</string>
-    <string name="interaccionC">Interacción C</string>
 
     <string name="difficulty_level">Nivel de dificultad:</string>
     <string name="difficulty_level_easy">Fácil</string>

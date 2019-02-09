@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class AcquirerOfJSONFiles {
+public class ReaderOfJSONFiles {
 
     public static List<Horse> getHorses(AppCompatActivity anActivity, ObjectMapper objectMapper){
         try{

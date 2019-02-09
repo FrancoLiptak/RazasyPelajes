@@ -9,7 +9,7 @@ import java.util.List;
 public class HorsesInformationProvider {
 
     public static List<Horse> getHorses(AppCompatActivity anActivity) {
-        List<Horse> horses = AcquirerOfJSONFiles.getHorses(anActivity, new ObjectMapper());
+        List<Horse> horses = ReaderOfJSONFiles.getHorses(anActivity, new ObjectMapper());
         return getHorsesWithSounds(horses, anActivity);
     }
 

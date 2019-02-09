@@ -21,30 +21,31 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/goHomeFromRL"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout20"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/home_regular" />
 
             <LinearLayout
+                android:id="@+id/linearLayout20"
                 android:layout_width="522dp"
                 android:layout_height="437dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <ListView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:onClick="onBack" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>

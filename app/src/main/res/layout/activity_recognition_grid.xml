@@ -21,40 +21,25 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/goHomeFromRG"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
-                android:onClick="playSound"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout19"
+                app:layout_constraintHorizontal_bias="0.022"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.006"
-                app:srcCompat="@drawable/home_regular" />
-
-            <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="playSound"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout19"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout19"
-                app:layout_constraintHorizontal_bias="0.517"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout19"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ma_reconocimiento_regular" />
+                app:srcCompat="@drawable/home_regular" />
 
             <LinearLayout
                 android:id="@+id/linearLayout19"
-                android:layout_width="513dp"
+                android:layout_width="594dp"
                 android:layout_height="348dp"
+                android:onClick="onBack"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/imageView18"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.461">
 
@@ -62,6 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
+
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
