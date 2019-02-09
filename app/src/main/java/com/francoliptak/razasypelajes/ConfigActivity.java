@@ -30,10 +30,30 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     private void setValues(){
-        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), false));
-        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), true));
-        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_mini_juego), R.id.imgWord));
-        recognitionMode.check(preferences.getInt(getString(R.string.config_preferences_recognition_mode), R.id.listRadioButton));
+        if(!hasCustomConfiguration()){
+            setDefaultConfiguration();
+        }
+        levelSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_level), levelSwitch.isChecked()));
+        sexSwitch.setChecked(preferences.getBoolean(getString(R.string.config_preferences_sex), sexSwitch.isChecked()));
+        minijuegoRadio.check(preferences.getInt(getString(R.string.config_preferences_mini_juego), minijuegoRadio.getCheckedRadioButtonId()));
+        recognitionMode.check(preferences.getInt(getString(R.string.config_preferences_recognition_mode), recognitionMode.getCheckedRadioButtonId()));
+    }
+
+    private Boolean hasCustomConfiguration(){
+        return sexSwitch.isChecked() &&
+                levelSwitch.isChecked() &&
+                (minijuegoRadio.getCheckedRadioButtonId() != -1) &&
+                (recognitionMode.getCheckedRadioButtonId() != -1);
+    }
+
+    private void setDefaultConfiguration(){
+        SharedPreferences.Editor editor = this.getPreferences().edit();
+        editor.putBoolean(getString(R.string.config_preferences_sex), true);
+        editor.putBoolean(getString(R.string.config_preferences_level), false);
+        editor.putInt(getString(R.string.config_preferences_mini_juego), R.id.listRadioButton);
+        editor.putInt(getString(R.string.config_preferences_recognition_mode), R.id.imgWord);
+
+        editor.apply();
     }
 
     private void associateViewsToVariables(){
