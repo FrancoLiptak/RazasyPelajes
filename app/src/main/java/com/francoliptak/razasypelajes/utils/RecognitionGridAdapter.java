@@ -52,7 +52,7 @@ public class RecognitionGridAdapter extends ArrayAdapter<Horse> {
         dataHolder.horseTextView.setText(horse.getRace());
         //dataHolder.horseTxtTextView.setText(horse.getDescription());
         dataHolder.horseImageView.setImageResource(horse.getImageResourceId());
-        // dataHolder.horseImageView.setTag(horse.getImageResourceId()); //Creo que es cuando la img se agranda
+        dataHolder.horseImageView.setTag(horse.getImageResourceId()); //Creo que es cuando la img se agranda
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
             dataHolder.soundImgView.setTag(horse.getSoundMasculine());
         }else{
