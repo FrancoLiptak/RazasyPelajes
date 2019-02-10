@@ -24,18 +24,19 @@
                 android:id="@+id/goHomeFromRL"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:onClick="onBack"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout20"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_bias="0.055"
                 app:srcCompat="@drawable/home_regular" />
 
             <LinearLayout
                 android:id="@+id/linearLayout20"
                 android:layout_width="522dp"
-                android:layout_height="437dp"
+                android:layout_height="325dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +46,7 @@
                 <ListView
                     android:id="@+id/listView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="305dp" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
