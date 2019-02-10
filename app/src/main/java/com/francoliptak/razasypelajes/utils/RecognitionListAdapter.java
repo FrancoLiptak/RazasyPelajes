@@ -15,7 +15,6 @@ public class RecognitionListAdapter extends RecognitionAdapter {
         super(anActivity, layoutId, horses);
     }
 
-
     protected RecognitionListItemData getItemsAndSetTagToConvertView(View convertView) {
         RecognitionListItemData recognitionListItemData = new RecognitionListItemData(
                 (ImageView) convertView.findViewById(R.id.listItemPhoto),
@@ -27,7 +26,7 @@ public class RecognitionListAdapter extends RecognitionAdapter {
         return recognitionListItemData;
     }
 
-    protected void setDataToViews(AppCompatActivity anActivity, List<Horse> horses, int position, RecognitionListItemData recognitionListItemData){
+    protected void setDataToViews(AppCompatActivity anActivity, List<Horse> horses, int position, RecognitionItemData recognitionListItemData){
         Horse horse = horses.get(position);
         recognitionListItemData.getHorseRaceFurNameTextView().setText(horse.getRace() + " " + horse.getFur());
         recognitionListItemData.getHorseDescriptionTextView().setText(horse.getDescription());

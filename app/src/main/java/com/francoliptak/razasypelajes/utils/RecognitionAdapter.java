@@ -23,20 +23,20 @@ public abstract class RecognitionAdapter extends ArrayAdapter<Horse> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        RecognitionListItemData recognitionListItemData;
+        RecognitionItemData recognitionItemData;
         if (convertView == null){
             LayoutInflater layoutInflater = anActivity.getLayoutInflater();
             convertView = layoutInflater.inflate(layoutId, parent, false);
-            recognitionListItemData = this.getItemsAndSetTagToConvertView(convertView);
+            recognitionItemData = this.getItemsAndSetTagToConvertView(convertView);
         }else{
-            recognitionListItemData = (RecognitionListItemData) convertView.getTag();
+            recognitionItemData = (RecognitionItemData) convertView.getTag();
         }
-        this.setDataToViews(anActivity, horses, position, recognitionListItemData);
+        this.setDataToViews(anActivity, horses, position, recognitionItemData);
         return convertView;
     }
 
-    protected abstract RecognitionListItemData getItemsAndSetTagToConvertView(View convertView);
+    protected abstract RecognitionItemData getItemsAndSetTagToConvertView(View convertView);
 
-    protected abstract void setDataToViews(AppCompatActivity anActivity, List<Horse> horses, int position, RecognitionListItemData recognitionListItemData);
+    protected abstract void setDataToViews(AppCompatActivity anActivity, List<Horse> horses, int position, RecognitionItemData recognitionListItemData);
 
 }
