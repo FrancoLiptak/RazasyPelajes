@@ -25,7 +25,7 @@
                 android:id="@+id/gridItemPhoto"
                 android:layout_width="194dp"
                 android:layout_height="161dp"
-                android:onClick="horseIvOnClickListener"
+                android:onClick="onClickInHorseImg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

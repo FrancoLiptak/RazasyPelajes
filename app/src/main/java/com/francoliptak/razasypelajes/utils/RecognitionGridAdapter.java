@@ -26,7 +26,7 @@ public class RecognitionGridAdapter extends ArrayAdapter<Horse> {
         this.horses = horses;
     }
 
-    static class DataHolder{
+    private static class DataHolder{
         ImageView horseImageView, soundImgView;
         TextView horseTextView, horseTxtTextView;
     }
@@ -34,7 +34,7 @@ public class RecognitionGridAdapter extends ArrayAdapter<Horse> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        RecognitionGridAdapter.DataHolder dataHolder;
+        DataHolder dataHolder;
 
         if (convertView == null){
             LayoutInflater layoutInflater = anActivity.getLayoutInflater();
@@ -52,7 +52,7 @@ public class RecognitionGridAdapter extends ArrayAdapter<Horse> {
         dataHolder.horseTextView.setText(horse.getRace());
         //dataHolder.horseTxtTextView.setText(horse.getDescription());
         dataHolder.horseImageView.setImageResource(horse.getImageResourceId());
-        dataHolder.horseImageView.setTag(horse.getImageResourceId()); //Creo que es cuando la img se agranda
+        dataHolder.horseImageView.setTag(horse.getImageResourceId());
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
             dataHolder.soundImgView.setTag(horse.getSoundMasculine());
         }else{
