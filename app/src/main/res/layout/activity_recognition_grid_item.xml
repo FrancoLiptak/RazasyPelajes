@@ -7,23 +7,24 @@
     android:background="@drawable/bg_amarillo">
 
     <LinearLayout
-        android:layout_width="245dp"
-        android:layout_height="match_parent"
+        android:layout_width="175dp"
+        android:layout_height="300dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="119dp"
-                android:layout_height="78dp"
+                android:id="@+id/gridItemPhoto"
+                android:layout_width="194dp"
+                android:layout_height="161dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +33,7 @@
                 app:srcCompat="@android:color/background_light" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/gridItemRaceName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -42,22 +43,21 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                app:layout_constraintTop_toBottomOf="@+id/gridItemPhoto"
                 app:layout_constraintVertical_bias="0.185" />
 
             <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="100dp"
-                android:layout_height="114dp"
+                android:id="@+id/gridItemPlaySound"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:onClick="playSounds"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/gridItemRaceName"
                 app:srcCompat="@drawable/audio_regular" />
         </android.support.constraint.ConstraintLayout>
-
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
