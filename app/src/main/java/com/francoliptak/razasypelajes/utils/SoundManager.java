@@ -1,6 +1,9 @@
 package com.francoliptak.razasypelajes.utils;
 
 import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
+
+import java.util.List;
 
 public class SoundManager {
     private static MediaPlayer successSound;
@@ -21,5 +24,11 @@ public class SoundManager {
 
     public static void playError(){
         errorSound.start();
+    }
+
+    public static void playSounds(AppCompatActivity anActivity, List<MediaPlayer> soundTags){
+        for(MediaPlayer soundTag : soundTags){
+            soundTag.start();
+        }
     }
 }

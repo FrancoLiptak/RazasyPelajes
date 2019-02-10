@@ -1,7 +1,6 @@
 package com.francoliptak.razasypelajes.utils;
 
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.francoliptak.razasypelajes.R;

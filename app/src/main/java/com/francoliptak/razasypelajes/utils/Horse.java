@@ -17,9 +17,15 @@ public class Horse {
     @JsonProperty("sound_feminine_name")
     private String soundFeminineName;
     @JsonIgnore
+    private int imageResourceId;
+    @JsonIgnore
     private MediaPlayer soundMasculine;
     @JsonIgnore
+    private Integer masculineSoundID;
+    @JsonIgnore
     private MediaPlayer soundFeminine;
+    @JsonIgnore
+    private Integer feminineSoundID;
 
     public Horse() {
     }
@@ -95,5 +101,29 @@ public class Horse {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
+
+    public void setImageResourceId(int imageResourceId) {
+        this.imageResourceId = imageResourceId;
+    }
+
+    public Integer getMasculineSoundID() {
+        return masculineSoundID;
+    }
+
+    public void setMasculineSoundID(Integer masculineSoundID) {
+        this.masculineSoundID = masculineSoundID;
+    }
+
+    public Integer getFeminineSoundID() {
+        return feminineSoundID;
+    }
+
+    public void setFeminineSoundID(Integer feminineSoundID) {
+        this.feminineSoundID = feminineSoundID;
     }
 }
