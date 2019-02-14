@@ -18,21 +18,13 @@ public class GameInitializer {
 
     public static void initialize(GameActivity gameActivity){
         destroy();
-        createHorses(gameActivity);
+        horses = HorsesInformationProvider.getHorses(gameActivity);
         printHorses(gameActivity);
-    }
-
-    public static void createHorses(GameActivity gameActivity){
-        horses = new ArrayList<>();
-        horses.add(new Horse("Raza1", "Pelaje1", "uno", gameActivity.getString(R.string.photoHorse1), "horse_sound_1", "horse_sound_1"));
-        horses.add(new Horse("Raza2", "Pelaje2", "dos", gameActivity.getString(R.string.photoHorse2), "horse_sound_2", "horse_sound_2"));
-        horses.add(new Horse("Raza3", "Pelaje3", "tres", gameActivity.getString(R.string.photoHorse3), "horse_sound_3", "horse_sound_2"));
-        horses.add(new Horse("Raza4", "Pelaje4", "cuatro", gameActivity.getString(R.string.photoHorse4), "horse_sound_4", "horse_sound_2"));
     }
 
     public static void printHorses(GameActivity gameActivity){
         Random r = new Random();
-        while (horses.size() > 0){
+        while (horses.size() > 3){
             Horse randomHorse = horses.get(r.nextInt(horses.size()));
             horses.remove(randomHorse);
             List<ImageView> views = gameActivity.getHorsesViews();
@@ -41,7 +33,7 @@ public class GameInitializer {
             if(correctAnswer == null){
                 correctAnswerView = imageView.getId();
                 correctAnswer = randomHorse;
-                // correctHorseSound = randomHorse.getSoundMasculineName();
+                correctHorseSound = randomHorse.getSoundMasculine();
             }
             int id = gameActivity.getResources().getIdentifier(randomHorse.getImageName(), "drawable", gameActivity.getPackageName());
             imageView.setImageResource(id);

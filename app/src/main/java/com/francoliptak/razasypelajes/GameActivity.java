@@ -25,6 +25,12 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_ip);
+        initializeRound();
+        attempts = 0;
+        hits = 0;
+    }
+
+    private void initializeRound(){
         associateElementsToVariables();
         GameInitializer.initialize(this);
         correctAnswer = GameInitializer.getCorrectAnswer();
@@ -38,10 +44,10 @@ public class GameActivity extends AppCompatActivity {
 
     private void associateHorsesViewsToVariables(){
         horsesViews = new ArrayList<>();
-        //horsesViews.add((ImageView) findViewById(R.id.imageView1));
-        horsesViews.add((ImageView) findViewById(R.id.imageView2));
-        horsesViews.add((ImageView) findViewById(R.id.imageView3));
-        horsesViews.add((ImageView) findViewById(R.id.imageView4));
+        horsesViews.add((ImageView) findViewById(R.id.gameIPImg1));
+        horsesViews.add((ImageView) findViewById(R.id.gameIPImg2));
+        horsesViews.add((ImageView) findViewById(R.id.gameIPImg3));
+        horsesViews.add((ImageView) findViewById(R.id.gameIPImg4));
     }
 
     private void associateSounds(){
@@ -62,11 +68,22 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void evaluateOptionChosen(View view){
+        attempts++;
         if(view.getId() == correctAnswer){
             SoundManager.playSucces();
-            finish();
+            hits++;
         }else{
             SoundManager.playError();
+        }
+
+        if(attempts == 5){
+            if(hits >= 3){
+                System.out.println("Ganó");
+            }else {
+                this.destroy();
+            }
+        }else{
+            this.initializeRound();
         }
     }
 
@@ -74,11 +91,11 @@ public class GameActivity extends AppCompatActivity {
         this.horseSound = horseSound;
     }
 
-    public void goBack(View view){
-        goBack();
+    public void onBack(View view){
+        destroy();
     }
 
-    private void goBack(){
+    private void destroy(){
         correctAnswer = null;
         horseSound = null;
         GameInitializer.destroy();
@@ -87,6 +104,6 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        goBack();
+        destroy();
     }
 }
