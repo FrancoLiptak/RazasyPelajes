@@ -3,6 +3,7 @@ package com.francoliptak.razasypelajes.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 
 import com.francoliptak.razasypelajes.R;
 
@@ -29,4 +30,19 @@ public class ConfigPreferencesHandler {
     public static Boolean selectedAudioIsMasculine(AppCompatActivity anActivity){
         return !getSharedPreferences(anActivity).getBoolean(anActivity.getString(R.string.config_preferences_sex), false);
     }
+
+    public static Boolean selectedGameModeIsWI(AppCompatActivity anActivity){
+        RadioGroup minijuegoRadio = anActivity.findViewById(R.id.mini_juego_radio);
+        return getSharedPreferences(anActivity).getInt(anActivity.getString(R.string.config_preferences_mini_juego), R.id.wordImg)
+                ==
+                minijuegoRadio.getCheckedRadioButtonId();
+    }
+
+    public static Boolean selectedGameModeIsIW(AppCompatActivity anActivity){
+        RadioGroup minijuegoRadio = anActivity.findViewById(R.id.mini_juego_radio);
+        return getSharedPreferences(anActivity).getInt(anActivity.getString(R.string.config_preferences_mini_juego), R.id.imgWord)
+                ==
+                minijuegoRadio.getCheckedRadioButtonId();
+    }
+
 }

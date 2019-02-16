@@ -7,11 +7,21 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.francoliptak.razasypelajes.utils.ConfigPreferencesHandler;
 import com.francoliptak.razasypelajes.utils.GameInitializer;
+import com.francoliptak.razasypelajes.utils.GameController;
+import com.francoliptak.razasypelajes.utils.Horse;
+import com.francoliptak.razasypelajes.utils.HorsesInformationProvider;
+import com.francoliptak.razasypelajes.utils.Level;
+import com.francoliptak.razasypelajes.utils.LevelsCreator;
 import com.francoliptak.razasypelajes.utils.SoundManager;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+
+import static com.francoliptak.razasypelajes.utils.GameInterfaces.IMG_WORD;
+import static com.francoliptak.razasypelajes.utils.Games.MINIGAME_ONE;
 
 public class GameActivity extends AppCompatActivity {
     private List<ImageView> horsesViews;
@@ -24,7 +34,19 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_ip);
+        List<Horse> horses = HorsesInformationProvider.getHorses(this);
+
+        /* SACAR A FUNCION */
+        if(ConfigPreferencesHandler.selectedGameModeIsIW(this)){
+            HashSet<Level> levels = LevelsCreator.getLevels(MINIGAME_ONE, IMG_WORD, horses);
+            GameController.playGame(this, levels);
+        }else{
+            // WIGameController.playGame(this);
+        }
+        // setContentView(R.layout.activity_game_ip); VA EN LOS NIVELES
+
+
+
         initializeRound();
         attempts = 0;
         hits = 0;
@@ -91,11 +113,11 @@ public class GameActivity extends AppCompatActivity {
         this.horseSound = horseSound;
     }
 
-    public void onBack(View view){
+    public void goBack(View view){
         destroy();
     }
 
-    private void destroy(){
+    public void destroy(){
         correctAnswer = null;
         horseSound = null;
         GameInitializer.destroy();
