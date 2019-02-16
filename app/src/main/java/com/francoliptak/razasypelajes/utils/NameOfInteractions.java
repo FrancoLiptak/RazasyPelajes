@@ -1,6 +1,6 @@
 package com.francoliptak.razasypelajes.utils;
 
-public enum GameInterfaces {
+public enum NameOfInteractions {
     IMG_WORD,
     WORD_IMG
 }

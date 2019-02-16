@@ -9,19 +9,19 @@ import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.utils.ConfigPreferencesHandler;
 import com.francoliptak.razasypelajes.utils.GameInitializer;
-import com.francoliptak.razasypelajes.utils.GameController;
+import com.francoliptak.razasypelajes.utils.Game;
+import com.francoliptak.razasypelajes.utils.GamesController;
+import com.francoliptak.razasypelajes.utils.GamesCreator;
 import com.francoliptak.razasypelajes.utils.Horse;
 import com.francoliptak.razasypelajes.utils.HorsesInformationProvider;
-import com.francoliptak.razasypelajes.utils.Level;
-import com.francoliptak.razasypelajes.utils.LevelsCreator;
 import com.francoliptak.razasypelajes.utils.SoundManager;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static com.francoliptak.razasypelajes.utils.GameInterfaces.IMG_WORD;
-import static com.francoliptak.razasypelajes.utils.Games.MINIGAME_ONE;
+import static com.francoliptak.razasypelajes.utils.NameOfInteractions.IMG_WORD;
+import static com.francoliptak.razasypelajes.utils.NameOfInteractions.WORD_IMG;
 
 public class GameActivity extends AppCompatActivity {
     private List<ImageView> horsesViews;
@@ -34,22 +34,27 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        List<Horse> horses = HorsesInformationProvider.getHorses(this);
-
+        startGame();
         /* SACAR A FUNCION */
-        if(ConfigPreferencesHandler.selectedGameModeIsIW(this)){
-            HashSet<Level> levels = LevelsCreator.getLevels(MINIGAME_ONE, IMG_WORD, horses);
-            GameController.playGame(this, levels);
-        }else{
-            // WIGameController.playGame(this);
-        }
-        // setContentView(R.layout.activity_game_ip); VA EN LOS NIVELES
+
 
 
 
         initializeRound();
         attempts = 0;
         hits = 0;
+    }
+
+    private void startGame(){
+        List<Horse> horses = HorsesInformationProvider.getHorses(this);
+        if(ConfigPreferencesHandler.selectedGameModeIsIW(this)){
+            HashSet<Game> games = GamesCreator.getGames(horses, IMG_WORD);
+            GamesController.playGames(this, games);
+        }else{
+            HashSet<Game> games = GamesCreator.getGames(horses, WORD_IMG);
+            GamesController.playGames(this, games);
+        }
+        // setContentView(R.layout.activity_game_ip_level_two); VA EN LOS NIVELES
     }
 
     private void initializeRound(){

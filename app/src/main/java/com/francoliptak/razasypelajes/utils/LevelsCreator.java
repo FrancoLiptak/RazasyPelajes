@@ -3,23 +3,21 @@ package com.francoliptak.razasypelajes.utils;
 import java.util.HashSet;
 import java.util.List;
 
-import static com.francoliptak.razasypelajes.utils.GameInterfaces.IMG_WORD;
-import static com.francoliptak.razasypelajes.utils.GameInterfaces.WORD_IMG;
-import static com.francoliptak.razasypelajes.utils.Games.MINIGAME_ONE;
-import static com.francoliptak.razasypelajes.utils.Games.MINIGAME_TWO;
+import static com.francoliptak.razasypelajes.utils.NameOfInteractions.IMG_WORD;
+import static com.francoliptak.razasypelajes.utils.NameOfInteractions.WORD_IMG;
 
 public class LevelsCreator {
 
-    public static HashSet<Level> getLevels(Enum game, Enum gameLevel, List<Horse> horses){
+    public static HashSet<Level> getLevels(List<Horse> horses, NameOfGames nameOfGame, NameOfInteractions nameOfInteraction){
         HashSet<Level> levelHashSet = new HashSet<>();
-        createLevels(levelHashSet, game, gameLevel, horses);
+        createLevels(levelHashSet, nameOfGame, nameOfInteraction, horses);
         return levelHashSet;
     }
 
-    private static void createLevels(HashSet<Level> levelHashSet, Enum game, Enum gameInterface, List<Horse> horses){
-        switch (game) {
+    private static void createLevels(HashSet<Level> levelHashSet, NameOfGames nameOfGame, NameOfInteractions nameOfInteraction, List<Horse> horses){
+        switch (nameOfGame) {
             case MINIGAME_ONE:
-                switch (gameInterface) {
+                switch (nameOfInteraction) {
                     case IMG_WORD:
                         levelHashSet.add(new GameOneLevelOneIW(horses));
                         levelHashSet.add(new GameOneLevelTwoIW(horses));
@@ -28,7 +26,7 @@ public class LevelsCreator {
                         levelHashSet.add(new GameOneLevelTwoWI(horses));
                 }
             case MINIGAME_TWO:
-                switch (gameInterface) {
+                switch (nameOfInteraction) {
                     case IMG_WORD:
                         levelHashSet.add(new GameTwoLevelOneIW(horses));
                         levelHashSet.add(new GameTwoLevelTwoIW(horses));

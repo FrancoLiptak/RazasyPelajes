@@ -1,6 +1,6 @@
 package com.francoliptak.razasypelajes.utils;
 
-public enum Games {
+public enum NameOfGames {
     MINIGAME_ONE,
     MINIGAME_TWO
 }
