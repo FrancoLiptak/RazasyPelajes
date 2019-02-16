@@ -3,6 +3,7 @@ package com.francoliptak.razasypelajes.utils;
 import android.media.MediaPlayer;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.GameActivity;
 import com.francoliptak.razasypelajes.R;
@@ -40,12 +41,15 @@ public class GameOneLevelOneIW extends Level{
     }
 
     public void printHorses(GameActivity gameActivity, Integer randomBetweenRaceAndFur){
+        List<Horse> horses = new ArrayList<>();
+        horses.addAll(this.horses);
+        List<ImageView> views = new ArrayList<>();
+        views.addAll(this.getHorsesViews(gameActivity));
         Random r = new Random();
         for(int i = 0; i < 2; i++) {
             Horse randomHorse = horses.get(r.nextInt(horses.size()));
             horses.remove(randomHorse);
-            List<ImageView> views = this.getHorsesViews(gameActivity);
-            ImageView imageView = horsesViews.get(r.nextInt(views.size()));
+            ImageView imageView = views.get(r.nextInt(views.size()));
             views.remove(imageView);
             if (correctAnswer == null) {
                 correctAnswer = randomHorse;
@@ -60,10 +64,10 @@ public class GameOneLevelOneIW extends Level{
             imageView.setImageResource(id);
         }
         if(randomBetweenRaceAndFur == 1){
-            gameActivity.getRaceOrFurNameTextView().setText(correctAnswer.getRace());
+            ((TextView) gameActivity.findViewById(R.id.iw_lo_horseName)).setText(correctAnswer.getRace());
             gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
         }else{
-            gameActivity.getRaceOrFurNameTextView().setText(correctAnswer.getFur());
+            ((TextView) gameActivity.findViewById(R.id.iw_lo_horseName)).setText(correctAnswer.getFur());
             gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
         }
     }

@@ -37,11 +37,11 @@ public class GameActivity extends AppCompatActivity {
     private void startGame(){
         List<Horse> horses = HorsesInformationProvider.getHorses(this);
         if(ConfigPreferencesHandler.selectedGameModeIsIW(this)){
-            HashSet<Game> games = GamesCreator.getGames(horses, IMG_WORD);
-            GamesController.playGames(this, games);
+            GamesController gamesController = new GamesController(horses, IMG_WORD);
+            gamesController.playGameOne(this);
         }else{
-            HashSet<Game> games = GamesCreator.getGames(horses, WORD_IMG);
-            GamesController.playGames(this, games);
+            GamesController gamesController = new GamesController(horses, WORD_IMG);
+            gamesController.playGameOne(this);
         }
     }
 
@@ -76,13 +76,17 @@ public class GameActivity extends AppCompatActivity {
         SoundManager.associateSounds(MediaPlayer.create(this, R.raw.success_sound),
                                      MediaPlayer.create(this, R.raw.error_sound));
     }
+
     public TextView getRaceOrFurNameTextView() {
         return raceOfFurNameTextView;
     }
 
     public void setHorseRaceOrFurNameSound(MediaPlayer horseRaceOrFurNameSound) {
         this.horseRaceOrFurNameSound = horseRaceOrFurNameSound;
-    } // falta poder reproducirlo
+    }
 
+    public void playHorseRaceOrFurNameSound(View view){
+        horseRaceOrFurNameSound.start();
+    }
 
 }

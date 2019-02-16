@@ -39,10 +39,9 @@ public class ConfigPreferencesHandler {
     }
 
     public static Boolean selectedGameModeIsIW(AppCompatActivity anActivity){
-        RadioGroup minijuegoRadio = anActivity.findViewById(R.id.mini_juego_radio);
         return getSharedPreferences(anActivity).getInt(anActivity.getString(R.string.config_preferences_mini_juego), R.id.imgWord)
                 ==
-                minijuegoRadio.getCheckedRadioButtonId();
+                R.id.imgWord;
     }
 
 }

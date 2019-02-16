@@ -48,7 +48,7 @@
                         app:srcCompat="@drawable/home_regular" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/iw_lo_horseName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/horse"
@@ -65,10 +65,11 @@
                         android:id="@+id/imageView6"
                         android:layout_width="72dp"
                         android:layout_height="72dp"
+                        android:onClick="playHorseRaceOrFurNameSound"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.168"
-                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toEndOf="@+id/iw_lo_horseName"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/audio_regular" />
                 </android.support.constraint.ConstraintLayout>
@@ -107,6 +108,7 @@
                                 android:id="@+id/ip_lo_optionTwo"
                                 android:layout_width="202dp"
                                 android:layout_height="136dp"
+                                android:onClick="evaluateOptionChosen"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.5"
@@ -135,6 +137,7 @@
                                 android:id="@+id/ip_lo_optionOne"
                                 android:layout_width="202dp"
                                 android:layout_height="136dp"
+                                android:onClick="evaluateOptionChosen"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.5"

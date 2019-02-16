@@ -1,5 +1,7 @@
 package com.francoliptak.razasypelajes.utils;
 
+import android.view.View;
+
 import com.francoliptak.razasypelajes.GameActivity;
 
 import java.util.List;
@@ -11,7 +13,11 @@ public class GameOneLevelTwoIW extends Level{
         this.horses = horses;
     }
 
-    public boolean playLevelAndReportSuccessOrNot(GameActivity gameActivity){
-        return false;
+    public void playLevel(GameActivity gameActivity){
     }
+
+    public void evaluateOptionChosen(View view, GameActivity gameActivity) {
+
+    }
+
 }
