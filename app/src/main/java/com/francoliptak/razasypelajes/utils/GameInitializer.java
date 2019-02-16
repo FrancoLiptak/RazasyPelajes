@@ -3,10 +3,8 @@ package com.francoliptak.razasypelajes.utils;
 import android.media.MediaPlayer;
 import android.widget.ImageView;
 
-import com.francoliptak.razasypelajes.R;
 import com.francoliptak.razasypelajes.GameActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -16,6 +14,7 @@ public class GameInitializer {
     private static Integer correctAnswerView = null;
     private static MediaPlayer correctHorseSound = null;
 
+    /*
     public static void initialize(GameActivity gameActivity){
         destroy();
         horses = HorsesInformationProvider.getHorses(gameActivity);
@@ -38,8 +37,8 @@ public class GameInitializer {
             int id = gameActivity.getResources().getIdentifier(randomHorse.getImageName(), "drawable", gameActivity.getPackageName());
             imageView.setImageResource(id);
         }
-        gameActivity.getRaceName().setText(correctAnswer.getRace());
-        gameActivity.setHorseSound(correctHorseSound);
+        gameActivity.getRaceOrFurNameTextView().setText(correctAnswer.getRace());
+        gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
     }
 
     public static Integer getCorrectAnswer(){
@@ -52,4 +51,5 @@ public class GameInitializer {
         correctAnswerView = null;
         correctHorseSound = null;
     }
+    */
 }

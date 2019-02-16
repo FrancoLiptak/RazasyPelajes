@@ -3,11 +3,15 @@ package com.francoliptak.razasypelajes.utils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.francoliptak.razasypelajes.GameActivity;
+
 public abstract class Level implements Comparable<Level> {
     private Integer id;
     private View view;
 
-    public abstract boolean playLevelAndReportSuccessOrNot(AppCompatActivity gameActivity);
+    public abstract void playLevel(GameActivity gameActivity);
+
+    public abstract void evaluateOptionChosen(View view, GameActivity gameActivity);
 
     public Integer getId() {
         return id;

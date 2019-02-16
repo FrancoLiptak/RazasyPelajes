@@ -1,36 +1,31 @@
 package com.francoliptak.razasypelajes.utils;
 
-import android.support.v7.app.AppCompatActivity;
-
 import com.francoliptak.razasypelajes.GameActivity;
 
-import java.util.HashSet;
+import java.util.List;
 
 public class Game {
-    private HashSet<Level> levelHashSet;
-    private boolean lostGame;
-    private int successfulLevels;
+    private Level levelOne;
+    private Level levelTwo;
+    private GamesController gamesController;
 
-    public Game(HashSet<Level> levelHashSet) {
-        this.levelHashSet = levelHashSet;
-        this.lostGame = false;
-        this.successfulLevels = 0;
+    public Game(GamesController gamesController, List<Horse> horses, NameOfGames nameOfGame, NameOfInteractions nameOfInteraction) {
+        this.gamesController = gamesController;
+        List<Level> levels = LevelsCreator.getLevels(horses, nameOfGame, nameOfInteraction, this);
+        levelOne = levels.get(0);
+        levelTwo = levels.get(1);
     }
 
-    public boolean playGameAndReportSuccessOrNot(GameActivity gameActivity){
-        while((!lostGame) || successfulLevels != levelHashSet.size()){
-            for(Level level : levelHashSet){
-                boolean success = level.playLevelAndReportSuccessOrNot(gameActivity);
-                if(!success){
-                    lostGame = true;
-                    break;
-                }else{
-                    successfulLevels++;
-                }
-            }
-        }
+    public void playLevelOne(GameActivity gameActivity){
+        this.levelOne.playLevel(gameActivity);
+    }
 
-        return successfulLevels == levelHashSet.size();
+    public void playLevelTwo(GameActivity gameActivity){
+        this.levelTwo.playLevel(gameActivity);
+    }
+
+    public void informThatTheGameIsOver(){
+        gamesController.playGameTwo();
     }
 
 }
