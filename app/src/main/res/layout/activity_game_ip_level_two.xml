@@ -155,8 +155,8 @@
 
                     <TextView
                         android:id="@+id/raceText"
-                        android:layout_width="258dp"
-                        android:layout_height="105dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="@string/horse"
                         android:textColor="@android:color/background_light"
                         android:textSize="80dp"
