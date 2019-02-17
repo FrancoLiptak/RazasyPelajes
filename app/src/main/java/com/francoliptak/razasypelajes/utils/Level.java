@@ -1,38 +1,101 @@
 package com.francoliptak.razasypelajes.utils;
 
-import android.support.v7.app.AppCompatActivity;
+import android.media.MediaPlayer;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.francoliptak.razasypelajes.GameActivity;
 
-public abstract class Level implements Comparable<Level> {
-    private Integer id;
-    private View view;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-    public abstract void playLevel(GameActivity gameActivity);
+public abstract class Level {
+    private Game game;
+    private List<Horse> horses;
+    private Horse correctAnswer = null;
+    private MediaPlayer correctHorseSound = null;
+    private int attempts = 0;
+    private int hits = 0;
+    private Integer correctAnswerViewID;
 
-    public abstract void evaluateOptionChosen(View view, GameActivity gameActivity);
-
-    public Integer getId() {
-        return id;
+    public Level(Game game, List<Horse> horses) {
+        this.game = game;
+        this.horses = horses;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void playLevel(GameActivity gameActivity){
+        gameActivity.setContentView(this.getLayoutForLevel());
+        gameActivity.setActualLevelHandler(this);
+        initializeRound(gameActivity);
     }
 
-    public View getView() {
-        return view;
+    public abstract int getLayoutForLevel();
+
+
+    private void initializeRound(GameActivity gameActivity){
+        destroy();
+        printHorses(gameActivity);
     }
 
-    public void setView(View view) {
-        this.view = view;
+    public void printHorses(GameActivity gameActivity){
+        List<Horse> horses = new ArrayList<>();
+        horses.addAll(this.horses);
+        List<ImageView> views = new ArrayList<>();
+        views.addAll(this.getHorsesViews(gameActivity));
+        Random r = new Random();
+        for(int i = 0; i < this.getAmountOfTotalOptions(); i++) {
+            Horse randomHorse = horses.get(r.nextInt(horses.size()));
+            horses.remove(randomHorse);
+            ImageView imageView = views.get(r.nextInt(views.size()));
+            views.remove(imageView);
+            if (correctAnswer == null) {
+                correctAnswer = randomHorse;
+                correctAnswerViewID = imageView.getId();
+                if(gameActivity.selectedSoundIsFemale()){
+                    correctHorseSound = randomHorse.getSoundFeminine();
+                }else{
+                    correctHorseSound = randomHorse.getSoundMasculine();
+                }
+            }
+            int id = gameActivity.getResources().getIdentifier(randomHorse.getImageName(), "drawable", gameActivity.getPackageName());
+            imageView.setImageResource(id);
+        }
+        this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSound);
     }
 
-    @Override
-    public int compareTo(Level anotherLevel) {
-        if (this.getId() > anotherLevel.getId()) return 1;
-        if (this.getId() < anotherLevel.getId()) return -1;
-        return 0;
+    public void evaluateOptionChosen(View view, GameActivity gameActivity){
+        attempts++;
+        if(view.getId() == correctAnswerViewID){
+            SoundManager.playSucces();
+            hits++;
+        }else{
+            SoundManager.playError();
+        }
+
+        if(attempts < 5){
+            initializeRound(gameActivity);
+        }else{
+            if(hits >= 3){
+                // gameActivity.showConfetti();
+                this.nextStep(gameActivity, game);
+            }else{
+                gameActivity.destroy();
+            }
+        }
     }
+
+    private void destroy(){
+        correctAnswer = null;
+        correctHorseSound = null;
+        correctAnswerViewID = null;
+    }
+
+    public abstract void nextStep(GameActivity gameActivity, Game game);
+
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, MediaPlayer correctHorseSound);
+
+    public abstract List<ImageView> getHorsesViews(GameActivity gameActivity);
+
+    public abstract int getAmountOfTotalOptions();
 }

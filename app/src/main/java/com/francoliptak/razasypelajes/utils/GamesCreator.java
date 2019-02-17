@@ -15,7 +15,7 @@ public class GamesCreator {
         switch (nameOfGameInteraction) {
             case IMG_WORD:
                 games.add(new Game(gamesController, horses, MINIGAME_ONE, IMG_WORD));
-                // games.add(new Game(gamesController, horses, MINIGAME_TWO, IMG_WORD));
+                games.add(new Game(gamesController, horses, MINIGAME_TWO, IMG_WORD));
                 break;
             case WORD_IMG:
                 // games.add(new Game(gamesController, horses, MINIGAME_ONE, WORD_IMG));

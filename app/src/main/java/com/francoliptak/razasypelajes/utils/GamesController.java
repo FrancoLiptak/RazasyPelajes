@@ -11,7 +11,7 @@ public class GamesController {
     public GamesController(List<Horse> horses, NameOfInteractions nameOfGameInteraction) {
         List<Game> games = GamesCreator.getGames(this, horses, nameOfGameInteraction);
         this.gameOne = games.get(0);
-        // this.gameTwo = games.get(1);
+        this.gameTwo = games.get(1);
     }
 
     public void playGameOne(GameActivity gameActivity){

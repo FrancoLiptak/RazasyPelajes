@@ -1,23 +1,31 @@
 package com.francoliptak.razasypelajes.utils;
 
-import android.view.View;
+import android.media.MediaPlayer;
+import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.GameActivity;
+import com.francoliptak.razasypelajes.R;
 
 import java.util.List;
 
-public class GameOneLevelTwoIW extends Level{
-    private List<Horse> horses;
+public class GameOneLevelTwoIW extends LevelTwoIW {
 
-    public GameOneLevelTwoIW(List<Horse> horses) {
-        this.horses = horses;
+    public GameOneLevelTwoIW(Game game, List<Horse> horses) {
+        super(game, horses);
     }
 
-    public void playLevel(GameActivity gameActivity){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, MediaPlayer correctHorseSound){
+        if(getRandomBetweenRaceAndFur() == 1){
+            ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getRace());
+            gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
+        }else{
+            ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getFur());
+            gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
+        }
     }
 
-    public void evaluateOptionChosen(View view, GameActivity gameActivity) {
-
+    private Integer getRandomBetweenRaceAndFur(){
+        // Se asume que 1 es Raza, y 2 es Pelaje
+        return (Math.random() <= 0.5) ? 1 : 2;
     }
-
 }

@@ -47,7 +47,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/gameIPImg1"
+                            android:id="@+id/ip_lt_optionOne"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:onClick="evaluateOptionChosen"
@@ -66,7 +66,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/gameIPImg2"
+                            android:id="@+id/ip_lt_optionTwo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:onClick="evaluateOptionChosen"
@@ -85,7 +85,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/gameIPImg3"
+                            android:id="@+id/ip_lt_optionThree"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:onClick="evaluateOptionChosen"
@@ -104,7 +104,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/gameIPImg4"
+                            android:id="@+id/ip_lt_optionFour"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:onClick="evaluateOptionChosen"
@@ -146,15 +146,12 @@
                         android:layout_height="58dp"
                         android:onClick="playHorseRaceOrFurNameSound"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.734"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.587"
-                        app:srcCompat="@drawable/audio_regular" />
+                        app:srcCompat="@drawable/audio_regular"
+                        tools:layout_editor_absoluteX="436dp" />
 
                     <TextView
-                        android:id="@+id/raceText"
+                        android:id="@+id/iw_lt_horseName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/horse"

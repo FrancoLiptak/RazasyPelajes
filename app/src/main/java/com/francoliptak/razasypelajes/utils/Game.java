@@ -13,7 +13,7 @@ public class Game {
         this.gamesController = gamesController;
         List<Level> levels = LevelsCreator.getLevels(horses, nameOfGame, nameOfInteraction, this);
         levelOne = levels.get(0);
-        // levelTwo = levels.get(1);
+        levelTwo = levels.get(1);
     }
 
     public void playLevelOne(GameActivity gameActivity){
