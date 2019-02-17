@@ -57,11 +57,10 @@ public class RecognitionActivity extends AppCompatActivity {
                 android.R.integer.config_shortAnimTime);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void playSounds(View view){
         view.setBackgroundResource(R.drawable.audio_click);
-        ArrayList<MediaPlayer> lista = new ArrayList<>();
-        lista.add((MediaPlayer) view.getTag()); // Tengo que modificar esto. La idea es que los caballos devuelvan una lista de sonidos (Raza y pelaje)
-        SoundManager.playSounds(this, lista);
+        SoundManager.playSounds((ArrayList<MediaPlayer>) view.getTag());
     }
 
     public void onBack(View view){

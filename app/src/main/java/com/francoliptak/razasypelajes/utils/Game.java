@@ -28,4 +28,8 @@ public class Game {
         gamesController.playGameTwo(gameActivity);
     }
 
+    public void informThatAllGamesWereFinished(GameActivity gameActivity){
+        gameActivity.destroy();
+    }
+
 }

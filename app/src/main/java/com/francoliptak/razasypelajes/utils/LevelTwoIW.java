@@ -23,7 +23,7 @@ public abstract class LevelTwoIW extends Level {
         return 4;
     }
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, MediaPlayer correctHorseSound);
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound);
 
     public List<ImageView> getHorsesViews(GameActivity gameActivity) {
         List<ImageView> horsesViews = new ArrayList<>();
@@ -34,7 +34,7 @@ public abstract class LevelTwoIW extends Level {
         return horsesViews;
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.informThatTheGameIsOver(gameActivity);
-    }
+    public abstract void nextStep(GameActivity gameActivity, Game game);
+
+    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 }

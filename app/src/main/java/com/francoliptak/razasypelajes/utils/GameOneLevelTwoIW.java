@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.francoliptak.razasypelajes.GameActivity;
 import com.francoliptak.razasypelajes.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameOneLevelTwoIW extends LevelTwoIW {
@@ -14,18 +15,32 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
         super(game, horses);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, MediaPlayer correctHorseSound){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound){
         if(getRandomBetweenRaceAndFur() == 1){
             ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getRace());
-            gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
+            gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
         }else{
             ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getFur());
-            gameActivity.setHorseRaceOrFurNameSound(correctHorseSound);
+            gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
         }
     }
 
     private Integer getRandomBetweenRaceAndFur(){
         // Se asume que 1 es Raza, y 2 es Pelaje
         return (Math.random() <= 0.5) ? 1 : 2;
+    }
+
+    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse){
+        List<MediaPlayer> sounds = new ArrayList<>();
+        if(gameActivity.selectedSoundIsFemale()){
+            sounds.add(horse.getSoundFeminine());
+        }else{
+            sounds.add(horse.getSoundMasculine());
+        }
+        return sounds;
+    }
+
+    public void nextStep(GameActivity gameActivity, Game game){
+        game.informThatTheGameIsOver(gameActivity);
     }
 }

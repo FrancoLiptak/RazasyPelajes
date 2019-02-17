@@ -1,5 +1,6 @@
 package com.francoliptak.razasypelajes.utils;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -7,6 +8,7 @@ import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecognitionGridAdapter extends RecognitionAdapter {
@@ -32,9 +34,15 @@ public class RecognitionGridAdapter extends RecognitionAdapter {
         recognitionGridItemData.getHorseImageView().setTag(horse.getImageResourceId());
 
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
-            recognitionGridItemData.getHorseSoundImageView().setTag(horse.getSoundMasculine());
+            List<MediaPlayer> sounds = new ArrayList<>();
+            sounds.add(horse.getSoundMasculine());
+            sounds.add(horse.getSoundFeminine()); // cambiar cuando suban los sonidos
+            recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }else{
-            recognitionGridItemData.getHorseSoundImageView().setTag(horse.getSoundFeminine());
+            List<MediaPlayer> sounds = new ArrayList<>();
+            sounds.add(horse.getSoundFeminine());
+            sounds.add(horse.getSoundMasculine()); // cambiar cuando suban los sonidos
+            recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }
     }
 }

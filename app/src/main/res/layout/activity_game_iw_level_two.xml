@@ -146,24 +146,26 @@
                         android:layout_height="58dp"
                         android:onClick="playHorseRaceOrFurNameSound"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iw_lt_horseName"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/audio_regular"
-                        tools:layout_editor_absoluteX="436dp" />
+                        app:srcCompat="@drawable/audio_regular" />
 
                     <TextView
                         android:id="@+id/iw_lt_horseName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="goBack"
                         android:text="@string/horse"
                         android:textColor="@android:color/background_light"
                         android:textSize="80dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.496" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>

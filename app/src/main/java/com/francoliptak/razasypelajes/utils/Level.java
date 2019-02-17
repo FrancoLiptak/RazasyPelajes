@@ -14,7 +14,7 @@ public abstract class Level {
     private Game game;
     private List<Horse> horses;
     private Horse correctAnswer = null;
-    private MediaPlayer correctHorseSound = null;
+    private List<MediaPlayer> correctHorseSounds = null;
     private int attempts = 0;
     private int hits = 0;
     private Integer correctAnswerViewID;
@@ -39,6 +39,7 @@ public abstract class Level {
     }
 
     public void printHorses(GameActivity gameActivity){
+        List<MediaPlayer> correctHorseSounds = null;
         List<Horse> horses = new ArrayList<>();
         horses.addAll(this.horses);
         List<ImageView> views = new ArrayList<>();
@@ -52,17 +53,15 @@ public abstract class Level {
             if (correctAnswer == null) {
                 correctAnswer = randomHorse;
                 correctAnswerViewID = imageView.getId();
-                if(gameActivity.selectedSoundIsFemale()){
-                    correctHorseSound = randomHorse.getSoundFeminine();
-                }else{
-                    correctHorseSound = randomHorse.getSoundMasculine();
-                }
+                correctHorseSounds = this.saveHorsesNamesAndFurSounds(gameActivity, randomHorse);
             }
             int id = gameActivity.getResources().getIdentifier(randomHorse.getImageName(), "drawable", gameActivity.getPackageName());
             imageView.setImageResource(id);
         }
-        this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSound);
+        this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSounds);
     }
+
+    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 
     public void evaluateOptionChosen(View view, GameActivity gameActivity){
         attempts++;
@@ -87,13 +86,12 @@ public abstract class Level {
 
     private void destroy(){
         correctAnswer = null;
-        correctHorseSound = null;
         correctAnswerViewID = null;
     }
 
     public abstract void nextStep(GameActivity gameActivity, Game game);
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, MediaPlayer correctHorseSound);
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSounds);
 
     public abstract List<ImageView> getHorsesViews(GameActivity gameActivity);
 

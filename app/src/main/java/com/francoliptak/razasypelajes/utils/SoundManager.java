@@ -1,6 +1,8 @@
 package com.francoliptak.razasypelajes.utils;
 
 import android.media.MediaPlayer;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.List;
@@ -26,9 +28,13 @@ public class SoundManager {
         errorSound.start();
     }
 
-    public static void playSounds(AppCompatActivity anActivity, List<MediaPlayer> soundTags){
-        for(MediaPlayer soundTag : soundTags){
-            soundTag.start();
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public static void playSounds(List<MediaPlayer> soundTags){
+        if(soundTags.size() > 1){
+            for(int i = 0; i < soundTags.size() - 1; i++){
+                soundTags.get(i).setNextMediaPlayer(soundTags.get(i+1));
+            }
         }
+        soundTags.get(0).start();
     }
 }
