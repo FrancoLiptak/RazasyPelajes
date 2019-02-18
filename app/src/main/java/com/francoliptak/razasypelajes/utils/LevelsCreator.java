@@ -20,19 +20,19 @@ public class LevelsCreator {
             case MINIGAME_ONE:
                 switch (nameOfInteraction) {
                     case IMG_WORD:
-                        levels.add(new GameOneLevelOneIW(game, horses));
-                        levels.add(new GameOneLevelTwoIW(game, horses));
-                    // case WORD_IMG:
-                       //  levels.add(new GameOneLevelOneWI(game, horses));
+                        levels.add(new GameOneLevelOneIW(game, horses, IMG_WORD));
+                        levels.add(new GameOneLevelTwoIW(game, horses, IMG_WORD));
+                    case WORD_IMG:
+                        levels.add(new GameOneLevelOneWI(game, horses, WORD_IMG));
                         // levels.add(new GameOneLevelTwoWI(game, horses));
                 }
 
             case MINIGAME_TWO:
                 switch (nameOfInteraction) {
                     case IMG_WORD:
-                        levels.add(new GameTwoLevelOneIW(game, horses));
-                        levels.add(new GameTwoLevelTwoIW(game, horses));
-                    // case WORD_IMG:
+                        levels.add(new GameTwoLevelOneIW(game, horses, IMG_WORD));
+                        levels.add(new GameTwoLevelTwoIW(game, horses, IMG_WORD));
+                    case WORD_IMG:
                        // levels.add(new GameTwoLevelOneWI(game, horses));
                        // levels.add(new GameTwoLevelTwoWI(game, horses));
                 }

@@ -50,7 +50,7 @@
                         app:srcCompat="@drawable/home_regular" />
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/wi_lo_horseImg"
                         android:layout_width="250dp"
                         android:layout_height="200dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,30 +93,30 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imageView7"
+                                android:id="@+id/wi_lo_soundOne"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.498"
+                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintVertical_bias="0.916"
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
-                                android:id="@+id/textView11"
+                                android:id="@+id/wi_lo_optionOne"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@+id/imageView7"
+                                app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.089" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
 
@@ -136,7 +136,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imageView15"
+                                android:id="@+id/wi_lo_soundTwo"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -148,14 +148,14 @@
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
-                                android:id="@+id/textView12"
+                                android:id="@+id/wi_lo_optionTwo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@+id/imageView15"
+                                app:layout_constraintBottom_toTopOf="@+id/wi_lo_soundTwo"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"

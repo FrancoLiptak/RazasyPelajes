@@ -1,6 +1,7 @@
 package com.francoliptak.razasypelajes.utils;
 
 import android.media.MediaPlayer;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.GameActivity;
@@ -11,8 +12,8 @@ import java.util.List;
 
 public class GameOneLevelTwoIW extends LevelTwoIW {
 
-    public GameOneLevelTwoIW(Game game, List<Horse> horses) {
-        super(game, horses);
+    public GameOneLevelTwoIW(Game game, List<Horse> horses, NameOfInteractions nameOfInteraction) {
+        super(game, horses, nameOfInteraction);
     }
 
     public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound){
@@ -42,5 +43,13 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
 
     public void nextStep(GameActivity gameActivity, Game game){
         game.informThatTheGameIsOver(gameActivity);
+    }
+
+    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView){
+        throw new UnsupportedOperationException();
+    }
+
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
+        throw new UnsupportedOperationException();
     }
 }

@@ -18,8 +18,8 @@ public class GamesCreator {
                 games.add(new Game(gamesController, horses, MINIGAME_TWO, IMG_WORD));
                 break;
             case WORD_IMG:
-                // games.add(new Game(gamesController, horses, MINIGAME_ONE, WORD_IMG));
-                // games.add(new Game(gamesController, horses, MINIGAME_TWO, WORD_IMG));
+                games.add(new Game(gamesController, horses, MINIGAME_ONE, WORD_IMG));
+                games.add(new Game(gamesController, horses, MINIGAME_TWO, WORD_IMG));
                 break;
         }
         return games;

@@ -2,6 +2,7 @@ package com.francoliptak.razasypelajes.utils;
 
 import android.media.MediaPlayer;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.GameActivity;
 import com.francoliptak.razasypelajes.R;
@@ -11,8 +12,8 @@ import java.util.List;
 
 public abstract class LevelTwoIW extends Level {
 
-    public LevelTwoIW(Game game, List<Horse> horses) {
-        super(game, horses);
+    public LevelTwoIW(Game game, List<Horse> horses, NameOfInteractions nameOfInteraction) {
+        super(game, horses, nameOfInteraction);
     }
 
     public int getLayoutForLevel(){
@@ -25,13 +26,21 @@ public abstract class LevelTwoIW extends Level {
 
     public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound);
 
-    public List<ImageView> getHorsesViews(GameActivity gameActivity) {
+    public List<ImageView> getHorsesImgViews(GameActivity gameActivity) {
         List<ImageView> horsesViews = new ArrayList<>();
         horsesViews.add((ImageView) gameActivity.findViewById(R.id.ip_lt_optionOne));
         horsesViews.add((ImageView) gameActivity.findViewById(R.id.ip_lt_optionTwo));
         horsesViews.add((ImageView) gameActivity.findViewById(R.id.ip_lt_optionThree));
         horsesViews.add((ImageView) gameActivity.findViewById(R.id.ip_lt_optionFour));
         return horsesViews;
+    }
+
+    public List<TextView> getHorsesTxtViews(GameActivity gameActivity) {
+        throw new UnsupportedOperationException();
+    }
+
+    public List<ImageView> getHorseSoundImageViews(GameActivity gameActivity){
+        throw new UnsupportedOperationException();
     }
 
     public abstract void nextStep(GameActivity gameActivity, Game game);

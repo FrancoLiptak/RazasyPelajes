@@ -106,7 +106,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/ip_lo_optionTwo"
+                                android:id="@+id/iw_lo_optionTwo"
                                 android:layout_width="202dp"
                                 android:layout_height="136dp"
                                 android:onClick="evaluateOptionChosen"
@@ -135,7 +135,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/ip_lo_optionOne"
+                                android:id="@+id/iw_lo_optionOne"
                                 android:layout_width="202dp"
                                 android:layout_height="136dp"
                                 android:onClick="evaluateOptionChosen"
