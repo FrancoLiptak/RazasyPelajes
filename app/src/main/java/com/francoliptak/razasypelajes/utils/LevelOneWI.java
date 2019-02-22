@@ -50,6 +50,4 @@ public abstract class LevelOneWI extends Level {
 
     public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 
-    public abstract void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView);
-
 }

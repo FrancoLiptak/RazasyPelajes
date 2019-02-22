@@ -87,12 +87,17 @@ public abstract class Level {
                 correctAnswer = randomHorse;
                 correctAnswerViewID = textView.getId();
             }
-            this.renderOption(gameActivity, randomHorse, textView, imageView);
+            this.renderOption(gameActivity, randomHorse, textView, imageView, getRandomBetweenRaceAndFur());
         }
         this.showHorseInformationOnScreen(gameActivity, correctAnswer);
     }
 
-    public abstract void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView);
+    private Integer getRandomBetweenRaceAndFur(){
+        // Se asume que 1 es Raza, y 2 es Pelaje
+        return (Math.random() <= 0.5) ? 1 : 2;
+    }
+
+    public abstract void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur);
 
     public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 

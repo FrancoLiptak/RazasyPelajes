@@ -24,7 +24,7 @@ public class LevelsCreator {
                         levels.add(new GameOneLevelTwoIW(game, horses, IMG_WORD));
                     case WORD_IMG:
                         levels.add(new GameOneLevelOneWI(game, horses, WORD_IMG));
-                        // levels.add(new GameOneLevelTwoWI(game, horses));
+                        levels.add(new GameOneLevelTwoWI(game, horses, WORD_IMG));
                 }
 
             case MINIGAME_TWO:
@@ -33,8 +33,8 @@ public class LevelsCreator {
                         levels.add(new GameTwoLevelOneIW(game, horses, IMG_WORD));
                         levels.add(new GameTwoLevelTwoIW(game, horses, IMG_WORD));
                     case WORD_IMG:
-                       // levels.add(new GameTwoLevelOneWI(game, horses));
-                       // levels.add(new GameTwoLevelTwoWI(game, horses));
+                        levels.add(new GameTwoLevelOneWI(game, horses, WORD_IMG));
+                        levels.add(new GameTwoLevelTwoWI(game, horses, WORD_IMG));
                 }
         }
     }

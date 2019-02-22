@@ -16,25 +16,25 @@ public class GameOneLevelOneWI extends LevelOneWI {
     }
 
     public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound) {
-        ((ImageView) gameActivity.findViewById(R.id.wi_lo_horseImg)).setImageResource(correctAnswer.getImageResourceId());
+        throw new UnsupportedOperationException();
     }
 
     public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse) {
         throw new UnsupportedOperationException();
     }
 
-    private Integer getRandomBetweenRaceAndFur(){
-        // Se asume que 1 es Raza, y 2 es Pelaje
-        return (Math.random() <= 0.5) ? 1 : 2;
+    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
+        if(randomBetweenRaceAndFur == 1){
+            textView.setText(aHorse.getRace());
+            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer para el nombre de raza o pelaje
+        }else{
+            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer para el nombre de raza o pelaje
+            textView.setText(aHorse.getFur());
+        }
     }
 
-    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView){
-        if(getRandomBetweenRaceAndFur() == 1){
-            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer
-        }else{
-            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer
-
-        }
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
+        ((ImageView) gameActivity.findViewById(R.id.wi_lo_horseImg)).setImageResource(correctAnswer.getImageResourceId());
     }
 
 }

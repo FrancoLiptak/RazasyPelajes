@@ -37,7 +37,7 @@ public class GameTwoLevelTwoIW extends LevelTwoIW {
         game.informThatAllGamesWereFinished(gameActivity);
     }
 
-    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView){
+    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
         throw new UnsupportedOperationException();
     }
 

@@ -48,9 +48,7 @@ public abstract class LevelTwoWI extends Level {
         throw new UnsupportedOperationException();
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.playLevelTwo(gameActivity);
-    }
+    public abstract void nextStep(GameActivity gameActivity, Game game);
 
     public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 }
