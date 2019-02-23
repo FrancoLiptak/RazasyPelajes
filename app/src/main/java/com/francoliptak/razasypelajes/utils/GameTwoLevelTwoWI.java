@@ -35,4 +35,8 @@ public class GameTwoLevelTwoWI extends LevelTwoWI {
     public void nextStep(GameActivity gameActivity, Game game){
         game.informThatTheGameIsOver(gameActivity);
     }
+
+    public void displayAnimation(GameActivity gameActivity, Game game){
+        gameActivity.showFinalMenuAndAnimation();
+    }
 }

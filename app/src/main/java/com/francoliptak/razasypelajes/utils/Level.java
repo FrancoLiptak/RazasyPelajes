@@ -75,6 +75,7 @@ public abstract class Level {
         List<ImageView> imageViews = new ArrayList<>();
         imageViews.addAll(this.getHorseSoundImageViews(gameActivity));
         Random r = new Random();
+        int raceOrFur = getRandomBetweenRaceAndFur();
         for(int i = 0; i < this.getAmountOfTotalOptions(); i++) {
             Horse randomHorse = horses.get(r.nextInt(horses.size()));
             horses.remove(randomHorse);
@@ -87,7 +88,7 @@ public abstract class Level {
                 correctAnswer = randomHorse;
                 correctAnswerViewID = textView.getId();
             }
-            this.renderOption(gameActivity, randomHorse, textView, imageView, getRandomBetweenRaceAndFur());
+            this.renderOption(gameActivity, randomHorse, textView, imageView, raceOrFur);
         }
         this.showHorseInformationOnScreen(gameActivity, correctAnswer);
     }
@@ -114,8 +115,7 @@ public abstract class Level {
             initializeRound(gameActivity);
         }else{
             if(hits >= 3){
-                // gameActivity.showConfetti();
-                this.nextStep(gameActivity, game);
+                this.displayAnimation(gameActivity, game);
             }else{
                 gameActivity.destroy();
             }
@@ -126,6 +126,8 @@ public abstract class Level {
         correctAnswer = null;
         correctAnswerViewID = null;
     }
+
+    public abstract void displayAnimation(GameActivity gameActivity, Game game);
 
     public abstract void nextStep(GameActivity gameActivity, Game game);
 

@@ -52,4 +52,9 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
     public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
         throw new UnsupportedOperationException();
     }
+
+    public void displayAnimation(GameActivity gameActivity, Game game){
+        gameActivity.showMenuAndAnimation();
+    }
+
 }

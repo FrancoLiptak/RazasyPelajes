@@ -1,14 +1,17 @@
 package com.francoliptak.razasypelajes;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.francoliptak.razasypelajes.utils.ConfigPreferencesHandler;
+import com.francoliptak.razasypelajes.utils.Game;
 import com.francoliptak.razasypelajes.utils.GamesController;
 import com.francoliptak.razasypelajes.utils.Horse;
 import com.francoliptak.razasypelajes.utils.HorsesInformationProvider;
@@ -23,6 +26,8 @@ import static com.francoliptak.razasypelajes.utils.NameOfInteractions.WORD_IMG;
 public class GameActivity extends AppCompatActivity {
     private List<MediaPlayer> horseRaceOrFurNameSounds;
     private Level actualLevelHandler;
+    private Game actualGameHandler;
+    private AnimationDrawable confettiAnimation, trophyAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -48,6 +53,10 @@ public class GameActivity extends AppCompatActivity {
 
     public void setActualLevelHandler(Level actualLevelHandler) {
         this.actualLevelHandler = actualLevelHandler;
+    }
+
+    public void setActualGameHandler(Game actualGameHandler) {
+        this.actualGameHandler = actualGameHandler;
     }
 
     public void evaluateOptionChosen(View view){
@@ -83,4 +92,43 @@ public class GameActivity extends AppCompatActivity {
         SoundManager.playSounds(this.horseRaceOrFurNameSounds);
     }
 
+    public void retryLevel(View view){
+        this.actualLevelHandler.playLevel(this);
+    }
+
+    public void goToNextLevel(View view){
+        this.actualLevelHandler.nextStep(this, actualGameHandler);
+    }
+
+    public void retryAllGames(View view){
+        startGame();
+    }
+
+
+    public void showFinalMenuAndAnimation(){ // invertir nombre con el de abajo
+        setContentView(R.layout.menu_game);
+        startConfettiAnimation();
+    }
+
+
+    public void showMenuAndAnimation(){ // invertir nombre con el de arriba
+        setContentView(R.layout.final_menu_game);
+        startTrophyAnimation();
+    }
+
+    public void startConfettiAnimation(){
+        ImageView confettiImgView = (ImageView) findViewById(R.id.confettiImageView);
+        confettiImgView.setBackgroundResource(R.drawable.anim_confetti);
+        confettiAnimation = (AnimationDrawable) confettiImgView.getBackground();
+        confettiAnimation.setOneShot(true);
+        confettiAnimation.start();
+    }
+
+    public void startTrophyAnimation() {
+        ImageView trophyImgView = (ImageView) findViewById(R.id.trophyImageView);
+        trophyImgView.setBackgroundResource(R.drawable.anim_trophy);
+        trophyAnimation = (AnimationDrawable) trophyImgView.getBackground();
+        trophyAnimation.setOneShot(true);
+        trophyAnimation.start();
+    }
 }

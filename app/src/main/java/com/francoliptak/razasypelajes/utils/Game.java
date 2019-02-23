@@ -17,6 +17,7 @@ public class Game {
     }
 
     public void playLevelOne(GameActivity gameActivity){
+        gameActivity.setActualGameHandler(this);
         this.levelOne.playLevel(gameActivity);
     }
 

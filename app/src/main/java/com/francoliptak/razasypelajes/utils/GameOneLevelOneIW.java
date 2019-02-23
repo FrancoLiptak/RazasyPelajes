@@ -49,4 +49,8 @@ public class GameOneLevelOneIW extends LevelOneIW{
         throw new UnsupportedOperationException();
     }
 
+    public void displayAnimation(GameActivity gameActivity, Game game){
+        gameActivity.showMenuAndAnimation();
+    }
+
 }

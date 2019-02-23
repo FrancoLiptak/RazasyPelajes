@@ -32,4 +32,8 @@ public class GameTwoLevelOneWI extends LevelOneWI {
         ((ImageView) gameActivity.findViewById(R.id.wi_lo_horseImg)).setImageResource(correctAnswer.getImageResourceId());
     }
 
+    public void displayAnimation(GameActivity gameActivity, Game game){
+        gameActivity.showMenuAndAnimation();
+    }
+
 }
