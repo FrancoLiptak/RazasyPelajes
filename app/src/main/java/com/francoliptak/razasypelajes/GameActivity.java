@@ -105,13 +105,13 @@ public class GameActivity extends AppCompatActivity {
     }
 
 
-    public void showFinalMenuAndAnimation(){ // invertir nombre con el de abajo
+    public void showMenuAndAnimation(){
         setContentView(R.layout.menu_game);
         startConfettiAnimation();
     }
 
 
-    public void showMenuAndAnimation(){ // invertir nombre con el de arriba
+    public void showFinalMenuAndAnimation(){
         setContentView(R.layout.final_menu_game);
         startTrophyAnimation();
     }
@@ -131,4 +131,5 @@ public class GameActivity extends AppCompatActivity {
         trophyAnimation.setOneShot(true);
         trophyAnimation.start();
     }
+
 }
