@@ -10,6 +10,7 @@ import com.francoliptak.razasypelajes.GameActivity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public abstract class Level {
     private Game game;
@@ -147,6 +148,7 @@ public abstract class Level {
         }
 
         if(attempts < 5){
+            delay(2);
             initializeRound(gameActivity);
         }else{
             if(hits >= 3){
@@ -154,6 +156,14 @@ public abstract class Level {
             }else{
                 gameActivity.destroy();
             }
+        }
+    }
+
+    private void delay(int seconds){
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e){
+            System.out.println(e.getMessage());
         }
     }
 

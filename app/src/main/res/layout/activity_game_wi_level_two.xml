@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
 
-    <HorizontalScrollView
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:background="@drawable/bg_amarillo"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,11 +25,11 @@
             <LinearLayout
                 android:id="@+id/linearLayout14"
                 android:layout_width="671dp"
-                android:layout_height="220dp"
+                android:layout_height="183dp"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout27"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.019">
@@ -63,8 +65,9 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout27"
                 android:layout_width="655dp"
-                android:layout_height="150dp"
+                android:layout_height="173dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,15 +96,15 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundOne"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.495"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.85"
+                                app:layout_constraintVertical_bias="1.0"
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
@@ -109,6 +112,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/colorPrimary"
+                                android:clickable="false"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -116,9 +120,9 @@
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toTopOf="@+id/wi_lt_soundOne"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
 
@@ -139,15 +143,15 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundTwo"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.495"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.85"
+                                app:layout_constraintVertical_bias="1.0"
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
@@ -155,6 +159,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/colorPrimary"
+                                android:clickable="false"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -162,9 +167,9 @@
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toTopOf="@+id/wi_lt_soundTwo"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
 
@@ -185,15 +190,15 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundThree"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.495"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.9"
+                                app:layout_constraintVertical_bias="1.0"
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
@@ -201,6 +206,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/colorPrimary"
+                                android:clickable="false"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -208,9 +214,9 @@
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toTopOf="@+id/wi_lt_soundThree"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
 
@@ -231,14 +237,14 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundFour"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.825"
+                                app:layout_constraintVertical_bias="1.0"
                                 app:srcCompat="@drawable/audio_regular" />
 
                             <TextView
@@ -246,6 +252,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/colorPrimary"
+                                android:clickable="false"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -253,14 +260,15 @@
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toTopOf="@+id/wi_lt_soundFour"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_bias="0.507"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.021" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
                 </android.support.constraint.ConstraintLayout>
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
-    </HorizontalScrollView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
