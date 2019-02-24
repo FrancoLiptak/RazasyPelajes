@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/playGameButton"
-        android:layout_width="217dp"
-        android:layout_height="73dp"
+        android:layout_width="248dp"
+        android:layout_height="85dp"
         android:background="@drawable/ma_jugar_regular"
         android:onClick="redirectToGame"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/recognitionButton"
-        android:layout_width="224dp"
-        android:layout_height="71dp"
+        android:layout_width="256dp"
+        android:layout_height="77dp"
         android:background="@drawable/ma_reconocimiento_regular"
         android:onClick="redirectToRecognition"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,8 +47,8 @@
 
     <ImageView
         android:id="@+id/gameLogo"
-        android:layout_width="416dp"
-        android:layout_height="71dp"
+        android:layout_width="456dp"
+        android:layout_height="90dp"
         app:layout_constraintBottom_toTopOf="@+id/cedicaLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -59,8 +59,8 @@
 
     <ImageView
         android:id="@+id/infoButton"
-        android:layout_width="71dp"
-        android:layout_height="72dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:onClick="redirectToInfo"
         app:layout_constraintBottom_toTopOf="@+id/unlpLogo"
         app:layout_constraintEnd_toStartOf="@+id/gameLogo"
@@ -72,8 +72,8 @@
 
     <ImageView
         android:id="@+id/settingsButton"
-        android:layout_width="71dp"
-        android:layout_height="72dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:onClick="redirectToConfig"
         app:layout_constraintBottom_toTopOf="@+id/informaticaLogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,8 +85,8 @@
 
     <ImageView
         android:id="@+id/informaticaLogo"
-        android:layout_width="136dp"
-        android:layout_height="105dp"
+        android:layout_width="157dp"
+        android:layout_height="112dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -97,8 +97,8 @@
 
     <ImageView
         android:id="@+id/unlpLogo"
-        android:layout_width="151dp"
-        android:layout_height="56dp"
+        android:layout_width="163dp"
+        android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/recognitionButton"
         app:layout_constraintHorizontal_bias="0.058"
