@@ -3,7 +3,6 @@ package com.francoliptak.razasypelajes.utils;
 import android.media.MediaPlayer;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Horse {
@@ -12,31 +11,45 @@ public class Horse {
     private String description;
     @JsonProperty("image_name")
     private String imageName;
-    @JsonProperty("sound_masculine_name")
-    private String soundMasculineName;
-    @JsonProperty("sound_feminine_name")
-    private String soundFeminineName;
+    @JsonProperty("s_m_race_name")
+    private String soundMasculineRaceName;
+    @JsonProperty("s_f_race_name")
+    private String soundFeminineRaceName;
+    @JsonProperty("s_m_fur_name")
+    private String soundMasculineFurName;
+    @JsonProperty("s_f_fur_name")
+    private String soundFeminineFurName;
     @JsonIgnore
     private int imageResourceId;
     @JsonIgnore
-    private MediaPlayer soundMasculine;
+    private MediaPlayer soundMasculineRace;
     @JsonIgnore
-    private Integer masculineSoundID;
+    private Integer masculineRaceSoundID;
     @JsonIgnore
-    private MediaPlayer soundFeminine;
+    private MediaPlayer soundFeminineRace;
     @JsonIgnore
-    private Integer feminineSoundID;
+    private Integer feminineRaceSoundID;
+    @JsonIgnore
+    private MediaPlayer soundMasculineFur;
+    @JsonIgnore
+    private Integer masculineFurSoundID;
+    @JsonIgnore
+    private MediaPlayer soundFeminineFur;
+    @JsonIgnore
+    private Integer feminineFurSoundID;
 
     public Horse() {
     }
 
-    public Horse(String race, String fur, String description, String imageName, String soundMasculineName, String soundFeminineName) {
+    public Horse(String race, String fur, String description, String imageName, String soundMasculineRaceName, String soundFeminineRaceName, String soundMasculineFurName, String soundFeminineFurName) {
         this.race = race;
         this.fur = fur;
         this.description = description;
         this.imageName = imageName;
-        this.soundMasculineName = soundMasculineName;
-        this.soundFeminineName = soundFeminineName;
+        this.soundMasculineRaceName = soundMasculineRaceName;
+        this.soundFeminineRaceName = soundFeminineRaceName;
+        this.soundMasculineFurName = soundMasculineFurName;
+        this.soundFeminineFurName = soundFeminineFurName;
     }
 
     public String getRace() {
@@ -63,40 +76,24 @@ public class Horse {
         this.imageName = imageName;
     }
 
-    public MediaPlayer getSoundMasculine() {
-        return soundMasculine;
-    }
-
-    public void setSoundMasculine(MediaPlayer soundMasculine) {
-        this.soundMasculine = soundMasculine;
-    }
-
-    public MediaPlayer getSoundFeminine() {
-        return soundFeminine;
-    }
-
-    public void setSoundFeminine(MediaPlayer soundFeminine) {
-        this.soundFeminine = soundFeminine;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    public String getSoundMasculineName() {
-        return soundMasculineName;
+    public String getSoundMasculineRaceName() {
+        return soundMasculineRaceName;
     }
 
-    public void setSoundMasculineName(String soundMasculineName) {
-        this.soundMasculineName = soundMasculineName;
+    public void setSoundMasculineRaceName(String soundMasculineRaceName) {
+        this.soundMasculineRaceName = soundMasculineRaceName;
     }
 
-    public String getSoundFeminineName() {
-        return soundFeminineName;
+    public String getSoundFeminineRaceName() {
+        return soundFeminineRaceName;
     }
 
-    public void setSoundFeminineName(String soundFeminineName) {
-        this.soundFeminineName = soundFeminineName;
+    public void setSoundFeminineRaceName(String soundFeminineRaceName) {
+        this.soundFeminineRaceName = soundFeminineRaceName;
     }
 
     public void setDescription(String description) {
@@ -111,19 +108,83 @@ public class Horse {
         this.imageResourceId = imageResourceId;
     }
 
-    public Integer getMasculineSoundID() {
-        return masculineSoundID;
+    public String getSoundMasculineFurName() {
+        return soundMasculineFurName;
     }
 
-    public void setMasculineSoundID(Integer masculineSoundID) {
-        this.masculineSoundID = masculineSoundID;
+    public void setSoundMasculineFurName(String soundMasculineFurName) {
+        this.soundMasculineFurName = soundMasculineFurName;
     }
 
-    public Integer getFeminineSoundID() {
-        return feminineSoundID;
+    public String getSoundFeminineFurName() {
+        return soundFeminineFurName;
     }
 
-    public void setFeminineSoundID(Integer feminineSoundID) {
-        this.feminineSoundID = feminineSoundID;
+    public void setSoundFeminineFurName(String soundFeminineFurName) {
+        this.soundFeminineFurName = soundFeminineFurName;
+    }
+
+    public MediaPlayer getSoundMasculineRace() {
+        return soundMasculineRace;
+    }
+
+    public void setSoundMasculineRace(MediaPlayer soundMasculineRace) {
+        this.soundMasculineRace = soundMasculineRace;
+    }
+
+    public Integer getMasculineRaceSoundID() {
+        return masculineRaceSoundID;
+    }
+
+    public void setMasculineRaceSoundID(Integer masculineRaceSoundID) {
+        this.masculineRaceSoundID = masculineRaceSoundID;
+    }
+
+    public MediaPlayer getSoundFeminineRace() {
+        return soundFeminineRace;
+    }
+
+    public void setSoundFeminineRace(MediaPlayer soundFeminineRace) {
+        this.soundFeminineRace = soundFeminineRace;
+    }
+
+    public Integer getFeminineRaceSoundID() {
+        return feminineRaceSoundID;
+    }
+
+    public void setFeminineRaceSoundID(Integer feminineRaceSoundID) {
+        this.feminineRaceSoundID = feminineRaceSoundID;
+    }
+
+    public MediaPlayer getSoundMasculineFur() {
+        return soundMasculineFur;
+    }
+
+    public void setSoundMasculineFur(MediaPlayer soundMasculineFur) {
+        this.soundMasculineFur = soundMasculineFur;
+    }
+
+    public Integer getMasculineFurSoundID() {
+        return masculineFurSoundID;
+    }
+
+    public void setMasculineFurSoundID(Integer masculineFurSoundID) {
+        this.masculineFurSoundID = masculineFurSoundID;
+    }
+
+    public MediaPlayer getSoundFeminineFur() {
+        return soundFeminineFur;
+    }
+
+    public void setSoundFeminineFur(MediaPlayer soundFeminineFur) {
+        this.soundFeminineFur = soundFeminineFur;
+    }
+
+    public Integer getFeminineFurSoundID() {
+        return feminineFurSoundID;
+    }
+
+    public void setFeminineFurSoundID(Integer feminineFurSoundID) {
+        this.feminineFurSoundID = feminineFurSoundID;
     }
 }

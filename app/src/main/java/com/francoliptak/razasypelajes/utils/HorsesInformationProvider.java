@@ -17,11 +17,11 @@ public class HorsesInformationProvider {
         for(Horse horse : horses) {
             int resourceImageID = anActivity.getResources().getIdentifier(horse.getImageName(), "drawable", anActivity.getPackageName());
             horse.setImageResourceId(resourceImageID);
-            int idFeminineSound = anActivity.getResources().getIdentifier(horse.getSoundFeminineName(), "raw", anActivity.getPackageName());
-            horse.setFeminineSoundID(idFeminineSound);
+            int idFeminineSound = anActivity.getResources().getIdentifier(horse.getSoundFeminineRaceName(), "raw", anActivity.getPackageName());
+            horse.setFeminineRaceSoundID(idFeminineSound);
             horse.setSoundFeminine(MediaPlayer.create(anActivity, idFeminineSound));
-            int idMasculineSound = anActivity.getResources().getIdentifier(horse.getSoundMasculineName(), "raw", anActivity.getPackageName());
-            horse.setMasculineSoundID(idMasculineSound);
+            int idMasculineSound = anActivity.getResources().getIdentifier(horse.getSoundMasculineRaceName(), "raw", anActivity.getPackageName());
+            horse.setMasculineRaceSoundID(idMasculineSound);
             horse.setSoundMasculine(MediaPlayer.create(anActivity, idMasculineSound));
         }
         return horses;
