@@ -18,6 +18,7 @@ import com.francoliptak.razasypelajes.utils.HorsesInformationProvider;
 import com.francoliptak.razasypelajes.utils.Level;
 import com.francoliptak.razasypelajes.utils.SoundManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.francoliptak.razasypelajes.utils.NameOfInteractions.IMG_WORD;
@@ -92,6 +93,12 @@ public class GameActivity extends AppCompatActivity {
         SoundManager.playSounds(this.horseRaceOrFurNameSounds);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void playSounds(View view){
+        view.setBackgroundResource(R.drawable.audio_click);
+        SoundManager.playSounds((ArrayList<MediaPlayer>) view.getTag());
+    }
+
     public void retryLevel(View view){
         this.actualLevelHandler.playLevel(this);
     }
@@ -109,7 +116,6 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.menu_game);
         startConfettiAnimation();
     }
-
 
     public void showFinalMenuAndAnimation(){
         setContentView(R.layout.final_menu_game);

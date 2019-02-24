@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.francoliptak.razasypelajes.GameActivity;
 import com.francoliptak.razasypelajes.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameOneLevelOneWI extends LevelOneWI {
@@ -27,16 +28,24 @@ public class GameOneLevelOneWI extends LevelOneWI {
         if(raceOrFur == 1){
             textView.setText(aHorse.getRace());
             if(gameActivity.selectedSoundIsFemale()) {
-                imageView.setTag(aHorse.getSoundFeminineRace());
+                List<MediaPlayer> list = new ArrayList<>();
+                list.add(aHorse.getSoundFeminineRace());
+                imageView.setTag(list);
             }else{
-                imageView.setTag(aHorse.getSoundMasculineRace());
+                List<MediaPlayer> list = new ArrayList<>();
+                list.add(aHorse.getSoundMasculineRace());
+                imageView.setTag(list);
             }
         }else{
             textView.setText(aHorse.getFur());
             if(gameActivity.selectedSoundIsFemale()) {
-                imageView.setTag(aHorse.getSoundFeminineFur());
+                List<MediaPlayer> list = new ArrayList<>();
+                list.add(aHorse.getSoundFeminineFur());
+                imageView.setTag(list);
             }else{
-                imageView.setTag(aHorse.getSoundMasculineFur());
+                List<MediaPlayer> list = new ArrayList<>();
+                list.add(aHorse.getSoundMasculineFur());
+                imageView.setTag(list);
             }
         }
     }
