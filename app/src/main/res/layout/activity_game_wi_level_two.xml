@@ -48,7 +48,7 @@
                         app:srcCompat="@android:color/background_light" />
 
                     <ImageView
-                        android:id="@+id/imageView10"
+                        android:id="@+id/goBack"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:onClick="goBack"

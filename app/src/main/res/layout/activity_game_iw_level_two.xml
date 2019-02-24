@@ -129,7 +129,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/goBack"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:onClick="goBack"
@@ -142,7 +142,7 @@
                         app:srcCompat="@drawable/home_regular" />
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/playSound"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:onClick="playHorseRaceOrFurNameSound"

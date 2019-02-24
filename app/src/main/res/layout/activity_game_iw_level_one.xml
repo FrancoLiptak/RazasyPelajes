@@ -37,7 +37,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/goBack"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:onClick="goBack"
@@ -64,7 +64,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/playSound"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:onClick="playHorseRaceOrFurNameSound"

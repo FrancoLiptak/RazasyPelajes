@@ -66,7 +66,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void goBack(View view){
-
+        findViewById(R.id.goBack).setBackgroundResource(R.drawable.home_click);
         destroy();
     }
 
@@ -94,6 +94,7 @@ public class GameActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void playHorseRaceOrFurNameSound(View view){
+        view.setBackgroundResource(R.drawable.audio_click);
         SoundManager.playSounds(this.horseRaceOrFurNameSounds);
     }
 
