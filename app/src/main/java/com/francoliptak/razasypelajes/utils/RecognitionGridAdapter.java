@@ -29,7 +29,7 @@ public class RecognitionGridAdapter extends RecognitionAdapter {
 
     protected void setDataToViews(AppCompatActivity anActivity, List<Horse> horses, int position, RecognitionItemData recognitionGridItemData){
         Horse horse = horses.get(position);
-        recognitionGridItemData.getHorseRaceFurNameTextView().setText(horse.getRace() + " " + horse.getFur());
+        recognitionGridItemData.getHorseRaceFurNameTextView().setText(horse.getRace() + " - " + horse.getFur());
         recognitionGridItemData.getHorseImageView().setImageResource(horse.getImageResourceId());
         recognitionGridItemData.getHorseImageView().setTag(horse.getImageResourceId());
 
