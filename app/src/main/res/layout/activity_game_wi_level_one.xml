@@ -24,7 +24,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout24"
                 android:layout_width="match_parent"
-                android:layout_height="229dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +39,8 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:onClick="goBack"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +66,7 @@
 
             <LinearLayout
                 android:layout_width="656dp"
-                android:layout_height="126dp"
+                android:layout_height="140dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,8 +80,8 @@
 
                     <LinearLayout
                         android:id="@+id/linearLayout26"
-                        android:layout_width="311dp"
-                        android:layout_height="110dp"
+                        android:layout_width="315dp"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/linearLayout25"
@@ -95,8 +95,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lo_soundOne"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -110,23 +110,24 @@
                                 android:id="@+id/wi_lo_optionOne"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintBottom_toTopOf="@+id/wi_lo_soundOne"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.089" />
+                                app:layout_constraintTop_toTopOf="parent" />
                         </android.support.constraint.ConstraintLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/linearLayout25"
-                        android:layout_width="321dp"
-                        android:layout_height="110dp"
+                        android:layout_width="315dp"
+                        android:layout_height="150dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -140,8 +141,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lo_soundTwo"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -155,6 +156,7 @@
                                 android:id="@+id/wi_lo_optionTwo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"

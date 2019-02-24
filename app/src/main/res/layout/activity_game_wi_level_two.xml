@@ -23,7 +23,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout14"
                 android:layout_width="671dp"
-                android:layout_height="229dp"
+                android:layout_height="220dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -49,8 +49,8 @@
 
                     <ImageView
                         android:id="@+id/imageView10"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:onClick="goBack"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/wi_lt_horseImg"
@@ -64,7 +64,7 @@
 
             <LinearLayout
                 android:layout_width="655dp"
-                android:layout_height="107dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
                     <LinearLayout
                         android:id="@+id/linearLayout16"
                         android:layout_width="155dp"
-                        android:layout_height="90dp"
+                        android:layout_height="140dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/linearLayout15"
@@ -93,8 +93,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundOne"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +108,7 @@
                                 android:id="@+id/wi_lt_optionOne"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -124,7 +125,7 @@
                     <LinearLayout
                         android:id="@+id/linearLayout15"
                         android:layout_width="155dp"
-                        android:layout_height="90dp"
+                        android:layout_height="140dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/linearLayout17"
@@ -138,8 +139,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundTwo"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -153,6 +154,7 @@
                                 android:id="@+id/wi_lt_optionTwo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -169,7 +171,7 @@
                     <LinearLayout
                         android:id="@+id/linearLayout17"
                         android:layout_width="155dp"
-                        android:layout_height="90dp"
+                        android:layout_height="140dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/linearLayout18"
@@ -183,8 +185,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundThree"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -198,6 +200,7 @@
                                 android:id="@+id/wi_lt_optionThree"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
@@ -214,7 +217,7 @@
                     <LinearLayout
                         android:id="@+id/linearLayout18"
                         android:layout_width="148dp"
-                        android:layout_height="90dp"
+                        android:layout_height="140dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -228,8 +231,8 @@
 
                             <ImageView
                                 android:id="@+id/wi_lt_soundFour"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
                                 android:onClick="playSounds"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -242,6 +245,7 @@
                                 android:id="@+id/wi_lt_optionFour"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
