@@ -22,8 +22,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
@@ -37,8 +37,8 @@
 
                     <LinearLayout
                         android:id="@+id/linearLayout6"
-                        android:layout_width="330dp"
-                        android:layout_height="142dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
                         android:background="@drawable/customborder"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
@@ -104,8 +104,8 @@
 
                     <LinearLayout
                         android:id="@+id/linearLayout7"
-                        android:layout_width="330dp"
-                        android:layout_height="137dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
                         android:background="@drawable/customborder"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -189,8 +189,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -204,8 +204,8 @@
 
                     <LinearLayout
                         android:id="@+id/linearLayout9"
-                        android:layout_width="329dp"
-                        android:layout_height="135dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
                         android:background="@drawable/customborder"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -286,8 +286,8 @@
 
                     <LinearLayout
                         android:id="@+id/linearLayout8"
-                        android:layout_width="329dp"
-                        android:layout_height="144dp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
                         android:background="@drawable/customborder"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
