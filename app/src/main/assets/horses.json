@@ -10,8 +10,8 @@
     "s_f_fur_name": "sound_fem_rosillo"
   },
   {
-    "race": "MESTIZO CRUZA ÁRABE.",
-    "fur": "ALAZÁN TOSTADO.",
+    "race": "MESTIZO CRUZA ÁRABE",
+    "fur": "ALAZÁN TOSTADO",
     "description": "RAZA: MESTIZO CRUZA ÁRABE. Resultante de un progenitor MESTIZO y uno ÁRABE. RAZA MESTIZO - Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. RAZA ÁRABE - Raza de Caballos con una cabeza característica y la cola siempre en alto. El caballo árabe es una de las razas de caballos mejor reconocidas en el mundo. Su reputación denota su inteligencia, carácter fuerte y resistencia sobresaliente. Tienen menos huesos ya que tienen una costilla, un hueso lumbar y dos vértebras menos que los demás caballos. Su pelaje puede tener varias tonalidades. Encontramos caballos árabes en prácticamente todos los colores, aunque los más característicos o arraigados a este tipo de raza sean los Tordillos y Alazanes. PELAJE: ALAZÁN TOSTADO. Capa color anaranjado parejo y uniforme, que va del amarillento al colorado azafrán. Su piel es oscura. Las crines, cerdas y miembros son del mismo color o más claros, pero nunca oscuro, pero nunca negras. Pueden ser: Alazán – Alazán Claro – Alazán Rubio – Alazán Dorado – Alazán Tostado.",
     "image_name": "ambar_mestizo_cruza_arabe_alazan_tostado",
     "s_m_race_name": "sound_mas_mestizo_cruza_arabe",
@@ -60,7 +60,7 @@
     "s_f_fur_name": "sound_fem_blanco"
   },
   {
-    "race": "MESTIZO CUARTO DE MILLA.",
+    "race": "MESTIZO CUARTO DE MILLA",
     "fur": "OVERO AZULEJO",
     "description": "RAZA MESTIZO - Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. RAZA CUARTO DE MILLA - Raza de Caballos -también conocida como Quarter Horses-  extremadamente sensible y tratable. Tiene la velocidad de los caballos de sangre caliente de sus ancestros y la estabilidad de los Caballos de sangre fría. Tiene un alto grado de inteligencia; es muy fácil de entrenar y de conducir, obediente. Su conformación a la vez elegante y fuerte, la armonía de sus andares y la docilidad propias del Cuarto de Milla hace que se lo considere el caballo más versátil del mundo. Los caballos Quarter pueden presentarse en casi todos los pelajes, excepto los Pintados, los Albinos y los manchados como el Appaloosa. La capa más típica es la Alazán. PELAJE: OVERO AZULEJO. Capa pigmentada con manchas blancas características por sus bordes irregulares e indefinidos. Se da tanto en una capa pigmentada con manchas blancas o al revés. La parte inferior del cuerpo suele tener más presencia de blanco que la parte superior. Pueden ser: Overo Alazán – Overo Azulejo – Overo Moro – Overo Rosado – Overo  Zaino.",
     "image_name": "bonita_mestizo_qh_con_criollo_overo_azulejo",
