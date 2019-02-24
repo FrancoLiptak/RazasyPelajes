@@ -48,4 +48,14 @@
     <string name="volver">Volver</string>
     <string name="textview">TextView</string>
 
+
+    <string name="autor">Juego desarrollado por Franco Emanuel Liptak, para la cátedra Laboratorio de Software.</string>
+    <string name="objective">El objetivo general de este juego es favorecer el reconocimiento e identificación  de las razas y pelajes del caballo que se utiliza en la sesión o clase de CEDICA.</string>
+    <string name="title">Es un juego de un único jugador y cuenta con 2 modos: Reconocimiento y Juego.</string>
+    <string name="recognitionModeExplication">- Modo Reconocimiento: el objetivo de este modo es que las amazonas y jinetes puedan distinguir su caballo y el de sus compañeras y compañeros. Se trata de una instancia de reconocimiento de razas, pelajes.</string>
+    <string name="gameExplication">
+        - Modo Juego: Consiste de 2 minijuegos. En cada minijuego se usa una secuencia de 5 desafíos. Dentro de cada desafío la dificultad estará dada por la cantidad de opciones disponibles (2 imágenes/audios o 4 imágenes/audios).
+        Los minijuegos son de dificultad incremental y dependientes. Para pasar al minijuego 2, el o la jugadora debe acertar 3 de 5 desafíos del minijuego 1.
+    </string>
+
 </resources>

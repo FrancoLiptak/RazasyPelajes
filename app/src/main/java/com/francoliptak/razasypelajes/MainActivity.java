@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void redirectToInfo(View view) {
         findViewById(R.id.infoButton).setBackgroundResource(R.drawable.ma_info_click);
-        // Intent intent = new Intent(this, InfoActivity.class);
-        // startActivity(intent);
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
     }
 
 }

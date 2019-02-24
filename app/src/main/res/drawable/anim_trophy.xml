@@ -1,5 +1,6 @@
 <animation-list android:id="@+id/animation" android:oneshot="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item android:drawable="@drawable/copa_rotando001" android:duration="100" />
     <item android:drawable="@drawable/copa_rotando002" android:duration="100" />
     <item android:drawable="@drawable/copa_rotando003" android:duration="100" />
@@ -18,4 +19,5 @@
     <item android:drawable="@drawable/copa_rotando007" android:duration="100" />
     <item android:drawable="@drawable/copa_rotando008" android:duration="100" />
     <item android:drawable="@drawable/copa_rotando009" android:duration="100" />
+
 </animation-list>
