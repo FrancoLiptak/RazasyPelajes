@@ -1,5 +1,6 @@
 package com.francoliptak.razasypelajes;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -65,6 +66,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void goBack(View view){
+
         destroy();
     }
 
@@ -72,6 +74,8 @@ public class GameActivity extends AppCompatActivity {
         horseRaceOrFurNameSounds = null;
         actualLevelHandler = null;
         finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

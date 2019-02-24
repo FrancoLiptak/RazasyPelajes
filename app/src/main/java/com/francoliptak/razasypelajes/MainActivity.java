@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.settingsButton).setBackgroundResource(R.drawable.ma_config_click);
         Intent intent = new Intent(this, ConfigActivity.class);
         startActivity(intent);
+        findViewById(R.id.settingsButton).setBackgroundResource(R.drawable.ma_config_regular);
     }
 
     public void redirectToInfo(View view) {
         findViewById(R.id.infoButton).setBackgroundResource(R.drawable.ma_info_click);
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
+        findViewById(R.id.infoButton).setBackgroundResource(R.drawable.ma_info_regular);
     }
 
 }

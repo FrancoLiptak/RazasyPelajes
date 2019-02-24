@@ -14,6 +14,7 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     public void goBack(View view){
+        findViewById(R.id.aboutGoBack).setBackgroundResource(R.drawable.home_click);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
