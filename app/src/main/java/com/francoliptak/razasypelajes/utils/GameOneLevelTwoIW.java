@@ -44,10 +44,6 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
         return sounds;
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.informThatTheGameIsOver(gameActivity);
-    }
-
     public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
         throw new UnsupportedOperationException();
     }
@@ -58,6 +54,10 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
 
     public void displayAnimation(GameActivity gameActivity, Game game){
         gameActivity.showMenuAndAnimation();
+    }
+
+    public void nextStep(GameActivity gameActivity, Game game){
+        game.informThatTheGameIsOver(gameActivity);
     }
 
 }

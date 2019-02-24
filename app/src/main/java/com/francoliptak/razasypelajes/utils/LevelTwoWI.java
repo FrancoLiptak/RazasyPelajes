@@ -46,8 +46,6 @@ public abstract class LevelTwoWI extends Level {
         throw new UnsupportedOperationException();
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.informThatAllGamesWereFinished(gameActivity);
-    }
+    public abstract void nextStep(GameActivity gameActivity, Game game);
 
 }

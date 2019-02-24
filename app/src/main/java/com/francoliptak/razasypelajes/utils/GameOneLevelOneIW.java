@@ -56,4 +56,8 @@ public class GameOneLevelOneIW extends LevelOneIW{
         gameActivity.showMenuAndAnimation();
     }
 
+    public void nextStep(GameActivity gameActivity, Game game){
+        game.informThatTheGameIsOver(gameActivity);
+    }
+
 }

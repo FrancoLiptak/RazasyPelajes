@@ -54,11 +54,11 @@ public class GameOneLevelTwoWI extends LevelTwoWI {
         ((ImageView) gameActivity.findViewById(R.id.wi_lt_horseImg)).setImageResource(correctAnswer.getImageResourceId());
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.informThatTheGameIsOver(gameActivity);
-    }
-
     public void displayAnimation(GameActivity gameActivity, Game game){
         gameActivity.showMenuAndAnimation();
+    }
+
+    public void nextStep(GameActivity gameActivity, Game game){
+        game.informThatTheGameIsOver(gameActivity);
     }
 }
