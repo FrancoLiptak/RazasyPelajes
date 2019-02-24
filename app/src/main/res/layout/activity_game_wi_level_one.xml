@@ -6,8 +6,9 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="672dp"
-        android:layout_height="371dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
         android:background="@drawable/bg_amarillo"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,7 +113,7 @@
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
-                                android:textSize="24sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +158,7 @@
                                 android:onClick="evaluateOptionChosen"
                                 android:text="TextView"
                                 android:textColor="@android:color/background_light"
-                                android:textSize="24sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold"
                                 app:layout_constraintBottom_toTopOf="@+id/wi_lo_soundTwo"
                                 app:layout_constraintEnd_toEndOf="parent"

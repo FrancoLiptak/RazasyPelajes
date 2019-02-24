@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="715dp"
-        android:layout_height="319dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -335,8 +335,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="715dp"
-        android:layout_height="68dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

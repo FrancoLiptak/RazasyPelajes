@@ -6,8 +6,9 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="672dp"
-        android:layout_height="361dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
         android:background="@drawable/bg_amarillo"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/horse"
                         android:textColor="@android:color/background_light"
-                        android:textSize="80sp"
+                        android:textSize="36sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
