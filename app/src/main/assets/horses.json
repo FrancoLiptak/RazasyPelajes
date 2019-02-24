@@ -14,120 +14,120 @@
     "fur": "ALAZÁN TOSTADO.",
     "description": "RAZA: MESTIZO CRUZA ÁRABE. Resultante de un progenitor MESTIZO y uno ÁRABE. RAZA MESTIZO - Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. RAZA ÁRABE - Raza de Caballos con una cabeza característica y la cola siempre en alto. El caballo árabe es una de las razas de caballos mejor reconocidas en el mundo. Su reputación denota su inteligencia, carácter fuerte y resistencia sobresaliente. Tienen menos huesos ya que tienen una costilla, un hueso lumbar y dos vértebras menos que los demás caballos. Su pelaje puede tener varias tonalidades. Encontramos caballos árabes en prácticamente todos los colores, aunque los más característicos o arraigados a este tipo de raza sean los Tordillos y Alazanes. PELAJE: ALAZÁN TOSTADO. Capa color anaranjado parejo y uniforme, que va del amarillento al colorado azafrán. Su piel es oscura. Las crines, cerdas y miembros son del mismo color o más claros, pero nunca oscuro, pero nunca negras. Pueden ser: Alazán – Alazán Claro – Alazán Rubio – Alazán Dorado – Alazán Tostado.",
     "image_name": "ambar_mestizo_cruza_arabe_alazan_tostado",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo_cruza_arabe",
+    "s_m_fur_name": "sound_mas_alazan_tostado",
+    "s_f_race_name": "sound_fem_mestizo_cruzarabe",
+    "s_f_fur_name": "sound_fem_alazan_tostado"
   },
   {
     "race": "SANGRE PURO DE CARRERA",
     "fur": "ZAINO COLORADO",
     "description": "RAZA: SANGRE PURO DE CARRERA. Raza de Caballos con orígen el siglo XVIII en Inglaterra cuando yeguas madres inglesas fueron cruzadas con sementales árabes importados para crear corredores de distancia. Los pura sangre se destacan como caballos de carrera pero también se utilizan como caballos de equitación y otros entrenamientos ecuestres combinados, debido a su gran  condición atlética. El color de capa más común es el castaño pero también puede ser Zaino, Alazán o Tordillo en cuanto a su pelaje. PELAJE: ZAINO COLORADO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "angola_spc_zainocolorado",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_sangre_pura_de_carrera",
+    "s_m_fur_name": "sound_mas_zaino_colorado",
+    "s_f_race_name": "sound_fem_sangre_pura_de_carrera",
+    "s_f_fur_name": "sound_fem_zaino_colorado"
   },
   {
     "race": "MESTIZO",
     "fur": "OVERO ZAINO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: OVERO ZAINO. Capa pigmentada con manchas blancas características por sus bordes irregulares e indefinidos. Se da tanto en una capa pigmentada con manchas blancas o al revés. La parte inferior del cuerpo suele tener más presencia de blanco que la parte superior. Pueden ser: Overo Alazán – Overo Azulejo – Overo Moro – Overo Rosado – Overo  Zaino.",
     "image_name": "antu_mestizo_overo_zaino",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_overo_zaino",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_overo_zaino"
   },
   {
     "race": "MESTIZO",
     "fur": "ALAZÁN RUANO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ALAZÁN RUANO. Capa color rojizo de distintos tonos que presenta matices yendo del claro al oscuro. Se caracteriza por la crin y cola blancas.",
     "image_name": "bionda_mestizo_alazan_ruano",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_alazan_ruano",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_alazan_ruano"
   },
   {
     "race": "MESTIZO",
     "fur": "BLANCO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: BLANCO. Formado por pelos de ese color y piel que carece de pigmentación. Pueden ser: - Blanco Común – Blanco Rosado – Blanco Porcelano.",
     "image_name": "blanco_mestizo_blanco",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_blanco",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_blanco"
   },
   {
     "race": "MESTIZO CUARTO DE MILLA.",
     "fur": "OVERO AZULEJO",
     "description": "RAZA MESTIZO - Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. RAZA CUARTO DE MILLA - Raza de Caballos -también conocida como Quarter Horses-  extremadamente sensible y tratable. Tiene la velocidad de los caballos de sangre caliente de sus ancestros y la estabilidad de los Caballos de sangre fría. Tiene un alto grado de inteligencia; es muy fácil de entrenar y de conducir, obediente. Su conformación a la vez elegante y fuerte, la armonía de sus andares y la docilidad propias del Cuarto de Milla hace que se lo considere el caballo más versátil del mundo. Los caballos Quarter pueden presentarse en casi todos los pelajes, excepto los Pintados, los Albinos y los manchados como el Appaloosa. La capa más típica es la Alazán. PELAJE: OVERO AZULEJO. Capa pigmentada con manchas blancas características por sus bordes irregulares e indefinidos. Se da tanto en una capa pigmentada con manchas blancas o al revés. La parte inferior del cuerpo suele tener más presencia de blanco que la parte superior. Pueden ser: Overo Alazán – Overo Azulejo – Overo Moro – Overo Rosado – Overo  Zaino.",
     "image_name": "bonita_mestizo_qh_con_criollo_overo_azulejo",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo_cuarto_de_milla",
+    "s_m_fur_name": "sound_mas_overo_azulejo",
+    "s_f_race_name": "sound_fem_mestizo_cuarto_de_milla",
+    "s_f_fur_name": "sound_fem_overo_azulejo"
   },
   {
     "race": "MESTIZO",
     "fur": "ALAZÁN",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ALAZÁN. Capa color anaranjado parejo y uniforme, que va del amarillento al colorado azafrán. Su piel es oscura. Las crines, cerdas y miembros son del mismo color o más claros, pero nunca oscuro, pero nunca negras. Pueden ser: Alazán – Alazán Claro – Alazán Rubio – Alazán Dorado – Alazán Tostado.",
     "image_name": "cacique_mestizo_alazan",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_alazan",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_alazan"
   },
   {
     "race": "MESTIZO",
     "fur": "TOBIANO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: TOBIANO. Capa caracterizada por manchas de bordes definidos blancas –grandes o pequeñas- que, generalmente, se inician sobre la parte dorsal. Pueden ser: Tobiano Colorado – Tobiano Negro.",
     "image_name": "candelaria_mestizo_tobiano",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_tobiano",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_tobiano"
   },
   {
     "race": "MESTIZO",
     "fur": "TORDILLO CANELA",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: TORDILLO CANELA. Se caracteriza por poseer pelos blancos y negros entremezclados, lo cual le da a la capa un aspecto grisáceo que puede variar del gris oscuro al casi blanco. Puede ser: Tordillo – Tordillo Canela – Tordillo Moro – Tordillo Negro.",
     "image_name": "ciro_mestizo_tordillo_canela",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_tordillo_canela",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_tordillo_canela"
   },
   {
     "race": "MESTIZO",
     "fur": "ZAINO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ZAINO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "felipe_mestizo_zaino",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_zaino",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_zaino"
   },
   {
     "race": "MESTIZO",
     "fur": "PICAZO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: PICAZO. Se caracteriza por capa oscura con frente y extremidades blancas.",
     "image_name": "hualfin_criollo_horsepicaso",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_picazo",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_picazo"
   },
   {
     "race": "CUARTO DE MILLA",
     "fur": "BAYO",
     "description": "RAZA: CUARTO DE MILLA. Raza de Caballos conformada por la cruza de Pura Sangre Inglés y Mustang americano. De carácter tranquilo; es muy sensible y sociable. Veloces, dúctiles, de poca estatura y corpulentos: constitución musculosa, pecho grande y ancho. Muy amplia es la gama de pelaje, sólo no se aceptan los Pintados, los Manchados (Appaloosa) ni los Albinos. PELAJE: BAYO. El color de la capa abarca una amplia gama cromática que puede ir del amarillo muy claro casi blanco hasta el marrón claro anaranjado. Este pelaje suele presentar particularidades blancas o cabos negros. Pueden ser: Bayo – Bayo Claro – Bayo Anaranjado – Bayo Encerado.",
     "image_name": "juana_cuarto_de_milla_bayo",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_cuarto_de_milla",
+    "s_m_fur_name": "sound_mas_bayo",
+    "s_f_race_name": "sound_fem_cuarto_de_milla",
+    "s_f_fur_name": "sound_fem_bayo"
   },
   {
     "race": "PETISO ARGENTINO",
@@ -135,29 +135,29 @@
     "description": "RAZA: PETISO ARGENTINO. Raza de Caballos que nació de la cruza de petisos importados con caballos de otras razas, principalmente autóctonas. De cabeza mediana, orejas pequeñas, cuerpo armonioso y profundo; de acción ágil y suelta, temperamento activo y brioso.En la actualidad, se usa para actividades hípicas con niños y niñas. PELAJE: TORDILLO MORO. Se caracteriza por poseer pelos blancos y negros entremezclados, lo cual le da a la capa un aspecto grisáceo que puede variar del gris oscuro al casi blanco. Puede ser: Tordillo – Tordillo Canela – Tordillo Moro – Tordillo Negro.",
     "image_name": "mora_petiso_argentino_tordillo_moro",
     "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
+    "s_m_fur_name": "sound_mas_tordillo",
     "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_f_fur_name": "sound_fem_tordillo"
   },
   {
     "race": "MESTIZO",
     "fur": "OVERO ROSADO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: OVERO ROSADO. Capa pigmentada con manchas blancas características por sus bordes irregulares e indefinidos. Se da tanto en una capa pigmentada con manchas blancas o al revés. La parte inferior del cuerpo suele tener más presencia de blanco que la parte superior. Pueden ser: Overo Alazán – Overo Azulejo – Overo Moro – Overo Rosado – Overo  Zaino.",
     "image_name": "muneco_mestizo_overo_rosado",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_overo_rosado",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_overo_rosado"
   },
   {
     "race": "MESTIZO",
     "fur": "MORO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: MORO. Formado por capa de color gris azulina, formada pelos negros y blancos sobre piel negra. Su cabeza es más bien oscura. Puede ser: Moro Claro – Moro Oscuro – Moro Negro.",
     "image_name": "nala_mestizo_moro",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_mora",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_mora"
   },
   {
     "race": "PETISO ARGENTINO",
@@ -165,68 +165,68 @@
     "description": "RAZA: PETISO ARGENTINO. Raza de Caballos que nació de la cruza de petisos importados con caballos de otras razas, principalmente autóctonas. De cabeza mediana, orejas pequeñas, cuerpo armonioso y profundo; de acción ágil y suelta, temperamento activo y brioso.En la actualidad, se usa para actividades hípicas con niños y niñas. PELAJE: ZAINO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "pamperito_petiso_argentino_zaino",
     "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
+    "s_m_fur_name": "sound_mas_zaino",
     "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_f_fur_name": "sound_fem_zaino"
   },
   {
     "race": "MESTIZO",
     "fur": "ALAZÁN PINTADO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ALAZÁN PINTADO. Capa color rojizo de distintos tonos que presenta matices yendo del claro al oscuro.  Es distinguida porque los pelos de diferentes colores se agrupan formando manchas o parches.",
     "image_name": "pintada_mestizo_alazan_pintado",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_alazan_pintado",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_alazan_pintado"
   },
   {
     "race": "MESTIZO",
     "fur": "ZAINO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ZAINO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "pochito_mestizo_zaino",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_zaino",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_zaino"
   },
   {
     "race": "SILLA ARGENTINO",
     "fur": "ALAZÁN",
     "description": "RAZA: SILLA ARGENTINO. Raza de Caballo cuyo orígen se remonta a 1941 cuando  el Anglo Argentino se transformó en raza para la AAFE (Asociación Argentina de Fomento Equino). A partir de 1982 comenzó a llamarse Silla Argentino. Es una animal muy parecido al SPC, aunque más robustos. Se destaca por su temperamento enérgico y vivaz. De volumen y peso medianos, su estructura fuerte y proporcionada le otorga una armonía apta para el deporte. Su pelaje, notablemente liso y sedoso, puede ser Alazán, Zaino o Tordillo pero no Pintado o Tobiano. PELAJE: ALAZÁN. Capa color anaranjado parejo y uniforme, que va del amarillento al colorado azafrán. Su piel es oscura. Las crines, cerdas y miembros son del mismo color o más claros, pero nunca oscuro, pero nunca negras. Pueden ser: Alazán – Alazán Claro – Alazán Rubio – Alazán Dorado – Alazán Tostado.",
     "image_name": "primavera_silla_argentino_alazan",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_silla_argentino",
+    "s_m_fur_name": "sound_mas_alazan",
+    "s_f_race_name": "sound_fem_silla_argentino",
+    "s_f_fur_name": "sound_fem_alazan"
   },
   {
     "race": "CRIOLLO",
     "fur": "BAYO GATEADO",
     "description": "RAZA: CRIOLLO. Raza de Caballos propio de Latinoamérica. Son animales de cuerpo robusto y musculoso, con unas extremidades fuertes y una abundante melena; de porte equilibrado, armónico y con el centro de gravedad bajo. De carácter autónomo y perseverante. No se aceptan en esta raza pelajes Tobiano o Pintado. PELAJE: BAYO GATEADO. El color de la capa es amarilla anaranjada con distintas tonalidades. Se caracteriza por presentar raya de mula (línea que corre desde la cruz hasta la cola, de color más intenso que el resto del pelaje) y cebraduras (franjas transversales de color más oscuro que se encuentran en los miembros).",
     "image_name": "tigre_criollo_bayo_gateado",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_criollo",
+    "s_m_fur_name": "sound_mas_gateado",
+    "s_f_race_name": "sound_fem_criollo",
+    "s_f_fur_name": "sound_fem_bayo_gateado"
   },
   {
     "race": "MESTIZO",
     "fur": "ZAINO COLORADO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ZAINO COLORADO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "tupac_mestizo_zaino_oscuro",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_zaino_colorado",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_zaino_colorado"
   },
   {
     "race": "MESTIZO",
     "fur": "TORDILLO",
     "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: TORDILLO. Se caracteriza por poseer pelos blancos y negros entremezclados, lo cual le da a la capa un aspecto grisáceo que puede variar del gris oscuro al casi blanco. Puede ser: Tordillo – Tordillo Canela – Tordillo Moro – Tordillo Negro.",
     "image_name": "zorzal_mestizo_tordillo",
-    "s_m_race_name": "sound_mas_petiso_argentino",
-    "s_m_fur_name": "sound_mas_rosillo",
-    "s_f_race_name": "sound_fem_petizo_argentino",
-    "s_f_fur_name": "sound_fem_rosillo"
+    "s_m_race_name": "sound_mas_mestizo",
+    "s_m_fur_name": "sound_mas_tordillo",
+    "s_f_race_name": "sound_fem_mestizo",
+    "s_f_fur_name": "sound_fem_tordillo"
   }
 ]
