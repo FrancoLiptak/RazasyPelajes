@@ -19,6 +19,7 @@ public abstract class Level {
     private int hits = 0;
     private Integer correctAnswerViewID;
     private NameOfInteractions nameOfInteraction;
+    private List<Horse> options;
 
     public Level(Game game, List<Horse> horses, NameOfInteractions nameOfInteraction) {
         this.game = game;
@@ -45,6 +46,7 @@ public abstract class Level {
     }
 
     public void printHorsesForIW(GameActivity gameActivity){
+        options = new ArrayList<>();
         List<MediaPlayer> correctHorseSounds = null;
         List<Horse> horses = new ArrayList<>();
         horses.addAll(this.horses);
@@ -53,8 +55,7 @@ public abstract class Level {
         Random r = new Random();
         int raceOrFur = getRandomBetweenRaceAndFur();
         for(int i = 0; i < this.getAmountOfTotalOptions(); i++) {
-            Horse randomHorse = horses.get(r.nextInt(horses.size()));
-            horses.remove(randomHorse);
+            Horse randomHorse = getHorse(horses, r);
             ImageView imageView = views.get(r.nextInt(views.size()));
             views.remove(imageView);
             if (correctAnswer == null) {
@@ -68,7 +69,41 @@ public abstract class Level {
         this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSounds, raceOrFur);
     }
 
+    public Horse getHorse(List<Horse> horses, Random r){
+        boolean horseIsDiferent = false;
+        Horse randomHorse = horses.get(r.nextInt(horses.size()));
+        while(!horseIsDiferent){
+            horses.remove(randomHorse);
+            if((options.size() == 0) || (!containsFur(options, randomHorse.getFur()) && !containsRace(options, randomHorse.getRace()))){
+                options.add(randomHorse);
+                horseIsDiferent = true;
+            }else{
+                randomHorse = horses.get(r.nextInt(horses.size()));
+            }
+        }
+        return randomHorse;
+    }
+
+    private boolean containsFur(List<Horse> options, String fur){
+        for(Horse horse : options){
+            if(horse.getFur().equals(fur)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean containsRace(List<Horse> options, String race){
+        for(Horse horse : options){
+            if(horse.getRace().equals(race)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void printHorsesForWI(GameActivity gameActivity){
+        options = new ArrayList<>();
         List<Horse> horses = new ArrayList<>();
         horses.addAll(this.horses);
         List<TextView> textViews = new ArrayList<>();
@@ -78,8 +113,7 @@ public abstract class Level {
         Random r = new Random();
         int raceOrFur = getRandomBetweenRaceAndFur();
         for(int i = 0; i < this.getAmountOfTotalOptions(); i++) {
-            Horse randomHorse = horses.get(r.nextInt(horses.size()));
-            horses.remove(randomHorse);
+            Horse randomHorse = getHorse(horses, r);
             int nextInt = r.nextInt(textViews.size());
             TextView textView = textViews.get(nextInt);
             textViews.remove(textView);
