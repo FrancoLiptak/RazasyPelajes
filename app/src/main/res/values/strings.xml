@@ -10,8 +10,8 @@
     <string name="jugar">Jugar</string>
 
     <string name="miniGame">Minijuego:</string>
-    <string name="razasYPelajesIPRadioButton">Razas y Pelajes: Imagen-Palabra</string>
-    <string name="razasYPelajesPIRadioButton">Razas y Pelajes: Palabra-Imagen</string>
+    <string name="razasYPelajesIPRadioButton">Imagen-Palabra</string>
+    <string name="razasYPelajesPIRadioButton">Palabra-Imagen</string>
 
     <string name="difficulty_level">Nivel de dificultad:</string>
     <string name="difficulty_level_easy">Fácil</string>
