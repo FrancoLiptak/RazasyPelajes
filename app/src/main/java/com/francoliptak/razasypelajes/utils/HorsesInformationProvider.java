@@ -17,12 +17,20 @@ public class HorsesInformationProvider {
         for(Horse horse : horses) {
             int resourceImageID = anActivity.getResources().getIdentifier(horse.getImageName(), "drawable", anActivity.getPackageName());
             horse.setImageResourceId(resourceImageID);
-            int idFeminineSound = anActivity.getResources().getIdentifier(horse.getSoundFeminineRaceName(), "raw", anActivity.getPackageName());
-            horse.setFeminineRaceSoundID(idFeminineSound);
-            horse.setSoundFeminine(MediaPlayer.create(anActivity, idFeminineSound));
-            int idMasculineSound = anActivity.getResources().getIdentifier(horse.getSoundMasculineRaceName(), "raw", anActivity.getPackageName());
-            horse.setMasculineRaceSoundID(idMasculineSound);
-            horse.setSoundMasculine(MediaPlayer.create(anActivity, idMasculineSound));
+
+            int idFeminineSoundRaceName = anActivity.getResources().getIdentifier(horse.getSoundFeminineRaceName(), "raw", anActivity.getPackageName());
+            horse.setFeminineRaceSoundID(idFeminineSoundRaceName);
+            horse.setSoundFeminineRace(MediaPlayer.create(anActivity, idFeminineSoundRaceName));
+            int idMasculineSoundRaceName = anActivity.getResources().getIdentifier(horse.getSoundMasculineRaceName(), "raw", anActivity.getPackageName());
+            horse.setMasculineRaceSoundID(idMasculineSoundRaceName);
+            horse.setSoundMasculineRace(MediaPlayer.create(anActivity, idMasculineSoundRaceName));
+
+            int idFeminineSoundFurName = anActivity.getResources().getIdentifier(horse.getSoundFeminineFurName(), "raw", anActivity.getPackageName());
+            horse.setFeminineFurSoundID(idFeminineSoundFurName);
+            horse.setSoundFeminineFur(MediaPlayer.create(anActivity, idFeminineSoundFurName));
+            int idMasculineSoundFurName = anActivity.getResources().getIdentifier(horse.getSoundMasculineFurName(), "raw", anActivity.getPackageName());
+            horse.setMasculineRaceSoundID(idMasculineSoundFurName);
+            horse.setSoundMasculineFur(MediaPlayer.create(anActivity, idMasculineSoundFurName));
         }
         return horses;
     }

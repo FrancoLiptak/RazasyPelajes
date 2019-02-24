@@ -15,25 +15,33 @@ public class GameOneLevelTwoWI extends LevelTwoWI {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound) {
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse) {
+    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
-    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
-        if(randomBetweenRaceAndFur == 1){
+    public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer raceOrFur){
+        if(raceOrFur == 1){
             textView.setText(aHorse.getRace());
-            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer para el nombre de raza o pelaje
+            if(gameActivity.selectedSoundIsFemale()) {
+                imageView.setTag(aHorse.getSoundFeminineRace());
+            }else{
+                imageView.setTag(aHorse.getSoundMasculineRace());
+            }
         }else{
-            // ACA renderizaría la info del caballo. tengo que ver si la configuracion es hombre o mujer para el nombre de raza o pelaje
             textView.setText(aHorse.getFur());
+            if(gameActivity.selectedSoundIsFemale()) {
+                imageView.setTag(aHorse.getSoundFeminineFur());
+            }else{
+                imageView.setTag(aHorse.getSoundMasculineFur());
+            }
         }
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, Integer raceOrFur){
         ((ImageView) gameActivity.findViewById(R.id.wi_lt_horseImg)).setImageResource(correctAnswer.getImageResourceId());
     }
 

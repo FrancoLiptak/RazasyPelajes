@@ -16,19 +16,19 @@ public class GameTwoLevelTwoIW extends LevelTwoIW {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur){
         ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getRace() + " - " + correctAnswer.getFur());
         gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse){
+    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
         List<MediaPlayer> sounds = new ArrayList<>();
         if(gameActivity.selectedSoundIsFemale()){
-            sounds.add(horse.getSoundFeminine());
-            sounds.add(horse.getSoundMasculine());
+            sounds.add(horse.getSoundFeminineRace());
+            sounds.add(horse.getSoundFeminineFur());
         }else{
-            sounds.add(horse.getSoundMasculine());
-            sounds.add(horse.getSoundFeminine());
+            sounds.add(horse.getSoundMasculineRace());
+            sounds.add(horse.getSoundMasculineFur());
         }
         return sounds;
     }
@@ -41,7 +41,7 @@ public class GameTwoLevelTwoIW extends LevelTwoIW {
         throw new UnsupportedOperationException();
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, Integer raceOrFur){
         throw new UnsupportedOperationException();
     }
 

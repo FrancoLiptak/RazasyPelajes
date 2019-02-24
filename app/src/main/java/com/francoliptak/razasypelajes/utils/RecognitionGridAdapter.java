@@ -35,13 +35,13 @@ public class RecognitionGridAdapter extends RecognitionAdapter {
 
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
             List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundMasculine());
-            sounds.add(horse.getSoundFeminine()); // cambiar cuando suban los sonidos
+            // sounds.add(horse.getSoundMasculine());
+            // sounds.add(horse.getSoundFeminine()); // cambiar cuando suban los sonidos
             recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }else{
             List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundFeminine());
-            sounds.add(horse.getSoundMasculine()); // cambiar cuando suban los sonidos
+            // sounds.add(horse.getSoundFeminine());
+            // sounds.add(horse.getSoundMasculine()); // cambiar cuando suban los sonidos
             recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }
     }

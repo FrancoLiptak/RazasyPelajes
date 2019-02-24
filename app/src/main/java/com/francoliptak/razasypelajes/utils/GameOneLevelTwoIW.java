@@ -16,8 +16,8 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound){
-        if(getRandomBetweenRaceAndFur() == 1){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur){
+        if(raceOrFur == 1){
             ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getRace());
             gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
         }else{
@@ -26,17 +26,20 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
         }
     }
 
-    private Integer getRandomBetweenRaceAndFur(){
-        // Se asume que 1 es Raza, y 2 es Pelaje
-        return (Math.random() <= 0.5) ? 1 : 2;
-    }
-
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse){
+    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
         List<MediaPlayer> sounds = new ArrayList<>();
         if(gameActivity.selectedSoundIsFemale()){
-            sounds.add(horse.getSoundFeminine());
+            if(raceOrFur == 1){
+                sounds.add(horse.getSoundFeminineRace());
+            }else{
+                sounds.add(horse.getSoundFeminineFur());
+            }
         }else{
-            sounds.add(horse.getSoundMasculine());
+            if(raceOrFur == 1){
+                sounds.add(horse.getSoundMasculineRace());
+            }else{
+                sounds.add(horse.getSoundMasculineFur());
+            }
         }
         return sounds;
     }
@@ -49,7 +52,7 @@ public class GameOneLevelTwoIW extends LevelTwoIW {
         throw new UnsupportedOperationException();
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, Integer raceOrFur){
         throw new UnsupportedOperationException();
     }
 

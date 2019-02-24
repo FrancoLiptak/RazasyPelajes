@@ -51,6 +51,7 @@ public abstract class Level {
         List<ImageView> views = new ArrayList<>();
         views.addAll(this.getHorsesImgViews(gameActivity));
         Random r = new Random();
+        int raceOrFur = getRandomBetweenRaceAndFur();
         for(int i = 0; i < this.getAmountOfTotalOptions(); i++) {
             Horse randomHorse = horses.get(r.nextInt(horses.size()));
             horses.remove(randomHorse);
@@ -59,12 +60,12 @@ public abstract class Level {
             if (correctAnswer == null) {
                 correctAnswer = randomHorse;
                 correctAnswerViewID = imageView.getId();
-                correctHorseSounds = this.saveHorsesNamesAndFurSounds(gameActivity, randomHorse);
+                correctHorseSounds = this.saveHorsesNamesAndFurSounds(gameActivity, randomHorse, raceOrFur);
             }
             int id = gameActivity.getResources().getIdentifier(randomHorse.getImageName(), "drawable", gameActivity.getPackageName());
             imageView.setImageResource(id);
         }
-        this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSounds);
+        this.showHorseInformationOnScreen(gameActivity, correctAnswer, correctHorseSounds, raceOrFur);
     }
 
     public void printHorsesForWI(GameActivity gameActivity){
@@ -90,7 +91,7 @@ public abstract class Level {
             }
             this.renderOption(gameActivity, randomHorse, textView, imageView, raceOrFur);
         }
-        this.showHorseInformationOnScreen(gameActivity, correctAnswer);
+        this.showHorseInformationOnScreen(gameActivity, correctAnswer, raceOrFur);
     }
 
     private Integer getRandomBetweenRaceAndFur(){
@@ -100,7 +101,7 @@ public abstract class Level {
 
     public abstract void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur);
 
-    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
+    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur);
 
     public void evaluateOptionChosen(View view, GameActivity gameActivity){
         attempts++;
@@ -131,9 +132,9 @@ public abstract class Level {
 
     public abstract void nextStep(GameActivity gameActivity, Game game);
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSounds);
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSounds, Integer raceOrFur);
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer);
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, Integer raceOrFur);
 
     public abstract List<ImageView> getHorsesImgViews(GameActivity gameActivity); // creo que algunos no la implementan
 

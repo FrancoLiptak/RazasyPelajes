@@ -24,8 +24,6 @@ public abstract class LevelTwoWI extends Level {
         return 4;
     }
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound);
-
     public List<TextView> getHorsesTxtViews(GameActivity gameActivity) {
         List<TextView> horsesViews = new ArrayList<>();
         horsesViews.add((TextView) gameActivity.findViewById(R.id.wi_lt_optionOne));
@@ -50,5 +48,4 @@ public abstract class LevelTwoWI extends Level {
 
     public abstract void nextStep(GameActivity gameActivity, Game game);
 
-    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse);
 }
