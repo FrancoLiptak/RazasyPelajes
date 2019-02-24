@@ -8,8 +8,8 @@ public class GamesController {
     private Game gameOne;
     private Game gameTwo;
 
-    public GamesController(List<Horse> horses, NameOfInteractions nameOfGameInteraction) {
-        List<Game> games = GamesCreator.getGames(this, horses, nameOfGameInteraction);
+    public GamesController(List<Horse> horses, NameOfInteractions nameOfGameInteraction, NameOfLevels nameOfLevel) {
+        List<Game> games = GamesCreator.getGames(this, horses, nameOfGameInteraction, nameOfLevel);
         this.gameOne = games.get(0);
         this.gameTwo = games.get(1);
     }

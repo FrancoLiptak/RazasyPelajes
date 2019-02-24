@@ -33,10 +33,6 @@ public class GameTwoLevelTwoIW extends LevelTwoIW {
         return sounds;
     }
 
-    public void nextStep(GameActivity gameActivity, Game game){
-        game.informThatAllGamesWereFinished(gameActivity);
-    }
-
     public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
         throw new UnsupportedOperationException();
     }

@@ -6,23 +6,17 @@ import java.util.List;
 
 public class Game {
     private Level levelOne;
-    private Level levelTwo;
     private GamesController gamesController;
 
-    public Game(GamesController gamesController, List<Horse> horses, NameOfGames nameOfGame, NameOfInteractions nameOfInteraction) {
+    public Game(GamesController gamesController, List<Horse> horses, NameOfGames nameOfGame, NameOfInteractions nameOfInteraction, NameOfLevels nameOfLevel) {
         this.gamesController = gamesController;
-        List<Level> levels = LevelsCreator.getLevels(horses, nameOfGame, nameOfInteraction, this);
+        List<Level> levels = LevelsCreator.getLevels(horses, nameOfGame, nameOfInteraction, nameOfLevel, this); // Devuelve una lista por escalabilidad
         levelOne = levels.get(0);
-        levelTwo = levels.get(1);
     }
 
     public void playLevelOne(GameActivity gameActivity){
         gameActivity.setActualGameHandler(this);
         this.levelOne.playLevel(gameActivity);
-    }
-
-    public void playLevelTwo(GameActivity gameActivity){
-        this.levelTwo.playLevel(gameActivity);
     }
 
     public void informThatTheGameIsOver(GameActivity gameActivity){

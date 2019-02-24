@@ -40,7 +40,7 @@ public abstract class LevelOneIW extends Level {
     }
 
     public void nextStep(GameActivity gameActivity, Game game){
-        game.playLevelTwo(gameActivity);
+        game.informThatTheGameIsOver(gameActivity);
     }
 
 }

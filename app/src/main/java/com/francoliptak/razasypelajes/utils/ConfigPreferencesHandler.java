@@ -44,4 +44,12 @@ public class ConfigPreferencesHandler {
                 R.id.imgWord;
     }
 
+    public static Boolean selectedLevelIsEasy(AppCompatActivity anActivity){
+        return !getSharedPreferences(anActivity).getBoolean(anActivity.getString(R.string.config_preferences_level), false);
+    }
+
+    public static Boolean selectedLevelIsHard(AppCompatActivity anActivity){
+        return getSharedPreferences(anActivity).getBoolean(anActivity.getString(R.string.config_preferences_level), false);
+    }
+
 }

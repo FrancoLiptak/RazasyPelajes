@@ -24,6 +24,8 @@ import java.util.List;
 
 import static com.francoliptak.razasypelajes.utils.NameOfInteractions.IMG_WORD;
 import static com.francoliptak.razasypelajes.utils.NameOfInteractions.WORD_IMG;
+import static com.francoliptak.razasypelajes.utils.NameOfLevels.LEVEL_ONE;
+import static com.francoliptak.razasypelajes.utils.NameOfLevels.LEVEL_TWO;
 
 public class GameActivity extends AppCompatActivity {
     private List<MediaPlayer> horseRaceOrFurNameSounds;
@@ -41,11 +43,21 @@ public class GameActivity extends AppCompatActivity {
     private void startGame(){
         List<Horse> horses = HorsesInformationProvider.getHorses(this);
         if(ConfigPreferencesHandler.selectedGameModeIsIW(this)){
-            GamesController gamesController = new GamesController(horses, IMG_WORD);
-            gamesController.playGameOne(this);
+            if(ConfigPreferencesHandler.selectedLevelIsEasy(this)){
+                GamesController gamesController = new GamesController(horses, IMG_WORD, LEVEL_ONE);
+                gamesController.playGameOne(this);
+            }else{
+                GamesController gamesController = new GamesController(horses, IMG_WORD, LEVEL_TWO);
+                gamesController.playGameOne(this);
+            }
         }else{
-            GamesController gamesController = new GamesController(horses, WORD_IMG);
-            gamesController.playGameOne(this);
+            if(ConfigPreferencesHandler.selectedLevelIsEasy(this)) {
+                GamesController gamesController = new GamesController(horses, WORD_IMG, LEVEL_ONE);
+                gamesController.playGameOne(this);
+            }else{
+                GamesController gamesController = new GamesController(horses, WORD_IMG, LEVEL_TWO);
+                gamesController.playGameOne(this);
+            }
         }
     }
 
