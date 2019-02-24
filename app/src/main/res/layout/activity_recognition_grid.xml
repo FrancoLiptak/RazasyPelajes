@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:background="@drawable/bg_amarillo"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -24,27 +24,28 @@
 
             <ImageView
                 android:id="@+id/goHomeFromRG"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onBack"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout19"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.055"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/home_regular" />
 
             <LinearLayout
                 android:id="@+id/linearLayout19"
-                android:layout_width="594dp"
-                android:layout_height="348dp"
-                android:onClick="goBack"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="100dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.461">
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <GridView
                     android:id="@+id/gridView"
