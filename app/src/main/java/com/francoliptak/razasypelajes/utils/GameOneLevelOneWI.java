@@ -16,11 +16,11 @@ public class GameOneLevelOneWI extends LevelOneWI {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur) {
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<Integer> correctHorseSound, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur) {
+    public List<Integer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
@@ -28,23 +28,23 @@ public class GameOneLevelOneWI extends LevelOneWI {
         if(raceOrFur == 1){
             textView.setText(aHorse.getRace());
             if(gameActivity.selectedSoundIsFemale()) {
-                List<MediaPlayer> list = new ArrayList<>();
-                list.add(aHorse.getSoundFeminineRace());
+                List<Integer> list = new ArrayList<>();
+                list.add(aHorse.getFeminineRaceSoundID());
                 imageView.setTag(list);
             }else{
-                List<MediaPlayer> list = new ArrayList<>();
-                list.add(aHorse.getSoundMasculineRace());
+                List<Integer> list = new ArrayList<>();
+                list.add(aHorse.getMasculineRaceSoundID());
                 imageView.setTag(list);
             }
         }else{
             textView.setText(aHorse.getFur());
             if(gameActivity.selectedSoundIsFemale()) {
-                List<MediaPlayer> list = new ArrayList<>();
-                list.add(aHorse.getSoundFeminineFur());
+                List<Integer> list = new ArrayList<>();
+                list.add(aHorse.getFeminineFurSoundID());
                 imageView.setTag(list);
             }else{
-                List<MediaPlayer> list = new ArrayList<>();
-                list.add(aHorse.getSoundMasculineFur());
+                List<Integer> list = new ArrayList<>();
+                list.add(aHorse.getMasculineFurSoundID());
                 imageView.setTag(list);
             }
         }

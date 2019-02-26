@@ -16,7 +16,7 @@ public class GameOneLevelOneIW extends LevelOneIW{
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<Integer> correctHorseSound, Integer raceOrFur){
         if(raceOrFur == 1){
             ((TextView) gameActivity.findViewById(R.id.iw_lo_horseName)).setText(correctAnswer.getRace());
             gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
@@ -26,19 +26,19 @@ public class GameOneLevelOneIW extends LevelOneIW{
         }
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
-        List<MediaPlayer> sounds = new ArrayList<>();
+    public List<Integer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
+        List<Integer> sounds = new ArrayList<>();
         if(gameActivity.selectedSoundIsFemale()){
             if(raceOrFur == 1){
-                sounds.add(horse.getSoundFeminineRace());
+                sounds.add(horse.getFeminineRaceSoundID());
             }else{
-                sounds.add(horse.getSoundFeminineFur());
+                sounds.add(horse.getFeminineFurSoundID());
             }
         }else{
             if(raceOrFur == 1){
-                sounds.add(horse.getSoundMasculineRace());
+                sounds.add(horse.getMasculineRaceSoundID());
             }else{
-                sounds.add(horse.getSoundMasculineFur());
+                sounds.add(horse.getMasculineFurSoundID());
             }
         }
         return sounds;

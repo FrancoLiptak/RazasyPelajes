@@ -60,7 +60,7 @@ public class RecognitionActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void playSounds(View view){
         view.setBackgroundResource(R.drawable.audio_click);
-        SoundManager.playSounds((ArrayList<MediaPlayer>) view.getTag());
+        SoundManager.playSounds((ArrayList<Integer>) view.getTag(), this);
     }
 
     public void onBack(View view){

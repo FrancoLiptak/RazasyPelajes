@@ -16,19 +16,19 @@ public class GameTwoLevelTwoIW extends LevelTwoIW {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur){
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<Integer> correctHorseSound, Integer raceOrFur){
         ((TextView) gameActivity.findViewById(R.id.iw_lt_horseName)).setText(correctAnswer.getRace() + " - " + correctAnswer.getFur());
         gameActivity.setHorseRaceOrFurNameSounds(correctHorseSound);
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
-        List<MediaPlayer> sounds = new ArrayList<>();
+    public List<Integer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur){
+        List<Integer> sounds = new ArrayList<>();
         if(gameActivity.selectedSoundIsFemale()){
-            sounds.add(horse.getSoundFeminineRace());
-            sounds.add(horse.getSoundFeminineFur());
+            sounds.add(horse.getFeminineRaceSoundID());
+            sounds.add(horse.getFeminineFurSoundID());
         }else{
-            sounds.add(horse.getSoundMasculineRace());
-            sounds.add(horse.getSoundMasculineFur());
+            sounds.add(horse.getMasculineRaceSoundID());
+            sounds.add(horse.getMasculineFurSoundID());
         }
         return sounds;
     }

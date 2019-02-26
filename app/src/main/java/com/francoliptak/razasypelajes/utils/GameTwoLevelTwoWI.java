@@ -16,25 +16,25 @@ public class GameTwoLevelTwoWI extends LevelTwoWI {
         super(game, horses, nameOfInteraction);
     }
 
-    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSound, Integer raceOrFur) {
+    public void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<Integer> correctHorseSound, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
-    public List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur) {
+    public List<Integer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur) {
         throw new UnsupportedOperationException();
     }
 
     public void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur){
         textView.setText(aHorse.getRace() + " - " + aHorse.getFur());
         if(gameActivity.selectedSoundIsFemale()) {
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(aHorse.getSoundFeminineRace());
-            sounds.add(aHorse.getSoundFeminineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(aHorse.getFeminineRaceSoundID());
+            sounds.add(aHorse.getFeminineFurSoundID());
             imageView.setTag(sounds);
         }else{
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(aHorse.getSoundMasculineRace());
-            sounds.add(aHorse.getSoundMasculineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(aHorse.getMasculineRaceSoundID());
+            sounds.add(aHorse.getMasculineFurSoundID());
             imageView.setTag(sounds);
         }
     }

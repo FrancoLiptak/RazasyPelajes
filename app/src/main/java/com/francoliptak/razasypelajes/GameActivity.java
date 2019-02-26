@@ -28,7 +28,7 @@ import static com.francoliptak.razasypelajes.utils.NameOfLevels.LEVEL_ONE;
 import static com.francoliptak.razasypelajes.utils.NameOfLevels.LEVEL_TWO;
 
 public class GameActivity extends AppCompatActivity {
-    private List<MediaPlayer> horseRaceOrFurNameSounds;
+    private List<Integer> horseRaceOrFurNameSounds;
     private Level actualLevelHandler;
     private Game actualGameHandler;
     private AnimationDrawable confettiAnimation, trophyAnimation;
@@ -100,14 +100,14 @@ public class GameActivity extends AppCompatActivity {
                                      MediaPlayer.create(this, R.raw.error_sound));
     }
 
-    public void setHorseRaceOrFurNameSounds(List<MediaPlayer> horseRaceOrFurNameSound) {
+    public void setHorseRaceOrFurNameSounds(List<Integer> horseRaceOrFurNameSound) {
         this.horseRaceOrFurNameSounds = horseRaceOrFurNameSound;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void playHorseRaceOrFurNameSound(View view){
         view.setBackgroundResource(R.drawable.audio_click);
-        SoundManager.playSounds(this.horseRaceOrFurNameSounds);
+        SoundManager.playSounds(this.horseRaceOrFurNameSounds, this);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)

@@ -34,14 +34,14 @@ public class RecognitionGridAdapter extends RecognitionAdapter {
         recognitionGridItemData.getHorseImageView().setTag(horse.getImageResourceId());
 
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundFeminineRace());
-            sounds.add(horse.getSoundFeminineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(horse.getFeminineRaceSoundID());
+            sounds.add(horse.getFeminineFurSoundID());
             recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }else{
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundMasculineRace());
-            sounds.add(horse.getSoundMasculineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(horse.getMasculineRaceSoundID());
+            sounds.add(horse.getMasculineFurSoundID());
             recognitionGridItemData.getHorseSoundImageView().setTag(sounds);
         }
     }

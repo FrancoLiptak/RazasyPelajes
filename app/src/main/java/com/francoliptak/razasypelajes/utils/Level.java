@@ -48,7 +48,7 @@ public abstract class Level {
 
     public void printHorsesForIW(GameActivity gameActivity){
         options = new ArrayList<>();
-        List<MediaPlayer> correctHorseSounds = null;
+        List<Integer> correctHorseSounds = null;
         List<Horse> horses = new ArrayList<>();
         horses.addAll(this.horses);
         List<ImageView> views = new ArrayList<>();
@@ -136,7 +136,7 @@ public abstract class Level {
 
     public abstract void renderOption(GameActivity gameActivity, Horse aHorse, TextView textView, ImageView imageView, Integer randomBetweenRaceAndFur);
 
-    public abstract List<MediaPlayer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur);
+    public abstract List<Integer> saveHorsesNamesAndFurSounds(GameActivity gameActivity, Horse horse, Integer raceOrFur);
 
     public void evaluateOptionChosen(View view, GameActivity gameActivity){
         attempts++;
@@ -176,15 +176,15 @@ public abstract class Level {
 
     public abstract void nextStep(GameActivity gameActivity, Game game);
 
-    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<MediaPlayer> correctHorseSounds, Integer raceOrFur);
+    public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, List<Integer> correctHorseSounds, Integer raceOrFur);
 
     public abstract void showHorseInformationOnScreen(GameActivity gameActivity, Horse correctAnswer, Integer raceOrFur);
 
-    public abstract List<ImageView> getHorsesImgViews(GameActivity gameActivity); // creo que algunos no la implementan
+    public abstract List<ImageView> getHorsesImgViews(GameActivity gameActivity);
 
-    public abstract List<TextView> getHorsesTxtViews(GameActivity gameActivity); // algunos no la implementan
+    public abstract List<TextView> getHorsesTxtViews(GameActivity gameActivity);
 
-    public abstract List<ImageView> getHorseSoundImageViews(GameActivity gameActivity); // algunos no la implementan
+    public abstract List<ImageView> getHorseSoundImageViews(GameActivity gameActivity);
 
     public abstract int getAmountOfTotalOptions();
 }

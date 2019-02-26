@@ -36,14 +36,14 @@ public class RecognitionListAdapter extends RecognitionAdapter {
         recognitionListItemData.getHorseImageView().setTag(horse.getImageResourceId());
 
         if(ConfigPreferencesHandler.selectedAudioIsFamale(anActivity)){
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundFeminineRace());
-            sounds.add(horse.getSoundFeminineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(horse.getFeminineRaceSoundID());
+            sounds.add(horse.getFeminineFurSoundID());
             recognitionListItemData.getHorseSoundImageView().setTag(sounds);
         }else{
-            List<MediaPlayer> sounds = new ArrayList<>();
-            sounds.add(horse.getSoundMasculineRace());
-            sounds.add(horse.getSoundMasculineFur());
+            List<Integer> sounds = new ArrayList<>();
+            sounds.add(horse.getMasculineRaceSoundID());
+            sounds.add(horse.getMasculineFurSoundID());
             recognitionListItemData.getHorseSoundImageView().setTag(sounds);
         }
     }

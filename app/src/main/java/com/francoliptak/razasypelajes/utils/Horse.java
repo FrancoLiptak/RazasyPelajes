@@ -22,19 +22,11 @@ public class Horse {
     @JsonIgnore
     private int imageResourceId;
     @JsonIgnore
-    private MediaPlayer soundMasculineRace;
-    @JsonIgnore
     private Integer masculineRaceSoundID;
-    @JsonIgnore
-    private MediaPlayer soundFeminineRace;
     @JsonIgnore
     private Integer feminineRaceSoundID;
     @JsonIgnore
-    private MediaPlayer soundMasculineFur;
-    @JsonIgnore
     private Integer masculineFurSoundID;
-    @JsonIgnore
-    private MediaPlayer soundFeminineFur;
     @JsonIgnore
     private Integer feminineFurSoundID;
 
@@ -124,28 +116,12 @@ public class Horse {
         this.soundFeminineFurName = soundFeminineFurName;
     }
 
-    public MediaPlayer getSoundMasculineRace() {
-        return soundMasculineRace;
-    }
-
-    public void setSoundMasculineRace(MediaPlayer soundMasculineRace) {
-        this.soundMasculineRace = soundMasculineRace;
-    }
-
     public Integer getMasculineRaceSoundID() {
         return masculineRaceSoundID;
     }
 
     public void setMasculineRaceSoundID(Integer masculineRaceSoundID) {
         this.masculineRaceSoundID = masculineRaceSoundID;
-    }
-
-    public MediaPlayer getSoundFeminineRace() {
-        return soundFeminineRace;
-    }
-
-    public void setSoundFeminineRace(MediaPlayer soundFeminineRace) {
-        this.soundFeminineRace = soundFeminineRace;
     }
 
     public Integer getFeminineRaceSoundID() {
@@ -156,28 +132,12 @@ public class Horse {
         this.feminineRaceSoundID = feminineRaceSoundID;
     }
 
-    public MediaPlayer getSoundMasculineFur() {
-        return soundMasculineFur;
-    }
-
-    public void setSoundMasculineFur(MediaPlayer soundMasculineFur) {
-        this.soundMasculineFur = soundMasculineFur;
-    }
-
     public Integer getMasculineFurSoundID() {
         return masculineFurSoundID;
     }
 
     public void setMasculineFurSoundID(Integer masculineFurSoundID) {
         this.masculineFurSoundID = masculineFurSoundID;
-    }
-
-    public MediaPlayer getSoundFeminineFur() {
-        return soundFeminineFur;
-    }
-
-    public void setSoundFeminineFur(MediaPlayer soundFeminineFur) {
-        this.soundFeminineFur = soundFeminineFur;
     }
 
     public Integer getFeminineFurSoundID() {
