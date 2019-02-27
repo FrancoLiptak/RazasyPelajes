@@ -211,8 +211,8 @@
   },
   {
     "race": "MESTIZO",
-    "fur": "ZAINO COLORADO",
-    "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ZAINO COLORADO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
+    "fur": "ZAINO OSCURO",
+    "description": "RAZA: MESTIZO. Cuando el resultado de la cruza entre dos caballos resulta en otro cuyas características no corresponden a ninguna raza pura conocida, se lo denomina CABALLO MESTIZO. Su pelaje depende mucho de las cruzas y los genes que tenga el caballo, por lo que podemos decir que la gama de colores y combinaciones con la que cuentan en su pelaje es verdaderamente muy amplia. PELAJE: ZAINO OSCURO. La capa tiene un color fundamentalmente marrón, variables de un rojo al negro. Pueden ser: Zaino – Zaino Colorado – Zaino Doradillo – Zaino Oscuro.",
     "image_name": "tupac_mestizo_zaino_oscuro",
     "s_m_race_name": "sound_mas_mestizo",
     "s_m_fur_name": "sound_mas_zaino_colorado",
