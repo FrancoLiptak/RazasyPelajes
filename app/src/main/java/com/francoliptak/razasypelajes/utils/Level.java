@@ -156,6 +156,8 @@ public abstract class Level {
             }else{
                 gameActivity.destroy();
             }
+            hits = 0;
+            attempts = 0;
         }
     }
 
