@@ -11,6 +11,7 @@ import java.util.List;
 public class SoundManager {
     private static MediaPlayer successSound;
     private static MediaPlayer errorSound;
+    private static List<MediaPlayer> mediaPlayers;
 
     public static void associateSounds(MediaPlayer success, MediaPlayer error){
         successSound = success;
@@ -30,18 +31,9 @@ public class SoundManager {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public static void playSounds(List<MediaPlayer> soundTags){
-        if(soundTags.size() > 1){
-            for(int i = 0; i < soundTags.size() - 1; i++){
-                soundTags.get(i).setNextMediaPlayer(soundTags.get(i+1));
-            }
-        }
-        soundTags.get(0).start();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public static void playSounds(List<Integer> soundTags, AppCompatActivity anActivity){
-        List<MediaPlayer> mediaPlayers = createMediaPlayers(soundTags, anActivity);
+        releaseAllMediaPlayers();
+        mediaPlayers = createMediaPlayers(soundTags, anActivity);
         if(mediaPlayers.size() > 1){
             for(int i = 0; i < mediaPlayers.size() - 1; i++){
                 mediaPlayers.get(i).setNextMediaPlayer(mediaPlayers.get(i+1));
@@ -56,5 +48,14 @@ public class SoundManager {
             mediaPlayers.add(MediaPlayer.create(activity, integer));
         }
         return mediaPlayers;
+    }
+
+    private static void releaseAllMediaPlayers(){
+        if(mediaPlayers != null) {
+            for (MediaPlayer mediaPlayer : mediaPlayers) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }
+        }
     }
 }
