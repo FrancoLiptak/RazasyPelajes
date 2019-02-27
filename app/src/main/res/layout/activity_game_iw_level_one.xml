@@ -43,10 +43,10 @@
                         android:onClick="goBack"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.027"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.048"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/home_regular" />
 
                     <TextView
